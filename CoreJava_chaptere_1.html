@@ -15,56 +15,74 @@
         <h1 class="text-4xl font-bold">Core Java - Chapter 1</h1>
         <pc class="text-lg mt-2">Introduction to Java & Basics</p>
     </header>
-    <!-- Content -->
-    <main class="max-w-5xl mx-auto p-6 space-y-8">
-        <!-- 1 -->
-        <section class="bg-white p-6 rounded-xl shadow">
-            <h2 class=" text-2xl font-bold mb-3"> &#49;&#65039;&#8419; What is Java?</h2>
-            <p>
-                Java is a programming language used to create desktop applications,
-                web applications, mobile apps (Android), and enterprise software.
-            </p>
-        </section>
 
-        <!-- 2 -->
-        <section class="bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold md-3"> &#51;&#65039;&#8419; History of Java </h2>
-            <ul class="list-disc pl-6 pt-2 space-y-1">
-                <li> Developed by James Gosling</li>
-                <li> Released In 1995</li>
-                <li> Originally by Sun Microsystems</li>
-                <li> Now owend by Oracle</li>
+    <div class="flex">
+        <aside class="w-64 bg-white h-screen shadow-md p-4 space-y-3">
+            <h2 class="font-bold text-lg mb-3">Chapter 1</h2>
+            <ul class="space-y-2 text-blue-600">
+                <li><a href="#one">1. What is Java?</a></li>
+                <li><a href="#two">2. History</a></li>
+                <li><a href="#three">3. Features</a></li>
+                <li><a href="#four">4. Platform Independent</a></li>
+                <li><a href="#five">5. Architecture</a></li>
+                <li><a href="#six">6. JVM / JRE / JDK</a></li>
+                <li><a href="#seven">7. First Program</a></li>
+                <li><a href="#eight">8. Explanation</a></li>
+                <li><a href="#nine">9. Compile & Run</a></li>
             </ul>
-        </section>
+        </aside>
 
-        <!-- 3 -->
-        <section class="bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold md-3"> &#51;&#65039;&#8419; Features of Java </h2>
-            <ul class="list-disc pl-6 pt-2 space-y-1">
-                <li> Simple & Easy to Learn</li>
-                <li> Object Oriented</li>
-                <li> Platform Independent</li>
-                <li> Secure</li>
-                <li> Robust & Scalable</li>
-            </ul>
-        </section>
 
-        <!-- 4 -->
-        <section class=" bg-white p-6 rounded-xl shadow">
-            <h2 class=" text-2xl font-bold md-3"> &#52;&#65039;&#8419; Platform Independent</h2>
-            <p class="pt-2">
-                Java follows the principle:
-                <span class="font-semibold"> "Write Once, Rune Anywhere"</span>
-            </p>
-            <p class="mt-2">
-                Java program run on any operating system because of the JVM.
-            </p>
-        </section>
+        <!-- Content -->
+        <main class="flex-1 max-w-5xl mx-auto p-6  space-y-8">
+            <!-- 1 -->
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class=" text-2xl font-bold mb-3"> &#49;&#65039;&#8419; What is Java?</h2>
+                <p>
+                    Java is a programming language used to create desktop applications,
+                    web applications, mobile apps (Android), and enterprise software.
+                </p>
+            </section>
 
-        <!-- 5 -->
-        <section class="bg-white p-6 rounder-xl shadow">
-            <h2 class="text-2xl font-bold mb-3">&#53;&#65039;&#8419; Java Architecture </h2>
-            <pre class=" bg-gray-900 text-green-400 p-4 rounded-lg">
+            <!-- 2 -->
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#51;&#65039;&#8419; History of Java </h2>
+                <ul class="list-disc pl-6 pt-2 space-y-1">
+                    <li> Developed by James Gosling</li>
+                    <li> Released In 1995</li>
+                    <li> Originally by Sun Microsystems</li>
+                    <li> Now owend by Oracle</li>
+                </ul>
+            </section>
+
+            <!-- 3 -->
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#51;&#65039;&#8419; Features of Java </h2>
+                <ul class="list-disc pl-6 pt-2 space-y-1">
+                    <li> Simple & Easy to Learn</li>
+                    <li> Object Oriented</li>
+                    <li> Platform Independent</li>
+                    <li> Secure</li>
+                    <li> Robust & Scalable</li>
+                </ul>
+            </section>
+
+            <!-- 4 -->
+            <section class=" bg-white p-6 rounded-xl shadow">
+                <h2 class=" text-2xl font-bold md-3"> &#52;&#65039;&#8419; Platform Independent</h2>
+                <p class="pt-2">
+                    Java follows the principle:
+                    <span class="font-semibold"> "Write Once, Rune Anywhere"</span>
+                </p>
+                <p class="mt-2">
+                    Java program run on any operating system because of the JVM.
+                </p>
+            </section>
+
+            <!-- 5 -->
+            <section class="bg-white p-6 rounder-xl shadow">
+                <h2 class="text-2xl font-bold mb-3">&#53;&#65039;&#8419; Java Architecture </h2>
+                <pre class=" bg-gray-900 text-green-400 p-4 rounded-lg">
                 .java file
                     &darr;
                 Java Compiler
@@ -75,23 +93,23 @@
                     &darr;
                   Output 
             </pre>
-        </section>
+            </section>
 
-        <!-- 6 -->
-        <section class=" bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold mb-3">&#54;&#65039;&#8419; JDK JRE & JVM </h2>
-            <ul class="list-disc pl-6 space-y-2">
-                <li> <strong>JVM:</strong> Executes Java Bytecode </li>
-                <li><strong>JRE:</strong> JVM + Libraries </li>
-                <li><strong>JDK:</strong> JRE + Compiler + Tools </li>
-            </ul>
-            <p class="mt-2 font-semibold"> Relation: JDK &rarr; JRE &#8594; JVM</p>
-        </section>
-        <!-- 7 -->
+            <!-- 6 -->
+            <section class=" bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-3">&#54;&#65039;&#8419; JDK JRE & JVM </h2>
+                <ul class="list-disc pl-6 space-y-2">
+                    <li> <strong>JVM:</strong> Executes Java Bytecode </li>
+                    <li><strong>JRE:</strong> JVM + Libraries </li>
+                    <li><strong>JDK:</strong> JRE + Compiler + Tools </li>
+                </ul>
+                <p class="mt-2 font-semibold"> Relation: JDK &rarr; JRE &#8594; JVM</p>
+            </section>
+            <!-- 7 -->
 
-        <section class=" bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold mb-3">&#55;&#65039;&#8419; First Java Program</h2>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
+            <section class=" bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-3">&#55;&#65039;&#8419; First Java Program</h2>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg overflow-x-auto">
              class Hello
               {
                 public static void main(String[] args)
@@ -100,102 +118,102 @@
                  }      
               }
             </pre>
-            <h2 class="text-2xl font-bold mt-4"> Explaination of each Line </h2>
+                <h2 class="text-2xl font-bold mt-4"> Explaination of each Line </h2>
 
-            <p class="font-semibold"> class Hello</p>
-            <p class=" mb-4">
-                Class name must match the file name. <br>
-                File name: <strong> Hello.java</strong>
-            </p>
-            <p class="font-semibold"> public static void main(String[]arge)</p>
-            <P class="mb-4">
-                This is the entry point of the Java program. <br>
-                JVM starts execution from here.
-            </P>
-            <p class="font-semibold"> System.out.println("Hello World");</p>
-            <p>
-                Prints output on the screen. <br>
-                <strong> println</strong> means print and move to the next line.
-            </p>
+                <p class="font-semibold"> class Hello</p>
+                <p class=" mb-4">
+                    Class name must match the file name. <br>
+                    File name: <strong> Hello.java</strong>
+                </p>
+                <p class="font-semibold"> public static void main(String[]arge)</p>
+                <P class="mb-4">
+                    This is the entry point of the Java program. <br>
+                    JVM starts execution from here.
+                </P>
+                <p class="font-semibold"> System.out.println("Hello World");</p>
+                <p>
+                    Prints output on the screen. <br>
+                    <strong> println</strong> means print and move to the next line.
+                </p>
 
-            <h2 class="text-2xl font-bold mt-4"> Program Explanation</h2>
-            <ul class="list-disc pl-6 space-y-1">
-                <li> <strong> class Hello</strong> &rarr; Class Name </li>
-                <li> <strong> main()</strong> &rarr; Program execution starts here </li>
-                <li><strong> System.out.println()</strong> &rarr; Prints output </li>
-            </ul>
-        </section>
-        <!-- 8 -->
-        <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mt-4"> Program Explanation</h2>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li> <strong> class Hello</strong> &rarr; Class Name </li>
+                    <li> <strong> main()</strong> &rarr; Program execution starts here </li>
+                    <li><strong> System.out.println()</strong> &rarr; Prints output </li>
+                </ul>
+            </section>
+            <!-- 8 -->
+            <section class="bg-white p-6 rounded-xl shadow">
 
-            <h2 class="text-2xl font-bold mb-4">8️⃣ How to Compile & Run Program</h2>
+                <h2 class="text-2xl font-bold mb-4">8️⃣ How to Compile & Run Program</h2>
 
-            <p class="font-semibold mb-2">Step 1: Compile</p>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
+                <p class="font-semibold mb-2">Step 1: Compile</p>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
 javac Hello.java
   </pre>
 
-            <p class="font-semibold mt-4 mb-2">Step 2: Run</p>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
+                <p class="font-semibold mt-4 mb-2">Step 2: Run</p>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
 java Hello
   </pre>
 
-            <p class="mt-4 text-sm text-gray-700">
-                📌 <strong>No .class extension</strong> is used while running the program.
-            </p>
-        </section>
-        <!-- 9 -->
-        <section class="bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold mb-3">&#57;&#65039;&#8419; Java Keywords </h2>
-            <p>
-                Keywords are reserved words that have predefined meaning in Java.
-            </p>
-            <p class="mt-2">
-                Examples: <code class="bg-gray-200 px-2 rounded"> class</code>
-                <code class="bg-gray-200 px-2 rounded"> public</code>
-                <code class="bg-gray-200 px-2 rounded"> static</code>
-                <code class="bg-gray-200 px-2 rounded"> void</code>
-            </p>
-        </section>
-        <!-- 10 -->
-        <section class=" bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold mb-3"> &#49;&#65039;&#8419;&#48;&#65039;&#8419; Variables in Java</h2>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
+                <p class="mt-4 text-sm text-gray-700">
+                    📌 <strong>No .class extension</strong> is used while running the program.
+                </p>
+            </section>
+            <!-- 9 -->
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-3">&#57;&#65039;&#8419; Java Keywords </h2>
+                <p>
+                    Keywords are reserved words that have predefined meaning in Java.
+                </p>
+                <p class="mt-2">
+                    Examples: <code class="bg-gray-200 px-2 rounded"> class</code>
+                    <code class="bg-gray-200 px-2 rounded"> public</code>
+                    <code class="bg-gray-200 px-2 rounded"> static</code>
+                    <code class="bg-gray-200 px-2 rounded"> void</code>
+                </p>
+            </section>
+            <!-- 10 -->
+            <section class=" bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-3"> &#49;&#65039;&#8419;&#48;&#65039;&#8419; Variables in Java</h2>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
                 int age = 25;
                 System.out.println(age);
             </pre>
-        </section>
-        <!-- 11 -->
-        <section class="bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#49;&#65039;Data Types </h2>
-            <table class="w-full border mt-3">
-                <tr class="bg-gray-200">
-                    <th class="border p-2">Type</th>
-                    <th class="border p-2">Example</th>
-                </tr>
-                <tr>
-                    <td class="border p-2">int</td>
-                    <td class="border p-2">10</td>
-                </tr>
-                <tr>
-                    <td class="border p-2">float</td>
-                    <td class="border p-2">10.5f</td>
-                </tr>
-                <tr>
-                    <td class="border p-2">char</td>
-                    <td class="border p-2">'A'</td>
-                </tr>
-                <tr>
-                    <td class="border p-2">boolean</td>
-                    <td class="border p-2">true</td>
-                </tr>
-            </table>
-        </section>
+            </section>
+            <!-- 11 -->
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#49;&#65039;Data Types </h2>
+                <table class="w-full border mt-3">
+                    <tr class="bg-gray-200">
+                        <th class="border p-2">Type</th>
+                        <th class="border p-2">Example</th>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">int</td>
+                        <td class="border p-2">10</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">float</td>
+                        <td class="border p-2">10.5f</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">char</td>
+                        <td class="border p-2">'A'</td>
+                    </tr>
+                    <tr>
+                        <td class="border p-2">boolean</td>
+                        <td class="border p-2">true</td>
+                    </tr>
+                </table>
+            </section>
 
-        <!-- 12 -->
-        <section class="bg-white p-6 rounded-xl shadow">
-            <h2 class="text-2xl font-bold mb-3">1️⃣2️⃣ Comments</h2>
-            <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
+            <!-- 12 -->
+            <section class="bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold mb-3">1️⃣2️⃣ Comments</h2>
+                <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
                 // Single line comment
 
                 /* Multi
@@ -203,21 +221,22 @@ java Hello
                    comment 
                 */
             </pre>
-        </section>
+            </section>
 
 
-        <!-- SUMMARY -->
-        <section class="bg-blue-100 p-6 rounded-xl">
-            <h2 class="text-2xl font-bold mb-3">📌 Chapter 1 Summary</h2>
-            <ul class="list-disc pl-6 space-y-1">
-                <li>Java is platform independent</li>
-                <li>JVM is the heart of Java</li>
-                <li>Execution starts from main()</li>
-                <li>Practice small programs daily</li>
-            </ul>
-        </section>
+            <!-- SUMMARY -->
+            <section class="bg-blue-100 p-6 rounded-xl">
+                <h2 class="text-2xl font-bold mb-3">📌 Chapter 1 Summary</h2>
+                <ul class="list-disc pl-6 space-y-1">
+                    <li>Java is platform independent</li>
+                    <li>JVM is the heart of Java</li>
+                    <li>Execution starts from main()</li>
+                    <li>Practice small programs daily</li>
+                </ul>
+            </section>
 
-    </main>
+        </main>
+    </div>
     <!-- FOOTER -->
     <footer class="text-center p-4 text-sm text-gray-500">
         © Core Java Learning | Chapter 1
