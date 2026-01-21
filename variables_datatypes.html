@@ -1,16 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Core Java - Variables & Data Types</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-       body:has(#dark:checked) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Core Java - Variables & Data Types</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body:has(#dark:checked) {
       background-color: #0f172a;
       color: #e5e7eb;
     }
-    
+
     body:has(#dark:checked) .card {
       background-color: #020617;
       color: #e5e7eb;
@@ -22,11 +23,27 @@
       background-color: #020617;
       color: #e5e7eb;
     }
-    </style>
+  </style>
 </head>
-<body class="bg-blue-600 text-white p-6 text-center">
+
+<body class="bg-gray-100 text-gray-800 leading-relaxed">
+  <header class="bg-blue-600 text-white p-6 text-center">
     <h1 class="text-4xl font-bold">Core Java</h1>
-    <p class="text-lg mt-2">Varyiables & Data Types</p>
-        
+    <p class="text-lg mt-2">Variables & Data Types</p>
+
+    <!-- Dark Mode -->
+    <div class="flex justify-center gap-4 mt-4 text-sm">
+      <label class="cursor-pointer">
+        <input type="radio" name="theme" id="light" checked hidden>
+        ☀ Light
+      </label>
+
+      <label class="cursor-pointer">
+        <input type="radio" name="theme" id="dark" hidden>
+        🌙 Dark
+      </label>
+    </div>
+  </header>
 </body>
+
 </html>
