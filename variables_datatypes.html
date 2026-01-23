@@ -17,6 +17,7 @@
       color: #e5e7eb;
     }
 
+
     body:has(#dark:checked) .sidebar,
     body:has(#dark:checked) header,
     body:has(#dark:checked) footer {
@@ -46,36 +47,122 @@
     </div>
   </header>
   <div class="flex flex-col md:flex-row">
-  <aside class="sidebar md:w-64 bg-white shadow-md p-4 md:sticky md:top-0 h-fit">
-    <h2 class="font-bold text-lg mb-3">Variables & Data Types</h2>
-    <ul class="space-y-2 text-blue-600 text-sm">
-      <li> <a href="#one">1. Variable</a></li>
-      <li> <a href="#two">2. Why Variable</a></li>
-      <li> <a href="#three">3. Naming Rules</a></li>
-      <li><a href="#four">4. Data Type</a></li>
-      <li><a href="#five">5. Type lof Data</a></li>
-      <li><a href="#six">6. Primitive Types</a></li>
-      <li><a href="#seven">7. Non-Primitive</a></li>
-      <li><a href="#eight">8. Example</a></li>
-      <li><a href="#nine">9. Summary</a></li>
-    </ul>
-  </aside>
-  <!-- Main Contain -->
-  <main class="flex-1 max-w-5xl mx-auto p-6 space-y-8">
-    <!-- 1 -->
-    <section id="one" class="card bg-white p-6 rounded-xl shadow">
-      <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419; What is Variable?</h2>
-      <p>
-        A <strong> variable</strong> is a container used to store data in memory.
-      </p>
-      <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mt-4">
+    <aside class="sidebar md:w-64 bg-white shadow-md p-4 md:sticky md:top-0 h-fit">
+      <h2 class="font-bold text-lg mb-3">Variables & Data Types</h2>
+      <ul class="space-y-2 text-blue-600 text-sm">
+        <li> <a href="#one">1. Variable</a></li>
+        <li> <a href="#two">2. Why Variable</a></li>
+        <li> <a href="#three">3. Naming Rules</a></li>
+        <li><a href="#four">4. Data Type</a></li>
+        <li><a href="#five">5. Type lof Data</a></li>
+        <li><a href="#six">6. Primitive Types</a></li>
+        <li><a href="#seven">7. Non-Primitive</a></li>
+        <li><a href="#eight">8. Example</a></li>
+        <li><a href="#nine">9. Summary</a></li>
+      </ul>
+    </aside>
+    <!-- Main Contain -->
+    <main class="flex-1 max-w-5xl mx-auto p-6 space-y-8">
+      <!-- 1 -->
+      <section id="one" class="card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419; What is Variable?</h2>
+        <p>
+          A <strong> variable</strong> is a container used to store data in memory.
+        </p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mt-4">
 int age = 25;
       </pre>
-    </section>
+        <ul class="list-disc mt-4 pl-6 space-y-1">
+          <li> int &rarr; <strong>data type</strong></li>
+          <li>age &rarr;<strong> variable name</strong></li>
+          <li>25 &rarr; <strong>value stored in memory</strong></li>
+        </ul>
+        <p>
+          &#128204; Meaning:A box named <span class=" font-thin italic">age</span> stored the value 25
+        </p>
+      </section>
 
-  </main>
+      <!-- 2 -->
+      <section id="two" class="card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-bold mb-3">&#50;&#65039;&#8419; Why Variables are Needeed?</h2>
+        <p> Without variables:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>You can't store Values </li>
+          <li> You can't perform calculations</li>
+          <li>You can't resuse data</li>
+          <li> Accept user input</li>
+        </ul>
+        <p> Example:</p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mt-4">
+        <span class="italic"> java</span> 
+int a = 10;
+int b = 20;
+int sum = a+b;
+System.out.println(sum);
+        </pre>
+      </section>
 
-</div>
+      <!-- 3 -->
+
+      <section id="three" class="card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-bold mb-3">&#51;&#65039;&#8419;Rules for Naming Vairalbes</h2>
+        <p>Allowed:</p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg ">
+  <span class="italic"> java</span>
+
+int totalmarks; // valid 
+int_count;      // valid
+int $prize;     // valid
+int number;     // valid
+
+</pre>
+        <p>Not allowed</p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
+  <span class="italic"> java</span>
+
+int 1number;        // cannot start with number 
+int class;         // keyword
+int total marks;  // space not allowed
+</pre>
+        <h2 class="text-2xl font-bold mb-3">&#128204; Best Practice(Java style)</h2>
+        <p>1. Use <strong>camelCase</strong></p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg ">
+<span class="italic"> java</span>
+<span class="text-amber-900 "> int</span> totalMarks;
+<span class="text-amber-900 "> double </span> accountbalance;
+</pre>
+      </section>
+
+<!-- 4 -->
+      <section id="four" class=" card bg-white p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-bold mb-3">&#52;&#65039;&#8419; Waht is a Data type?</h2>
+        <p> A <strong> data type</strong> defines:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li> What <strong>type of data </strong> avariable can store</li>
+          <li>How much <strong>memory</strong> is allocted</li>
+          <li>What <strong>operations </strong>are allowed</li>
+        </ul>
+      </section>
+
+      <!-- 5 -->
+      <section id="five" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#53;&#65039;&#8419; Types of Data Types in Java </h2>
+        <p>Java has <strong>2 main categories :</strong></p>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg">
+Data Types &darr;
+           &darr;&rarr;&rarr; primitive Data <span class="text-blue-700">Types</span>(8 types)
+           &darr;
+           &rarr;&rarr;&rarr; Non-Primitive Data Types
+        </pre>
+
+      </section>
+      <!-- 6 -->
+      <section id="six" class="">
+
+      </section>
+    </main>
+
+  </div>
 </body>
 
 </html>
