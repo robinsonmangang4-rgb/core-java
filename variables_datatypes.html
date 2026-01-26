@@ -30,7 +30,7 @@
 <body class="bg-gray-100 text-gray-800 leading-relaxed">
   <!-- HEARD -->
   <header class="bg-blue-600 text-white p-6 text-center">
-    <h1 class="text-4xl font-bold">Core Java</h1>
+    <h1 class="text-4xl font-bold">Core Java- Chapter-2</h1>
     <p class="text-lg mt-2">Variables & Data Types</p>
 
     <!-- Dark Mode -->
@@ -54,15 +54,24 @@
         <li> <a href="#two">2. Why Variable</a></li>
         <li> <a href="#three">3. Naming Rules</a></li>
         <li><a href="#four">4. Data Type</a></li>
-        <li><a href="#five">5. Type lof Data</a></li>
+        <li><a href="#five">5. Type of Data</a></li>
         <li><a href="#six">6. Primitive Types</a></li>
-        <li><a href="#seven">7. Non-Primitive</a></li>
-        <li><a href="#eight">8. Example</a></li>
-        <li><a href="#nine">9. Summary</a></li>
+        <li><a href="#seven">7. Integer Data Types</a></li>
+        <li><a href="#eight">8. Floating Point Data Types</a></li>
+        <li><a href="#nine">9. char Data Type</a></li>
+        <li><a href="#ten">10. boolean Data Type</a></li>
+        <li><a href="#eleven">11. Non-Primitive Data Types</a></li>
+        <li><a href="#twelve">12. Default Values Of Variables</a></li>
+        <li><a href="#thirteen">13. Type Casting </a></li>
+        <li><a href="#fourteen">14. Eaxmple Program</a></li>
+        <li><a href="#fifteen">15. Key Interview Points</a></li>
+        <li><a href="operators.html">16. chapter-3 Link</a></li>
+
+
       </ul>
     </aside>
     <!-- Main Contain -->
-    <main class="flex-1 max-w-5xl mx-auto p-6 space-y-8">
+    <main class="flex-1 w-auto mx-auto p-6 space-y-8">
       <!-- 1 -->
       <section id="one" class="card bg-white p-6 rounded-xl shadow">
         <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419; What is Variable?</h2>
@@ -128,12 +137,12 @@ int total marks;  // space not allowed
         <p>1. Use <strong>camelCase</strong></p>
         <pre class="bg-gray-900 text-green-400 p-4 rounded-lg ">
 <span class="italic"> java</span>
-<span class="text-amber-900 "> int</span> totalMarks;
-<span class="text-amber-900 "> double </span> accountbalance;
+<span class="text-amber-500 "> int</span> totalMarks;
+<span class="text-amber-500 "> double </span> accountbalance;
 </pre>
       </section>
 
-<!-- 4 -->
+      <!-- 4 -->
       <section id="four" class=" card bg-white p-6 rounded-xl shadow">
         <h2 class="text-2xl font-bold mb-3">&#52;&#65039;&#8419; Waht is a Data type?</h2>
         <p> A <strong> data type</strong> defines:</p>
@@ -156,6 +165,7 @@ Data Types &darr;
         </pre>
 
       </section>
+
       <!-- 6 -->
       <section id="six" class="card bg-white p-6 rounded-lg shadow">
         <h2 class="text-2xl font-bold mb-3">&#54;&#65039;&#8419; Primitive Data Types( Very Important )</h2>
@@ -218,16 +228,213 @@ Data Types &darr;
 <span class="text-amber-600 "> int</span> age = 30 ;
 <span class="text-amber-600 "> double </span> salary = 50000 ;
           </pre>
-          <p class="mt-6">&#128204; Why <span class=" font-thin italic"> int </span>? </p>
-          <ul class="list-disc pl-6 space-y-1 mt-4">
-            <li> Fast </li>
-            <li> Enough of most values</li>
-            <li> Default choice for numbers</li>
-          </ul>
+        <p class="mt-6">&#128204; Why <span class=" font-thin italic"> int </span>? </p>
+        <ul class="list-disc pl-6 space-y-1 mt-4">
+          <li> Fast </li>
+          <li> Enough of most values</li>
+          <li> Default choice for numbers</li>
+        </ul>
+        <p class="font-medium text-lg mt-6">&EmptySmallSquare; Long</p>
+        <p class="mt-4"> Used when numbers are <strong> very large.</strong> </p>
+        <pre class="bg-gray-900 text-green-400 pl-2 rounded-lg">
+<span class="italic"> java </span>
+<span class="text-amber-600"> long mobileNumber = 9876625371L;</span>
+          </pre>
+        <p class="pt-6"> &#9888; L is mandatory.</p>
+
+      </section>
+
+      <!-- 8 -->
+      <section id="eight" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#56;&#65039;&#8419; Floating Point Data Types ( float & double )</h2>
+        <p class="p-4 font-medium">&EmptySmallSquare; float</p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> float percentage = 85.5f;</span>
+        </pre>
+        <p class="mt-4">&#9888; f is mandatory</p>
+
+        <p class="pt-6 pb-4">&EmptySmallSquare; <strong>double ( MOST USED for decimals )</strong></p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> double price =99.99;</span>
+        </pre>
+        <p class="pt-3 pb-4">&#128204; Preferred becouse :</p>
+        <ul class="list-disc pl-6 space-y-1 mt-4">
+          <li> more accurate</li>
+          <li>Default for decimal numbers</li>
+        </ul>
+      </section>
+
+      <!-- 9 -->
+      <section id="nine" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#57;&#65039;&#8419; char Data Type </h2>
+        <p class="p-4 font-medium"> Stores <strong>a single character</strong></p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> char grade = <span class="text-green-500">'A'</span>;</span>
+<span> char gender = <span class="text-green-500">'M'</span>;</span>       
+</pre>
+        <p class="pt-4">&#9888;Use <strong>single quotes</strong> ' ' ; not double quotes.</p>
+
+      </section>
+
+      <!-- 10 -->
+      <section id="ten" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419;&#48;&#65039;&#8419; boolean Data Type </h2>
+        <p class="p-4 font-medium"> Stores only <strong>true or false.</strong></p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> boolean isJavaEasy = <span class="text-green-500">true</span>;</span>
+<span> boolean isLoggedIn = <span class="text-green-500">false</span>;</span>       
+</pre>
+        <p class="pt-4">&#128204; Used heavily in :</p>
+        <ul class="list-disc pl-6 rounded-lg pt-3">
+          <li> Conditions </li>
+          <li> Loops</li>
+          <li> Login systems</li>
+        </ul>
+
+      </section>
+
+
+      <!-- 11 -->
+      <section id="eleven" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419;&#49;&#65039;&#8419; Non-Primitive Data Types</h2>
+        <p class="p-4 font-medium"> These store <strong>References,</strong> not actual values.</p>
+        <strong>Examples : </strong>
+        <ul class="list-disc pl-6 rounded-lg pt-3">
+          <li>Sting</li>
+          <li>Arrays</li>
+          <li>Classes</li>
+          <li>Interfaces</li>
+        </ul>
+        <p class="font-medium pt-4 pb-3">&EmptySmallSquare; String ( VERY IMPORTANT )</p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> String name = <span class="text-green-500">"Robinson"</span>;</span>       
+</pre>
+        <p class="pt-4">&#128204; Difference :</p>
+        <ul class="list-disc pl-6 rounded-lg pt-3">
+          <li> <span class="italic"> char</span>&rarr; single character</li>
+          <li><span class="italic">String </span>&rarr; multiple characters</li>
+        </ul>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> char ch = <span class="text-green-500">'A'</span>;</span>       
+<span> String word = <span class="text-green-500">"Java"</span>;</span>       
+          </pre>
+      </section>
+
+      <!-- 12 -->
+      <section id="twelve" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419;&#50;&#65039;&#8419; Default Values of Variables</h2>
+
+        <table class="w-full border mt-4 bg-slate-200 ">
+          <tr class="bg-gray-300">
+            <td class="border p-2 font-medium"> Data Type</td>
+            <td class="border p-2 font-medium"> Default Value</td>
+          </tr>
+          <tr>
+            <td class="pl-6">double</td>
+            <td class="pl-6">0.0</td>
+          </tr>
+          <tr>
+            <td class="pl-6">char</td>
+            <td class="pl-6"> one character </td>
+          </tr>
+          <tr>
+            <td class="pl-6">boolean</td>
+            <td class="pl-6">false/true</td>
+          </tr>
+          <tr>
+            <td class="pl-6">string</td>
+            <td class="pl-6">null</td>
+          </tr>
+        </table>
+        <p class="pt-6"> &#9888; Only applies to <strong> instance variables,</strong> not local variables.</p>
+      </section>
+
+      <!-- 13 -->
+      <section id="thirteen" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419;&#51;&#65039;&#8419; Type Casting ( Bonus Concept )</h2>
+        <p class="p-4 font-medium">&EmptySmallSquare; Implicit Casting ( Automatic )</p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> int a = 10 ;</span>
+<span> double b = a;</span>
+        </pre>
+
+        <p class="pt-6 pb-4">&EmptySmallSquare; <strong> Explicit Casting ( Manual )</strong></p>
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span> double x = 10.5;</span>
+<span> int y = (int) x;</span>
+
+        </pre>
+        <p class="pt-3 pb-4">&#128204; Output : 10 ( decimal removed )</p>
+      </section>
+
+
+      <!-- 14 -->
+      <section id="fourteen" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419;&#52;&#65039;&#8419; Example Program ( Real-World )</h2>
+
+        <pre class="bg-gray-800 text-amber-600 rounded-lg p-4">
+<span> Java</span>
+<span class="text-pink-700"> public class</span> <span class="text-blue-600">Student</span> {
+   <span class="text-pink-700"> public static void</span><span class="text-blue-600">main</span> ( String [] args )<span></span>
+  {
+             <Span> String name = <span class="text-green-500">"Robinson"</span>;</Span>
+             <Span> int age  = <span class="text-green-500">22</span>;</Span>
+             <Span> double marks = <span class="text-green-500">88.5</span>;</Span>
+             <Span> char grade = <span class="text-green-500">'A'</span>;</Span>
+             <Span> boolean isPassed = <span class="text-green-500">true</span>;</Span>
+
+             <Span> System.out.println (<span class="text-green-500">"Name : "</span> + name );</Span>
+             <Span> System.out.println (<span class="text-green-500">"Age : "</span> + age );</Span>
+             <Span> System.out.println (<span class="text-green-500">"Marks : "</span> + marks );</Span>
+             <Span> System.out.println (<span class="text-green-500">"Grade : "</span> + grade );</Span>
+             <Span> System.out.println (<span class="text-green-500">"Passed : "</span> + isPassed );</Span>
+                       
+          }
+     }
+             </pre>
+      </section>
+
+      <!-- 15 -->
+      <section id="fifteen" class="card bg-white p-6 rounded-lg shadow">
+        <h2 class="text-2xl font-bold mb-3">&#49;&#65039;&#8419;&#53;&#65039;&#8419;Key Interview Points &#9734; </h2>
+        <ul class=" pl-6 rounded-lg pt-3">
+          <li> &#9989; Java has <strong> 8 primitive data types</strong></li>
+          <li>&#9989; <span class="italic"> int</span> and <span class="italic">double</span> are most commonly used
+          </li>
+          <li>&#9989;<span class="italic"> String</span>is <strong>non-primitive</strong></li>
+          <li>&#9989; Variables store data i memory</li>
+          <li>&#9989; Data type defines memory size and behavior</li>
+
+        </ul>
+      </section>
+
+      <!-- 16 -->
+      <section id="sixteen" class="card bg-white p-6 rounded-lg shadow">
+        <p class="font-bold ">If you want, Next Chapter please click here. <a href="operators.html">chapter 3
+            Operators</a></p>
       </section>
     </main>
 
   </div>
+  <!-- BACK TO TOP BUTTON -->
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 bg-blue-600 text-white
+  w-12 h-12 rounded-full shadow-lg
+  hover:bg-blue-700 transition">
+    &uarr;
+  </button>
+  <!-- FOOTER -->
+  <footer class="text-center p-4 text-sm text-gray-500">
+    © Core Java Learning | Chapter 2
+  </footer>
+
 </body>
 
 </html>
