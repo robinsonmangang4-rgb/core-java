@@ -287,7 +287,277 @@
 
             </section>
 
-           
+            <!--5  -->
+            <section id="five" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#53;&#65039;&#8419; Bitwise Operators</h2>
+                <p class="pt-4">Operate on <strong> binary (bit-level) data.</strong></p>
+
+                <table class="w-full border mt-4 bg-slate-200 ">
+                    <tr class="bg-gray-300">
+                        <td class="border p-2 font-medium">Operator</td>
+                        <td class="border p-2 font-medium">Meaning</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">&</td>
+                        <td class="pl-6">Bitwise AND</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">&#124;</td>
+                        <td class="pl-6">Bitwise OR</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">^</td>
+                        <td class="pl-6">Bitwise XOR</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">~</td>
+                        <td class="pl-6">Bitwise Complement</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">
+                            <<< /td>
+                        <td class="pl-6">Left shift</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">>></td>
+                        <td class="pl-6">Right shift</td>
+                    </tr>
+                </table>
+
+                <p class="text-lg font-bold pt-4 pb-4"> Eaxmple</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+<span> Java</span>
+<span class="text-pink-700"> class</span> <span class="text-blue-600">BitwiseDemo</span> {
+    <span class="text-pink-700"> public static void</span><span class="text-blue-600"> main</span> ( String [] args )<span></span>
+        {
+         <Span> int a  = <span class="text-green-500">5,</span> b =<span class="text-green-500"> 3</span>;</Span>
+            
+         <Span> System.out.println (a & b);</Span>
+         <Span> System.out.println (a &#124; b);</Span>
+         <Span> System.out.println (a ^ b);</Span>
+         <Span> System.out.println (a << 1);</Span>
+         <Span> System.out.println (a >> 1);</Span>                                   
+                                   
+                 }
+            }
+             </pre>
+                <p class="text-lg font-bold pt-4 pb-4"> Explanation</p>
+                <ul class="list-disc pl-3 ">
+                    <li> 5 &rarr; 0101</li>
+                    <li> 3 &rarr; 0011</li>
+                </ul>
+                <p class="text-lg font-bold pt-4 pb-4"> Output</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+
+<Span class="text-green-500"> 1 </Span>
+<Span class="text-green-500"> 7 </Span>
+<Span class="text-green-500"> 6</Span>
+<Span class="text-green-500"> 10</Span>
+<Span class="text-green-500"> 2</Span>
+             </pre>
+
+            </section>
+
+            <!-- 6 -->
+
+            <section id="six" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#54;&#65039;&#8419; Ternary Operators</h2>
+                <p class="pt-4"><strong> Shortest form of if-else</strong></p>
+                <p class="text-lg font-bold pt-4 pb-4"> Syntax</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+<span>java</span>
+<span>condition ? value1 : value2 ;</span>
+                </pre>
+
+
+                <p class="text-lg font-bold pt-4 pb-4"> Eaxmple</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+<span> Java</span>
+<span class="text-pink-700"> class</span> <span class="text-blue-600">TernaryDemo</span> {
+    <span class="text-pink-700"> public static void</span><span class="text-blue-600"> main</span> ( String [] args )<span></span>
+        {
+         <Span> int a  = <span class="text-green-500">10,</span> b =<span class="text-green-500"> 20</span>;</Span>
+            
+         <span> int max =(a > b) ? (a : b);</span>
+         <span> System.out.println (<span class="text-green-500">"Max is: "</span> + max) ;</span>
+                                   
+                 }
+            }
+             </pre>
+
+                <p class="text-lg font-bold pt-4 pb-4"> Output</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+
+<Span class="text-green-500"> Max <span> is:</span> 20</Span>
+
+             </pre>
+
+            </section>
+
+            <!-- 7 -->
+            <section id="seven" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#55;&#65039;&#8419; Assignment Operators</h2>
+                <p class="pt-4 font-medium">Used to assign values.</p>
+
+                <table class="w-full border mt-4 bg-slate-200 ">
+                    <tr class="bg-gray-300">
+                        <td class="border p-2 font-medium">Operator</td>
+                        <td class="border p-2 font-medium">Example</td>
+                        <td class="border p-2 font-medium">Meaning</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">=</td>
+                        <td class="pl-6">a = 10</td>
+                        <td class="pl-6">assign</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">+=</td>
+                        <td class="pl-6">a+= 5</td>
+                        <td class="pl-6">a = a+5</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">-=</td>
+                        <td class="pl-6">a-= 5</td>
+                        <td class="pl-6">a = a-5</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">*=</td>
+                        <td class="pl-6">a *= 2</td>
+                        <td class="pl-6">a = a*2</td>
+                    </tr>
+                    <tr>
+                        <td class="pl-6">/=</td>
+                        <td class="pl-6">a /= 2</td>
+                        <td class="pl-6">a = a/2</td>
+                    </tr>
+                </table>
+
+                <p class="text-lg font-bold pt-4 pb-4"> Eaxmple</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+<span> Java</span>
+<span class="text-pink-700"> class</span> <span class="text-blue-600">AssignmentDemo</span> {
+    <span class="text-pink-700"> public static void</span><span class="text-blue-600"> main</span> ( String [] args )<span></span>
+        {
+         <Span> int a  = <span class="text-green-500">10 ;</Span>
+            <span> a += 5 ;</span>
+         <Span> System.out.println (a);</Span>
+         <Span> a *= 2</Span>
+         <Span> System.out.println (a);</Span>                               
+                 }
+            }
+             </pre>
+                <p class="text-lg font-bold pt-4 pb-4"> Explanation</p>
+                <ul class="list-disc pl-3 ">
+                    <li class="font-bold">a += 5; &rarr; (a = 10): a += 5: a = a + 5 ( 10+5 = 15 )</li>
+                    <li class="font-bold"> a *= 2; &rarr; (a=15): a *= 2 &rarr; a = a * 2 ( 15 * 2 = 30)</li>
+                </ul>
+                <p class="text-lg font-bold pt-4 pb-4"> Output</p>
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+
+<Span class="text-green-500"> 15 </Span>
+<Span class="text-green-500"> 30 </Span>
+             </pre>
+
+            </section>
+
+            <!-- 8 -->
+            <section id="eight" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#56;&#65039;&#8419;Practice Programs</h2>
+                <p class="p-4 font-semibold">&#9745; Program 1: Arithmetic Calculator</p>
+
+                <pre class="bg-gray-800 text-amber-600 rounded-lg p-3 ">
+<span> Java</span>
+<span class="text-pink-700"> class</span> <span class="text-blue-600">Program1</span> {
+  <span class="text-pink-700"> public static void</span><span class="text-blue-600"> main</span> ( String [] args )<span></span>
+    {
+      <Span> int a  = <span class="text-green-500">15,</span> b =<span class="text-green-500"> 4</span>;</Span>
+            
+      <Span> System.out.println ( <span class="text-green-500">"Sum = "</span> + (a = b);</Span>
+      <Span> System.out.println ( <span class="text-green-500">"Difference = "</span> + (a - b);</Span>
+      <Span> System.out.println ( <span class="text-green-500">"Product = "</span> + (a * b);</Span>
+      <Span> System.out.println ( <span class="text-green-500">"Quotient = "</span> + (a / b);</Span>
+      <Span> System.out.println ( <span class="text-green-500">"REmainder = "</span> + (a % b);</Span>             
+                 }
+            }
+             </pre>
+            </section>
+
+            <!-- 9 -->
+            <section id="nine" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#57;&#65039;&#8419;Practice Programs Two</h2>
+                <p class="p-4 font-semibold">&#9745; Program 2: Largest of Two Numbers</p>
+
+                <pre class="bg-black text-green-400 p-4 rounded overflow-x-auto text-sm">
+<code>
+class Program2 {
+    public static void main(String[] args) {
+        int a = 25, b = 40;
+
+        String result = (a > b) ? "A is greater" : "B is greater";
+        System.out.println(result);
+    }
+}
+</code>
+            </pre>
+            </section>
+
+            <!--10 -->
+            <section id="ten" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold md-3"> &#49;&#65039;&#8419;&#48;&#65039;&#8419;Practice Programs Three
+                </h2>
+                <p class="p-4 font-semibold">&#9745; Program 3: Check Eligibility Using Logical Operator</p>
+
+                <pre class="bg-black text-green-400 p-4 rounded overflow-x-auto text-sm">
+<code>
+class Program3 {
+    public static void main(String[] args) {
+        int age = 21;
+        boolean hasId = true;
+
+        if (age >= 18 && hasId) {
+            System.out.println("Eligible to vote");
+        } else {
+            System.out.println("Not eligible");
+        }
+    }
+}
+</code>
+            </pre>
+            </section>
+
+            <!-- 11 -->
+            <section id="eleven" class="card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-bold text-blue-700 mb-3">
+                    &#127919; Interview Tips (VERY IMPORTANT)
+                </h2>
+
+                <h3 class="text-lg font-semibold text-red-600 mb-2">
+                    &#128293; Most Asked Questions
+                </h3>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li>Difference between <b>&</b> and <b>&&</b></li>
+                    <li>Why <b>==</b> is not used for String comparison</li>
+                    <li>What is short-circuit operator</li>
+                    <li>Can ternary replace if-else?</li>
+                    <li>Output of tricky operator expressions</li>
+                </ul>
+
+                <h3 class="text-lg font-semibold text-purple-600 mt-4 mb-2">
+                    &#128293; Golden Rules
+                </h3>
+                <ul class="list-disc list-inside space-y-1 text-gray-700">
+                    <li><b>==</b> compares values, not objects</li>
+                    <li>Logical operators return boolean</li>
+                    <li>Arithmetic with integers → integer result</li>
+                    <li>Prefer readability over short syntax</li>
+                </ul>
+
+                <div class="mt-4 p-3 bg-white border-l-4 border-blue-600 italic text-gray-800">
+                    <b>Interview Line:</b><br>
+                    “Operators are symbols used to perform operations on data. Java provides
+                    arithmetic, relational, logical, bitwise, assignment, and conditional operators.”
+                </div>
+            </section>
         </main>
 
     </div>
