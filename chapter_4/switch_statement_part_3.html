@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32*32"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1a0WBC7gzH2m5vruS5y6ITiFyhgd4-2iPIw&s">
+  <title>Core Java Switch Statement - Old & New</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Tailwind Dark Mode Using : has() -->
+  <style>
+    body:has(#dark:checked) {
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
+
+    body:has(#dark:checked).card {
+      background-color: #020617;
+      color: #e5e7eb;
+    }
+
+    body:has(#dark:checked).sidebar {
+      background-color: #020617;
+    }
+
+    body:has(#dark:checked).header {
+      background-color: #020617;
+    }
+  </style>
+</head>
+
+<body class="bg-slate-400 text-gray-800 leading-relaxed">
+  <!-- HEADER -->
+  <header class="bg-gradient-to-tr from-slate-500 via-sky-400  to-purple-400 text-indigo-800 p-6 text-center">
+    <h1 class="text-4xl font-bold">Core Java - Chapter 4 Part-3</h1>
+    <p class="text-lg mt-2">Core Java Control Statements - Old & New</p>
+    <!-- Dark Mode Radio -->
+    <div class="flex justify-center gap-4 mt-4 text-sm">
+      <label class="cursor-pointer">
+        <input type="radio" name="theme" id="light" checked hidden>
+        &#9728; Light
+      </label>
+
+      <label class="cursor-pointer">
+        <input type="radio" name="theme" id="dark" hidden>
+        &#127769; Dark
+      </label>
+    </div>
+  </header>
+
+  <div class="flex flex-col md:flex-row">
+    <aside class="sidebar md:w-64 bg-slate-200 shadow-md p-4 md:sticky md:top-0 h-fit rounded-r-lg">
+      <h2 class="font-bold text-lg mb-3">Chapter 4 Part-2</h2>
+      <ul class="space-y-2 text-blue-600 text-sm">
+        <li><a href="#one">1. else-if Ladder</a></li>
+        <li><a href="#two">2. Why do we need it?</a></li>
+        <li><a href="#three">3. Syntax</a></li>
+        <li><a href="#four">4. Basic Example</a></li>
+        <li><a href="#five">5. Student Marks Example</a></li>
+        <li><a href="#six">6. Flowchart Thinking</a></li>
+        <li><a href="#seven">7. Common Mistakes</a></li>
+        <li><a href="#eight">8. else-if vs multiple if</a></li>
+        <li><a href="#nine">9. Advanced Login Example</a></li>
+        <li><a href="#ten">10. Nested else-if ladder</a></li>
+        <li><a href="#eleven">11. else-if vs switch</a></li>
+        <li><a href="#twelve">12. Performance Tip</a></li>
+        <li><a href="#thirteen">13. Practice Questions</a></li>
+        <li><a href="#fourteen">14. Interview One-Liner</a></li>
+        <li><a href="#fifteen">15. Interview One-Liner</a></li>
+        <li><a href="#sixteen">16. Interview One-Liner</a></li>
+        <li><a href="#seventeen">17. Interview One-Liner</a></li>
+        <li><a href="#eightee">18. Interview One-Liner</a></li>
+        <li><a href="#nineteen">19. Interview One-Liner</a></li>
+        <li><a href="#twenty">20. Interview One-Liner</a></li>
+      </ul>
+    </aside>
+
+
+    <!-- Content -->
+    <main class="flex-1 max-w-5xl mx-auto p-6 sm:p-6 space-y-8">
+
+      <!-- 1 -->
+      <section id=" one" class=" card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600 pb-3">1. What is a switch statement?</h2>
+        <p>
+          A switch statement is a <strong>multi-branch decision-making control statement</strong>.
+          It lets you execute <strong>one block of code out of many</strong>, based on the value of an expression.
+        </p>
+        <p>
+          👉 It is an <strong>alternative to long if-else if ladders</strong> when you compare
+          <strong>one variable with many fixed values</strong>.
+        </p>
+      </section>
+
+      <!-- 2 -->
+      <section id="#two" class=" card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">&#51;&#65039;&#8419; Syntax - OLD switch (Traditional)</h2>
+        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mt-4 overflow-x-auto">
+switch (expression) {
+    case value1:
+        // code
+        break;
+    case value2:
+        // code
+        break;
+    default:
+        // code
+}
+      </pre>
+      </section>
+
+      <!-- 3 -->
+      <section id="#three" class=" card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">3. Rules of OLD switch</h2>
+
+        <h3 class="text-xl font-semibold mt-4">Expression rules</h3>
+        <ul class="list-disc list-inside">
+          <li>byte</li>
+          <li>short</li>
+          <li>char</li>
+          <li>int</li>
+          <li>enum</li>
+          <li>String (since Java 7)</li>
+        </ul>
+
+        <p class="mt-2 text-red-600 font-semibold">&#10060; Not allowed:</p>
+        <ul class="list-disc list-inside">
+          <li>float, double</li>
+          <li>long</li>
+          <li>boolean</li>
+        </ul>
+
+        <h3 class="text-xl font-semibold mt-4">Case rules</h3>
+        <ul class="list-disc list-inside">
+          <li>case values must be constant</li>
+          <li>case values must be unique</li>
+          <li>Order does not matter</li>
+          <li>default is optional</li>
+        </ul>
+      </section>
+
+      <!-- 4 -->
+      <section id="#four" class=" card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">4. Example 1 - Simple Integer Switch</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-4 overflow-x-auto">
+int day = 3;
+
+switch (day) {
+    case 1:
+        System.out.println("Monday");
+        break;
+    case 2:
+        System.out.println("Tuesday");
+        break;
+    case 3:
+        System.out.println("Wednesday");
+        break;
+    default:
+        System.out.println("Invalid day");
+}
+      </pre>
+        <p class="pt-4"><strong>Explanation</strong></p>
+        <ul class="list-disc list-inside">
+          <li>day = 3</li>
+          <li>Control jumps to case 3</li>
+          <li>Prints Wednesday</li>
+          <li>break stops execution</li>
+        </ul>
+      </section>
+
+      <!-- 5 -->
+      <section id="#five" class=" card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-3">5. Why break is IMPORTANT?</h2>
+        <p>Without break, <strong>fall-through happens</strong>.</p>
+        <pre class="bg-gray-800 text-green-400 p-3 rounded-lg mt-3 overflow-x-auto">
+int num = 2;
+
+switch (num) {
+    case 1:
+        System.out.println("One");
+    case 2:
+        System.out.println("Two");
+    case 3:
+        System.out.println("Three");
+}
+      </pre>
+        <p class="pt-2 pb-2"><strong>Output</strong></p>
+        <pre class="bg-gray-800 text-white p-3 rounded">
+Two
+Three
+      </pre>
+        <p class="pt-2 pb-2">
+          <strong>Why?</strong><br />
+          case 2 matches, no break, execution continues to next cases.
+        </p>
+      </section>
+
+      <!-- 6 -->
+      <section id="six" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">6. Intentional Fall-through (Real Use)</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+int month = 2;
+
+switch (month) {
+    case 12:
+    case 1:
+    case 2:
+        System.out.println("Winter");
+        break;
+    case 3:
+    case 4:
+    case 5:
+        System.out.println("Summer");
+        break;
+}
+      </pre>
+        <p class="mt-3">✔ Used when multiple cases need same logic</p>
+      </section>
+
+      <!-- 7 -->
+      <section id="seven" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">7. default Case</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+int choice = 10;
+
+switch (choice) {
+    case 1:
+        System.out.println("Option 1");
+        break;
+    default:
+        System.out.println("Invalid option");
+}
+      </pre>
+        <p class="mt-3">👉 Runs when no case matches</p>
+      </section>
+
+      <!-- 8 -->
+      <section id="eight" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">8. Switch with String (Java 7+)</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+String browser = "Chrome";
+
+switch (browser) {
+    case "Chrome":
+        System.out.println("Fast browser");
+        break;
+    case "Firefox":
+        System.out.println("Secure browser");
+        break;
+    default:
+        System.out.println("Unknown browser");
+}
+      </pre>
+        <p class="mt-3">✔ Case-sensitive</p>
+        <p class="mt-3">&#10060; "chrome" ≠ "Chrome"</p>
+      </section>
+
+      <!-- 9 -->
+      <section id="nine" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">9. Switch with enum</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+enum Day { MON, TUE, WED }
+
+Day d = Day.MON;
+
+switch (d) {
+    case MON:
+        System.out.println("Monday");
+        break;
+    case TUE:
+        System.out.println("Tuesday");
+        break;
+}
+      </pre>
+        <p class="mt-3">✔ Clean & type-safe</p>
+      </section>
+
+      <!-- 10 -->
+      <section id="ten" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">10. Problems with OLD switch</h2>
+        <ul class="list-disc list-inside spacey-y-1 mt-3">
+          <li>Too many break</li>
+          <li>Easy to forget break</li>
+          <li>More lines of code</li>
+          <li>Error-prone</li>
+        </ul>
+      </section>
+
+      <!-- 11 -->
+      <section id="eleven" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">11. New Switch Expression (Arrow →)</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+switch (expression) {
+    case value -> statement;
+    case value2 -> statement;
+    default -> statement;
+}
+      </pre>
+      </section>
+
+      <!-- 12 -->
+      <section id="twelve" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">12. Example - New Switch</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+int day = 1;
+
+switch (day) {
+    case 1 -> System.out.println("Monday");
+    case 2 -> System.out.println("Tuesday");
+    default -> System.out.println("Invalid day");
+}
+      </pre>
+        <ul class="list-disc list-inside">
+          <li>No break needed</li>
+          <li>No fall-through</li>
+          <li>More readable</li>
+        </ul>
+      </section>
+
+      <!-- 13 -->
+      <section id="thirteen" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">13. New Switch with Multiple Values</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+int month = 2;
+
+switch (month) {
+    case 12, 1, 2 -> System.out.println("Winter");
+    case 3, 4, 5 -> System.out.println("Summer");
+    default -> System.out.println("Invalid month");
+}
+      </pre>
+      </section>
+
+      <!-- 14 -->
+      <section id="fourteen" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">14. Switch as an Expression (Returns Value)</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+int day = 3;
+
+String result = switch (day) {
+    case 1 -> "Monday";
+    case 2 -> "Tuesday";
+    case 3 -> "Wednesday";
+    default -> "Invalid day";
+};
+
+System.out.println(result);
+      </pre>
+      </section>
+
+      <!-- 15 -->
+      <section id="fifteen" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">15. Using yield (Block Switch)</h2>
+        <pre class="bg-gray-800  text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+int num = 10;
+
+String type = switch (num) {
+    case 0 -> "Zero";
+    case 1 -> "One";
+    default -> {
+        if (num > 0)
+            yield "Positive number";
+        else
+            yield "Negative number";
+    }
+};
+
+System.out.println(type);
+      </pre>
+      </section>
+
+      <!-- 16 -->
+      <section id="sixteen" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-3">16. Old vs New Switch - Comparison</h2>
+        <table class="w-full border border-slate-700 bg-white/70">
+          <tr class="bg-sky-500">
+            <th class="border p-2">Feature</th>
+            <th class="border p-2">Old Switch</th>
+            <th class="border p-2">New Switch</th>
+          </tr>
+          <tr>
+            <td class="border p-2">Break required</td>
+            <td class="border p-2">Yes</td>
+            <td class="border p-2">No</td>
+          </tr>
+          <tr>
+            <td class="border p-2">Fall-through</td>
+            <td class="border p-2">Yes</td>
+            <td class="border p-2">No</td>
+          </tr>
+          <tr>
+            <td class="border p-2">Returns value</td>
+            <td class="border p-2">No</td>
+            <td class="border p-2">Yes</td>
+          </tr>
+          <tr>
+            <td class="border p-2">Readability</td>
+            <td class="border p-2">Medium</td>
+            <td class="border p-2">High</td>
+          </tr>
+          <tr>
+            <td class="border p-2">Error-prone</td>
+            <td class="border p-2">More</td>
+            <td class="border p-2">Less</td>
+          </tr>
+        </table>
+      </section>
+
+      <!-- 17 -->
+      <section id="seventeen" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600">17. When to Use Switch?</h2>
+        <p class="mt-3 mb-3 font-semibold">✅ Use switch when:</p>
+        <ul class="list-disc list-inside">
+          <li>Comparing one variable</li>
+          <li>With fixed values</li>
+          <li>Better readability than if-else</li>
+        </ul>
+        <p class="mt-3 mb-3 font-semibold">❌ Avoid switch when:</p>
+        <ul class="list-disc list-inside">
+          <li>Complex conditions</li>
+          <li>Ranges (&gt;, &lt;)</li>
+          <li>Boolean logic</li>
+        </ul>
+      </section>
+
+      <!-- 18 -->
+      <section id="eighteen" class="card bg-white/70 p-6 rounded-xl shadow space-y-1">
+        <h2 class="text-2xl font-semibold text-blue-600  mb-3">18. Interview Questions (Important)</h2>
+        <p><strong>Q1.</strong> Why break is used in switch?<br />👉 To prevent fall-through.</p>
+        <p><strong>Q2.</strong> Can we use long in switch?<br />👉 No.</p>
+        <p><strong>Q3.</strong> Since when String is allowed?<br />👉 Java 7.</p>
+        <p><strong>Q4.</strong> What is yield?<br />👉 Used to return value from new switch block.</p>
+      </section>
+
+      <!-- 19 -->
+      <section id="nineteen" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-3">19. Real-Life Example (Menu Program)</h2>
+        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg  overflow-x-auto">
+int choice = 2;
+
+String item = switch (choice) {
+    case 1 -> "Pizza";
+    case 2 -> "Burger";
+    case 3 -> "Pasta";
+    default -> "Invalid choice";
+};
+
+System.out.println("You ordered: " + item);
+      </pre>
+      </section>
+
+      <!-- 20 -->
+      <section id="twenty" class="card bg-white/70 p-6 rounded-xl shadow">
+        <h2 class="text-2xl font-semibold text-blue-600 mb-3">20. What Next?</h2>
+        <ul class="list-disc list-inside space-y-1">
+          <li>Compare if-else vs switch deeply</li>
+          <li>MCQs + interview questions</li>
+          <li>Real-world Java project usage</li>
+          <li>Common switch mistakes</li>
+        </ul>
+      </section>
+    </main>
+  </div>
+  <!-- BACK TO TOP BUTTON (SCRIPT) -->
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-4 right-6
+   bg-gradient-to-tr from-orange-400 to-sky-500 text-white text-3xl w-12 h-12 rounded-full shadow-lg 
+   hover:bg-gradient-to-tr hover:from-fuchsia-400 hover:to-yellow-500 translate-y-1 transition ">
+    &uarr;
+  </button>
+  <!-- FOOTER -->
+  <footer class="text-center p-4 text-sm text-white/90">
+    &copy; Core Java Learning &#124; Chapter-4.
+  </footer>
+
+</body>
+
+</html>
