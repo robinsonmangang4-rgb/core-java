@@ -128,8 +128,7 @@
                 <pre class="code">
 for (initialization; condition; update) {
   // body
-}
-    </pre>
+}           </pre>
 
                 <p class="section-title pt-3 pb-3"> Breakdown ( IMPORTANT )</p>
                 <table class=" tableCode">
@@ -159,16 +158,15 @@ for (initialization; condition; update) {
             <!-- Section 4 -->
             <section id="four" class="content-card">
                 <h2 class="section-title">4. First <span class="for">&ensp;for&ensp;</span> Loop Program ( Zero level )
-                </h2>
-                <pre class="code">
+                </h2> 
+                <pre class="code"> 
 public class Main {
   public static void main(String[] args) {
       for (int i = 1; i <= 5; i++) {
           System.out.println(i);
       }
   }
-}
-    </pre>
+}               </pre> 
 
                 <h2 class="section-title pt-3 pb-3">Execution Flow ( Step-by-step )</h2>
                 <table class="tableCode">
@@ -262,8 +260,8 @@ for (int i = 10; i >= 1; i--) {
             </section>
 
             <!-- Section 7 -->
-            <section id="seven" class="content-card" >
-                <h2 class="section-title"> Multiple Statements in <span class="for">&ensp;for&ensp;</span> Loop</h2>
+            <section id="seven" class="content-card">
+                <h2 class="section-title">7. Multiple Statements in <span class="for">&ensp;for&ensp;</span> Loop</h2>
                 <p class="pt-3 text-lg font-semibold"> Multiple variables</p>
                 <pre class="code">
 for ( int i = 1, j = 10; i <= 5; i++, j--) {
@@ -271,13 +269,15 @@ for ( int i = 1, j = 10; i <= 5; i++, j--) {
 }
                 </pre>
 
-                <p class="pt-3 pb-3"> &#9989; Allowed <br> &#10060; Different data types not allowed in initialization</p>
+                <p class="pt-3 pb-3"> &#9989; Allowed <br> &#10060; Different data types not allowed in initialization
+                </p>
             </section>
 
             <!--  Section 8 -->
 
-            <section id="eight" class="content-card" >
-                <h2 class="section-title"> 8. <span class="for">&ensp;for&ensp;</span> Loop Without Curly Braces ( &#9888; Dangerous)</h2>
+            <section id="eight" class="content-card">
+                <h2 class="section-title"> 8. <span class="for">&ensp;for&ensp;</span> Loop Without Curly Braces (
+                    &#9888; Dangerous)</h2>
                 <pre class="code">
 for ( int i = 1, i <= 3; i++,) {
     System.out.println ( i );
@@ -285,13 +285,17 @@ for ( int i = 1, i <= 3; i++,) {
 }
                 </pre>
 
-                <p class="pt-3 pb-3"> &#128073;Only <strong>first statement </strong>is inside Loop <br> <strong>Always use {}</strong></p>
+                <p class="pt-3 pb-3"> &#128073;Only <strong>first statement </strong>is inside Loop <br> <strong>Always
+                        use {}</strong></p>
             </section>
 
 
             <!-- Section 9 -->
             <section id="nine" class="content-card">
-                <h2 class="section-title">9. Nested for Loops</h2>
+                <h2 class="section-title">9. Nested <span class="for">&ensp;for&ensp;</span> Loops ( Intermediate Level
+                    )</h2>
+
+                <p class="pt-3 pl-3 text-lg font-semibold"> Pattern Printing (Classic Interview Topic)</p>
                 <pre class="code">
 for (int i = 1; i <= 3; i++) {
   for (int j = 1; j <= 3; j++) {
@@ -300,11 +304,24 @@ for (int i = 1; i <= 3; i++) {
   System.out.println();
 }
     </pre>
+
+                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+                <pre class="code">
+* * *
+* * *
+* * *
+    </pre>
+
+                <p class="pt-3 text-lg font-semibold"> How it works</p>
+                <ul class="list-disc list-inside p-2 space-y-1">
+                    <li> Outer loop &rarr; rows </li>
+                    <li> Inner loop &rarr; columns</li>
+                </ul>
             </section>
 
-            <!-- Section 8 -->
-            <section class="content-card">
-                <h2 class="section-title">10. Triangle Pattern (Interview Favorite)</h2>
+            <!-- Section 10 -->
+            <section id="ten" class="content-card">
+                <h2 class="section-title">10. Triangle Pattern Example (Interview Favorite)</h2>
                 <pre class="code">
 for (int i = 1; i <= 5; i++) {
   for (int j = 1; j <= i; j++) {
@@ -313,11 +330,75 @@ for (int i = 1; i <= 5; i++) {
   System.out.println();
 }
     </pre>
+
+                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+                <pre class="code">
+* 
+* * 
+* * *
+* * * *
+* * * * *
+    </pre>
+
             </section>
 
-            <!-- Section 9 -->
+            <!-- Section 11 -->
+            <section id="eleven" class="content-card">
+                <h2 class="section-title">11. <span class="for">&ensp;for&ensp;</span> Loop with <span
+                        class="for">&ensp;break&ensp;</span></h2>
+                <pre class="code">
+for (int i = 1; i <= 5; i++) {
+  if ( i == 5) {
+    break;
+  }
+  System.out.println(i);
+}
+                </pre>
+
+                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+                <pre class="code">
+1 2 3 4 
+    </pre>
+                <p class="pt-3">&#128073; <span class="for">&ensp;break&ensp;</span> exits loop immediately</p>
+            </section>
+
+
+            <!-- Section 12 -->
+            <section id="twelve" class="content-card">
+                <h2 class="section-title">12. <span class="for">&ensp;for&ensp;</span> Loop with <span
+                        class="for">&ensp;continue&ensp;</span></h2>
+                <pre class="code">
+for (int i = 1; i <= 5; i++) {
+  if ( i == 3) {
+    break;
+  }
+  System.out.println(i);
+}
+    </pre>
+
+                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+                <pre class="code">
+1 2 4 5 
+    </pre>
+                <p class="pt-3">&#128073; <span class="for">&ensp;continue&ensp;</span> skips current iteration only</p>
+            </section>
+
+
+            <!-- Section 13 -->
             <section class="content-card">
-                <h2 class="section-title">13. Enhanced for Loop</h2>
+                <h2 class="section-title">13. Advanced: Enhanced <span class="for">&ensp;for&ensp;</span> Loop (
+                    for-each )</h2>
+                <p class="pt-3 text-lg font-semibold"> Used for:</p>
+                <ul class="list-disc list-inside p-2 space-y-1">
+                    <li> Arrays</li>
+                    <li> Collections</li>
+                </ul>
+                <p class="pt-3 text-lg font-semibold"> Syntax</p>
+                <pre class="code">
+for (datatype variable : array){
+    // code
+}               </pre>
+                <p class="pt-3 text-lg font-semibold"> Example</p>
                 <pre class="code">
 int[] numbers = {10, 20, 30};
 
@@ -325,6 +406,60 @@ for (int num : numbers) {
   System.out.println(num);
 }
     </pre>
+                <ul class=" p-2 space-y-1">
+                    <li class="font-semibold"> &#128204; Limitation</li>
+                    <li>&#10060; index access</li>
+                    <li>&#10060; Cannot modify structure</li>
+                </ul>
+            </section>
+
+            <!-- Section 14 -->
+            <section class="content-card">
+                <h2 class="section-title">14. Advanced: <span class="for">&ensp;for(;;)&ensp;</span> Infinite Loop</h2>
+                <pre class="code">
+for (;;){
+    System.out.println("Running forever");
+}
+                </pre>
+                <p class="pt-3 text-lg font-semibold">&#9989; Valid Java <br> Used in :</p>
+                <ul class="list-disc list-inside p-2 space-y-1">
+                    <li> Game loops</li>
+                    <li> Servers</li>
+                    <li> Embedded systems</li>
+                </ul>
+            </section>
+
+            <!-- Section 15 -->
+            <section class="content-card">
+                <h2 class="section-title">15. Scope of Variables in <span class="for">&ensp;for&ensp;</span> Loop
+                    (Tricky)</h2>
+                <pre class="code">
+for (int i = 1; i <= 3; i++){
+    System.out.println("i");
+}
+// System.out.println(i); &#10060; ERROR
+                </pre>
+                <p class="pt-3 text-lg"> &#128073; <span class="for">&ensp;i&ensp;</span> exists <strong> only inside
+                        the loop </strong>
+                </p>
+            </section>
+            
+            <!-- Section 16 -->
+            <section id="twelve" class="content-card">
+                <h2 class="section-title">16. Performance & Best Practices (Pro Level)</h2>
+                <p class="pt-3 text-lg font-semibold">&#10060;Bad</p>
+                <pre class="code">
+for (int i = 0; i < arr.length; i++) {
+  }
+    </pre>
+
+                <p class="pt-3  text-lg font-semibold">&#9989; Better</p>
+                <pre class="code">
+int len = arr.length;
+for (int i =0; i< len; i++){
+}
+    </pre>
+                <p class="pt-3 font-medium">&#128073; Reduces repeated property access (minor but pro habit) </p>
             </section>
 
             <!-- Pro Tip -->
@@ -360,7 +495,7 @@ hover:bg-gradient-to-tr hover:from-fuchsia-400 hover:to-yellow-500 translate-y-1
         =========================== */
         document.querySelectorAll(".content-card").forEach(card => {
             card.classList.add(
-                "bg-white/70",
+                "bg-white/80",
                 "dark:bg-slate-800",
                 "p-6",
                 "rounded-xl",
@@ -386,7 +521,7 @@ hover:bg-gradient-to-tr hover:from-fuchsia-400 hover:to-yellow-500 translate-y-1
         });
 
         document.querySelectorAll(".for").forEach(f => {
-            f.classList.add("bg-slate-400", "rounded-md", "font-mono",);
+            f.classList.add("bg-slate-300", "rounded-md", "font-mono",);
         });
     </script>
 
