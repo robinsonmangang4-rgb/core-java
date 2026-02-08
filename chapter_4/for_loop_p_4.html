@@ -2,301 +2,350 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
-    <link rel="icon" type="image/png" sizes="32*32"
-        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1a0WBC7gzH2m5vruS5y6ITiFyhgd4-2iPIw&s">
-    <title>for-Looop: Core Java: Control Statement</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <!-- Tailwind Dark Mode Using : has() -->
-    <style>
-        body:has(#dark:checked) {
-            background-color: #0f172a;
-            color: #e5e7eb;
-        }
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Core Java for Loop tutorial from zero to advanced with examples, patterns, interview questions.">
+  <meta name="keywords" content="Core Java, for loop, Java loops, Java control statements">
+  <meta name="author" content="Core Java Learning">
 
-        body:has(#dark:checked).card {
-            background-color: #020617;
-            color: #e5e7eb;
-        }
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  <link rel="icon" type="image/png" sizes="32*32"
+    href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1a0WBC7gzH2m5vruS5y6ITiFyhgd4-2iPIw&s">
+  <title>for-Looop: Core Java: Control Statement</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Tailwind Dark Mode Using : has() -->
+  <style>
+    body:has(#dark:checked) {
+      background-color: #0f172a;
+      color: #e5e7eb;
+    }
 
-        body:has(#dark:checked).sidebar {
-            background-color: #020617;
-        }
+    body:has(#dark:checked).card {
+      background-color: #020617;
+      color: #e5e7eb;
+    }
 
-        body:has(#dark:checked).header {
-            background-color: #020617;
-        }
-    </style>
+    body:has(#dark:checked).sidebar {
+      background-color: #020617;
+    }
+
+    body:has(#dark:checked).header {
+      background-color: #020617;
+    }
+
+
+    /* Hide scrollbar but keep scrolling */
+    .sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .sidebar::-webkit-scrollbar-thumb {
+      background: rgba(100, 116, 139, 0.5);
+      border-radius: 10px;
+    }
+  </style>
+
 </head>
 
-<body class="bg-slate-400 text-gray-900 leading-relaxed">
-    <!-- HEADER -->
-    <header class="bg-gradient-to-tr from-slate-500 via-sky-400  to-purple-400 text-indigo-800 p-6 text-center">
-        <h1 class="text-4xl font-bold">Core Java - Chapter 4 Part-4</h1>
-        <p class="text-lg mt-2">Core Java Control Statements - for Loop</p>
-        <!-- Dark Mode Radio -->
-        <div class="flex justify-center gap-4 mt-4 text-sm">
-            <label class="cursor-pointer">
-                <input type="radio" name="theme" id="light" checked hidden>
-                &#9728; Light
-            </label>
+<body class="bg-slate-100 dark:bg-slate-900 text-gray-900 dark:text-gray-200">
 
-            <label class="cursor-pointer">
-                <input type="radio" name="theme" id="dark" hidden>
-                &#127769; Dark
-            </label>
-        </div>
-    </header>
+  <!-- HEADER -->
+  <header class="relative bg-gradient-to-tr from-slate-500 via-sky-400 to-purple-400 
+  p-4 sm:p-6 text-center">
 
-    <div class="flex flex-col md:flex-row">
-        <aside class="sidebar md:w-64 bg-slate-200 shadow-md p-4 md:sticky md:top-0 h-fit rounded-r-lg">
-            <h2 class="font-bold text-lg mb-3">Chapter 4 <Part-4></Part-4></h2>
-            <ul class="space-y-1 text-blue-600 text-sm">
-                <li><a href="#one">1. Control Statements? </a></li>
-                <li><a href="#two">2. for Loop? </a></li>
-                <li><a href="#three">3. Basic Syntax</a></li>
-                <li><a href="#four">4. First Program</a></li>
-                <li><a href="#five">5. Common Mistakes</a></li>
-                <li><a href="#six">6. Reverse Loop</a></li>
-                <li><a href="#seven">7. Multiple Statements </a></li>
-                <li><a href="#eight">8. Without Curly Braces</a></li>
-                <li><a href="#nine">9. Nested for Loops</a></li>
-                <li><a href="#ten">10. Triangle Pattern Example</a></li>
-                <li><a href="#eleven">11. for Loop with break</a></li>
-                <li><a href="#twelve">12. for Loop with continue</a></li>
-                <li><a href="#thirteen">13. Advanced: Enhanced for Loop</a></li>
-                <li><a href="#fourteen">14. Advanced: for(;;) Infinite Loop</a></li>
-                <li><a href="#fifteen">15. Scope of Variables in for Loop (Tricky)</a></li>
-                <li><a href="#sixteen">16. Performance & Best Practices (Pro Level)</a></li>
-                <li><a href="#seventeen">17. Interview Questions (Must Know)</a></li>
-                <li><a href="#eightee">18. Real-World Use Cases</a></li>
-                <li><a href="#nineteen">19. Pro Tip Summary</a></li>
-                <li><a href="#twenty">20. 50+ for loop Practices Problems</a></li>
-            </ul>
-        </aside>
+    <!-- Hamburger -->
+    <button id="menuBtn" class="md:hidden absolute right-4 top-5 text-3xl text-indigo-900">
+      <i class="fa-solid fa-bars"></i>
+    </button>
+
+    <!-- Responsive Heading -->
+    <h1 class="font-bold text-indigo-800">
+      <span class="block md:hidden text-xl">
+        Core Java
+      </span>
+
+      <span class="hidden md:block lg:hidden text-2xl">
+        Core Java - for Loop
+      </span>
+
+      <span class="hidden lg:block text-4xl">
+        Core Java - Chapter 4 Part-4 (for Loop)
+      </span>
+    </h1>
+
+    <p class="mt-2 text-sm sm:text-base lg:text-lg">
+      Control Statements Tutorial
+    </p>
+  </header>
 
 
-        <!-- Content -->
-        <main class="flex-1 max-w-5xl mx-auto p-6 sm:p-6 space-y-8">
-            <!-- Section 1 -->
-            <section id="one" class="content-card">
-                <h2 class="section-title">1. What are Control Statements?</h2>
-                <p class="mt-3">Control statements decide <strong> how your program flows</strong>:</p>
-                <ul class="list-disc pl-6 space-y-1">
-                    <li>What runs</li>
-                    <li>How many times it runs</li>
-                    <li>When it stops</li>
-                </ul>
+  <div class="flex flex-col md:flex-row">
+    <aside id="sidebar" class="
+  sidebar
+  fixed 
+  top-0 left-0 z-40
+  w-64
+  h-screen md:h-[calc(100vh-120px)]
+  overflow-y-auto
+  -translate-x-full md:translate-x-0
+  transition-transform duration-300
+  bg-slate-200 dark:bg-slate-800
+  shadow-md
+  p-4
+  md:sticky md:top-28
+  rounded-r-lg
+">
 
-                <p class="mt-3 font-medium">Java control statements:</p>
-                <ul class="list-decimal list-inner pl-6 space-y-1">
-                    <li><strong>Selection</strong> &rarr; <span class="for">&ensp;if&ensp;</span>, <span
-                            class="for">&ensp;switch&ensp;</span></li>
-                    <li><strong>Iteration</strong> &rarr;<span class="for">&ensp;for&ensp;</span>, <span
-                            class="for">&ensp;while&ensp;</span>, <span class="for">&ensp;do-while&ensp;</span></li>
-                    <li><strong>Jump</strong> &rarr; <span class="for">&ensp;break&ensp;</span>,<span
-                            class="for">&ensp;continue&ensp;</span>, <span class="for">&ensp;return&ensp;</span></li>
-                </ul>
+      <h2 class="font-bold text-lg mb-3">Chapter 4 <Part-4></Part-4></h2>
+      <ul class="space-y-2 text-blue-600 text-sm">
+        <li><a href="#one">1. Control Statements? </a></li>
+        <li><a href="#two">2. for Loop? </a></li>
+        <li><a href="#three">3. Basic Syntax</a></li>
+        <li><a href="#four">4. First Program</a></li>
+        <li><a href="#five">5. Common Mistakes</a></li>
+        <li><a href="#six">6. Reverse Loop</a></li>
+        <li><a href="#seven">7. Multiple Statements </a></li>
+        <li><a href="#eight">8. Without Curly Braces</a></li>
+        <li><a href="#nine">9. Nested for Loops</a></li>
+        <li><a href="#ten">10. Triangle Pattern Example</a></li>
+        <li><a href="#eleven">11. for Loop with break</a></li>
+        <li><a href="#twelve">12. for Loop with continue</a></li>
+        <li><a href="#thirteen">13. Advanced: Enhanced for Loop</a></li>
+        <li><a href="#fourteen">14. Advanced: for(;;) Infinite Loop</a></li>
+        <li><a href="#fifteen">15. Scope of Variables in for Loop (Tricky)</a></li>
+        <li><a href="#sixteen">16. Performance & Best Practices (Pro Level)</a></li>
+        <li><a href="#seventeen">17. Interview Questions (Must Know)</a></li>
+        <li><a href="#eightee">18. Real-World Use Cases</a></li>
+        <li><a href="#nineteen">19. Pro Tip Summary</a></li>
+        <li><a href="#twenty">20. 50+ for loop Practices Problems</a></li>
+      </ul>
+    </aside>
 
-                <p class="mt-3 text-lg  text-blue-600 font-serif">&#9989;We are Focusing on <strong>Iteration</strong>
-                    &rarr; <span class="for">&ensp;for&ensp;</span> loop</p>
-            </section>
+    <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
+      <div id="progressBar" class="h-1 bg-gradient-to-r from-sky-400 to-purple-500 w-0"></div>
+    </div>
 
-            <!-- Section 2 -->
-            <section id="two" class="content-card">
-                <h2 class="section-title">2. What is a <span class="for">&ensp;for&ensp;</span> Loop? ( <strong>Beginner
-                        Level</strong> )
-                </h2>
-                <p class="mt-3">A <span class="for">&ensp;for&ensp;</span>loop is used
-                    when: <br>
-                    <li class="list-disc list-inside">you know how many times you want to repeat something.</li>
-                </p>
-                <p class="text-lg"> <strong> Real-life example</strong> </p>
-                <ul class="pl-2">
-                    <li>"Print attendance for <strong>30 students</strong> "</li>
-                    <li>"Run a task<strong> 10 times</strong>" </li>
-                </ul>
-                <hr class="mt-3">
-                <p class="mt-2"> That's a <span class="for">&ensp;for&ensp;</span> loop job.</p>
-            </section>
+    <!-- Content -->
+    <main class="flex-1 max-w-full sm:max-w-3xl lg:max-w-5xl mx-auto p-4 sm:p-6 space-y-6 sm:space-y-8">
+      <!-- Section 1 -->
+      <section id="one" class="content-card card">
+        <h2 class="section-title">1. What are Control Statements?</h2>
+        <p class="mt-3">Control statements decide <strong> how your program flows</strong>:</p>
+        <ul class="list-disc pl-6 space-y-1">
+          <li>What runs</li>
+          <li>How many times it runs</li>
+          <li>When it stops</li>
+        </ul>
 
-            <!-- Section 3 -->
-            <section id="three" class="content-card">
-                <h2 class="section-title">3. Basic Syntax (Must Memorize)</h2>
-                <pre class="code">
+        <p class="mt-3 font-medium">Java control statements:</p>
+        <ul class="list-decimal list-inner pl-6 space-y-1">
+          <li><strong>Selection</strong> &rarr; <span class="for">&ensp;if&ensp;</span>, <span
+              class="for">&ensp;switch&ensp;</span></li>
+          <li><strong>Iteration</strong> &rarr;<span class="for">&ensp;for&ensp;</span>, <span
+              class="for">&ensp;while&ensp;</span>, <span class="for">&ensp;do-while&ensp;</span></li>
+          <li><strong>Jump</strong> &rarr; <span class="for">&ensp;break&ensp;</span>,<span
+              class="for">&ensp;continue&ensp;</span>, <span class="for">&ensp;return&ensp;</span></li>
+        </ul>
+
+        <p class="mt-3 text-lg  text-blue-600 font-serif">&#9989;We are Focusing on <strong>Iteration</strong>
+          &rarr; <span class="for">&ensp;for&ensp;</span> loop</p>
+      </section>
+
+      <!-- Section 2 -->
+      <section id="two" class="content-card">
+        <h2 class="section-title">2. What is a <span class="for">&ensp;for&ensp;</span> Loop? ( <strong>Beginner
+            Level</strong> )
+        </h2>
+        <p class="mt-3">A <span class="for">&ensp;for&ensp;</span>loop is used
+          when: <br>
+          <li class="list-disc list-inside">you know how many times you want to repeat something.</li>
+        </p>
+        <p class="text-lg"> <strong> Real-life example</strong> </p>
+        <ul class="pl-2">
+          <li>"Print attendance for <strong>30 students</strong> "</li>
+          <li>"Run a task<strong> 10 times</strong>" </li>
+        </ul>
+        <hr class="mt-3">
+        <p class="mt-2"> That's a <span class="for">&ensp;for&ensp;</span> loop job.</p>
+      </section>
+
+      <!-- Section 3 -->
+      <section id="three" class="content-card">
+        <h2 class="section-title">3. Basic Syntax (Must Memorize)</h2>
+        <pre class="code">
 for (initialization; condition; update) {
   // body
 }           </pre>
+        <p class="section-title pt-3 pb-3"> Breakdown ( IMPORTANT )</p>
+        <table class=" tableCode">
+          <tr class="bg-sky-500">
+            <td class="border p-2 text-md font-semibold">Part</td>
+            <td class="border p-2 text-md font-semibold">Meaning</td>
+          </tr>
+          <tr>
+            <td class=" border p-2"> initialization</td>
+            <td class="border p-2">Runs <strong>Once</strong></td>
+          </tr>
+          <tr>
+            <td class="border p-2"> condition</td>
+            <td class="border p-2"> Checked <strong>before every loop</strong></td>
+          </tr>
+          <tr>
+            <td class="border p-2">update</td>
+            <td class="border p-2"> Runs <strong> after each Iteration</strong></td>
+          </tr>
+          <tr>
+            <td class="border p-2"> body</td>
+            <td class="border p-2">Code that repeats</td>
+          </tr>
+        </table>
+      </section>
 
-                <p class="section-title pt-3 pb-3"> Breakdown ( IMPORTANT )</p>
-                <table class=" tableCode">
-                    <tr class="bg-sky-500">
-                        <td class="border p-2 text-md font-semibold">Part</td>
-                        <td class="border p-2 text-md font-semibold">Meaning</td>
-                    </tr>
-                    <tr>
-                        <td class=" border p-2"> initialization</td>
-                        <td class="border p-2">Runs <strong>Once</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="border p-2"> condition</td>
-                        <td class="border p-2"> Checked <strong>before every loop</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="border p-2">update</td>
-                        <td class="border p-2"> Runs <strong> after each Iteration</strong></td>
-                    </tr>
-                    <tr>
-                        <td class="border p-2"> body</td>
-                        <td class="border p-2">Code that repeats</td>
-                    </tr>
-                </table>
-            </section>
-
-            <!-- Section 4 -->
-            <section id="four" class="content-card">
-                <h2 class="section-title">4. First <span class="for">&ensp;for&ensp;</span> Loop Program ( Zero level )
-                </h2> 
-                <pre class="code"> 
+      <!-- Section 4 -->
+      <section id="four" class="content-card">
+        <h2 class="section-title">4. First <span class="for">&ensp;for&ensp;</span> Loop Program ( Zero level )
+        </h2>
+        <pre class="code">
 public class Main {
   public static void main(String[] args) {
       for (int i = 1; i <= 5; i++) {
           System.out.println(i);
       }
   }
-}               </pre> 
+}               </pre>
 
-                <h2 class="section-title pt-3 pb-3">Execution Flow ( Step-by-step )</h2>
-                <table class="tableCode">
-                    <tr class="bg-sky-400">
-                        <td class="border p-3">Step</td>
-                        <td class="border p-3"> Value of <span class="for">&ensp;i&ensp;</span></td>
-                        <td class="border p-3"> Condition</td>
-                        <td class="border p-3"> Output</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-3">1</td>
-                        <td class="border p-3">1</td>
-                        <td class="border p-3"> true </td>
-                        <td class="border p-3">1</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-3">2</td>
-                        <td class="border p-3">2</td>
-                        <td class="border p-3"> true </td>
-                        <td class="border p-3">2</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-3">3</td>
-                        <td class="border p-3">3</td>
-                        <td class="border p-3"> true </td>
-                        <td class="border p-3">3</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-3">4</td>
-                        <td class="border p-3">4</td>
-                        <td class="border p-3"> true </td>
-                        <td class="border p-3">4</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-3">5</td>
-                        <td class="border p-3">5</td>
-                        <td class="border p-3"> true </td>
-                        <td class="border p-3">5</td>
-                    </tr>
-                    <tr>
-                        <td class="border p-3">6</td>
-                        <td class="border p-3">6</td>
-                        <td class="border p-3"> false </td>
-                        <td class="border p-3">loop stops</td>
-                    </tr>
-                </table>
-                <p class="pt-3 text-md font-semibold"> Golden rule:
-                </p>
-                <p class="pl-2">If condition becomes <span class="for">&ensp;false&ensp;</span>, loop ends.</p>
+        <h2 class="section-title pt-3 pb-3">Execution Flow ( Step-by-step )</h2>
+        <div class="overflow-x-auto-auto">
+          <table class="tableCode">
+            <tr class="bg-sky-400">
+              <td class="border p-3">Step</td>
+              <td class="border p-3"> Value of <span class="for">&ensp;i&ensp;</span></td>
+              <td class="border p-3"> Condition</td>
+              <td class="border p-3"> Output</td>
+            </tr>
+            <tr>
+              <td class="border p-3">1</td>
+              <td class="border p-3">1</td>
+              <td class="border p-3"> true </td>
+              <td class="border p-3">1</td>
+            </tr>
+            <tr>
+              <td class="border p-3">2</td>
+              <td class="border p-3">2</td>
+              <td class="border p-3"> true </td>
+              <td class="border p-3">2</td>
+            </tr>
+            <tr>
+              <td class="border p-3">3</td>
+              <td class="border p-3">3</td>
+              <td class="border p-3"> true </td>
+              <td class="border p-3">3</td>
+            </tr>
+            <tr>
+              <td class="border p-3">4</td>
+              <td class="border p-3">4</td>
+              <td class="border p-3"> true </td>
+              <td class="border p-3">4</td>
+            </tr>
+            <tr>
+              <td class="border p-3">5</td>
+              <td class="border p-3">5</td>
+              <td class="border p-3"> true </td>
+              <td class="border p-3">5</td>
+            </tr>
+            <tr>
+              <td class="border p-3">6</td>
+              <td class="border p-3">6</td>
+              <td class="border p-3"> false </td>
+              <td class="border p-3">loop stops</td>
+            </tr>
+          </table>
+        </div>
+        <p class="pt-3 text-md font-semibold"> Golden rule:
+        </p>
+        <p class="pl-2">If condition becomes <span class="for">&ensp;false&ensp;</span>, loop ends.</p>
 
-            </section>
+      </section>
 
-            <!-- Section 5 -->
-            <section id="five" class="content-card">
-                <h2 class="section-title">5. Common Beginner Mistakes</h2>
+      <!-- Section 5 -->
+      <section id="five" class="content-card">
+        <h2 class="section-title">5. Common Beginner Mistakes</h2>
 
-                <p class="mt-3 font-semibold text-red-500"> &cross; Infinite Loop</p>
-                <pre class="code">
+        <p class="mt-3 font-semibold text-red-500"> &cross; Infinite Loop</p>
+        <pre class="code">
 for (int i = 1; i <= 5; ) {
   System.out.println(i);
 }
     </pre>
 
-                <p class="pt-2 pb-4"> &#128073; No update &rarr; infinite loop</p>
-                <hr>
-                <p class="mt-3 font-semibold text-red-500">&cross; Wrong Condition</p>
-                <pre class="code">
+        <p class="pt-2 pb-4"> &#128073; No update &rarr; infinite loop</p>
+        <hr>
+        <p class="mt-3 font-semibold text-red-500">&cross; Wrong Condition</p>
+        <pre class="code">
 for (int i = 5; i >= 1; i++) {
   System.out.println(i);
 }
     </pre>
-                <p class="pt-3">&#128073; <span class="for">&ensp;i++&ensp;</span> increases forever &rarr; infinite
-                    loop</p>
-            </section>
+        <p class="pt-3">&#128073; <span class="for">&ensp;i++&ensp;</span> increases forever &rarr; infinite
+          loop</p>
+      </section>
 
-            <!-- Section 6 -->
-            <section id="six" class="content-card">
-                <h2 class="section-title">6. Reverse Loop ( Basic but Powerful )</h2>
-                <pre class="code">
+      <!-- Section 6 -->
+      <section id="six" class="content-card">
+        <h2 class="section-title">6. Reverse Loop ( Basic but Powerful )</h2>
+        <pre class="code">
 for (int i = 10; i >= 1; i--) {
   System.out.println(i);
 }
     </pre>
 
-                <p class="pt-3">&#128204; Used in:</p>
-                <ul class="list-disc list-inside p-2 space-y-1">
-                    <li> Countdown timers</li>
-                    <li> Stack processing</li>
-                    <li> Reverse arrays</li>
-                </ul>
-            </section>
+        <p class="pt-3">&#128204; Used in:</p>
+        <ul class="list-disc list-inside p-2 space-y-1">
+          <li> Countdown timers</li>
+          <li> Stack processing</li>
+          <li> Reverse arrays</li>
+        </ul>
+      </section>
 
-            <!-- Section 7 -->
-            <section id="seven" class="content-card">
-                <h2 class="section-title">7. Multiple Statements in <span class="for">&ensp;for&ensp;</span> Loop</h2>
-                <p class="pt-3 text-lg font-semibold"> Multiple variables</p>
-                <pre class="code">
+      <!-- Section 7 -->
+      <section id="seven" class="content-card">
+        <h2 class="section-title">7. Multiple Statements in <span class="for">&ensp;for&ensp;</span> Loop</h2>
+        <p class="pt-3 text-lg font-semibold"> Multiple variables</p>
+        <pre class="code">
 for ( int i = 1, j = 10; i <= 5; i++, j--) {
     System.out.println ( i + " " + j);
 }
                 </pre>
 
-                <p class="pt-3 pb-3"> &#9989; Allowed <br> &#10060; Different data types not allowed in initialization
-                </p>
-            </section>
+        <p class="pt-3 pb-3"> &#9989; Allowed <br> &#10060; Different data types not allowed in initialization
+        </p>
+      </section>
 
-            <!--  Section 8 -->
+      <!--  Section 8 -->
 
-            <section id="eight" class="content-card">
-                <h2 class="section-title"> 8. <span class="for">&ensp;for&ensp;</span> Loop Without Curly Braces (
-                    &#9888; Dangerous)</h2>
-                <pre class="code">
+      <section id="eight" class="content-card">
+        <h2 class="section-title"> 8. <span class="for">&ensp;for&ensp;</span> Loop Without Curly Braces (
+          &#9888; Dangerous)</h2>
+        <pre class="code">
 for ( int i = 1, i <= 3; i++,) {
     System.out.println ( i );
     System.out.println ( " Hello" );
 }
                 </pre>
 
-                <p class="pt-3 pb-3"> &#128073;Only <strong>first statement </strong>is inside Loop <br> <strong>Always
-                        use {}</strong></p>
-            </section>
+        <p class="pt-3 pb-3"> &#128073;Only <strong>first statement </strong>is inside Loop <br> <strong>Always
+            use {}</strong></p>
+      </section>
 
 
-            <!-- Section 9 -->
-            <section id="nine" class="content-card">
-                <h2 class="section-title">9. Nested <span class="for">&ensp;for&ensp;</span> Loops ( Intermediate Level
-                    )</h2>
+      <!-- Section 9 -->
+      <section id="nine" class="content-card">
+        <h2 class="section-title">9. Nested <span class="for">&ensp;for&ensp;</span> Loops ( Intermediate Level
+          )</h2>
 
-                <p class="pt-3 pl-3 text-lg font-semibold"> Pattern Printing (Classic Interview Topic)</p>
-                <pre class="code">
+        <p class="pt-3 pl-3 text-lg font-semibold"> Pattern Printing (Classic Interview Topic)</p>
+        <pre class="code">
 for (int i = 1; i <= 3; i++) {
   for (int j = 1; j <= 3; j++) {
       System.out.print("* ");
@@ -305,24 +354,24 @@ for (int i = 1; i <= 3; i++) {
 }
     </pre>
 
-                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
-                <pre class="code">
+        <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+        <pre class="code">
 * * *
 * * *
 * * *
     </pre>
 
-                <p class="pt-3 text-lg font-semibold"> How it works</p>
-                <ul class="list-disc list-inside p-2 space-y-1">
-                    <li> Outer loop &rarr; rows </li>
-                    <li> Inner loop &rarr; columns</li>
-                </ul>
-            </section>
+        <p class="pt-3 text-lg font-semibold"> How it works</p>
+        <ul class="list-disc list-inside p-2 space-y-1  text-blue-600 text-xs sm:text-sm">
+          <li> Outer loop &rarr; rows </li>
+          <li> Inner loop &rarr; columns</li>
+        </ul>
+      </section>
 
-            <!-- Section 10 -->
-            <section id="ten" class="content-card">
-                <h2 class="section-title">10. Triangle Pattern Example (Interview Favorite)</h2>
-                <pre class="code">
+      <!-- Section 10 -->
+      <section id="ten" class="content-card">
+        <h2 class="section-title">10. Triangle Pattern Example (Interview Favorite)</h2>
+        <pre class="code">
 for (int i = 1; i <= 5; i++) {
   for (int j = 1; j <= i; j++) {
       System.out.print("* ");
@@ -331,8 +380,8 @@ for (int i = 1; i <= 5; i++) {
 }
     </pre>
 
-                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
-                <pre class="code">
+        <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+        <pre class="code">
 * 
 * * 
 * * *
@@ -340,13 +389,13 @@ for (int i = 1; i <= 5; i++) {
 * * * * *
     </pre>
 
-            </section>
+      </section>
 
-            <!-- Section 11 -->
-            <section id="eleven" class="content-card">
-                <h2 class="section-title">11. <span class="for">&ensp;for&ensp;</span> Loop with <span
-                        class="for">&ensp;break&ensp;</span></h2>
-                <pre class="code">
+      <!-- Section 11 -->
+      <section id="eleven" class="content-card">
+        <h2 class="section-title">11. <span class="for">&ensp;for&ensp;</span> Loop with <span
+            class="for">&ensp;break&ensp;</span></h2>
+        <pre class="code">
 for (int i = 1; i <= 5; i++) {
   if ( i == 5) {
     break;
@@ -355,19 +404,19 @@ for (int i = 1; i <= 5; i++) {
 }
                 </pre>
 
-                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
-                <pre class="code">
+        <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+        <pre class="code">
 1 2 3 4 
     </pre>
-                <p class="pt-3">&#128073; <span class="for">&ensp;break&ensp;</span> exits loop immediately</p>
-            </section>
+        <p class="pt-3">&#128073; <span class="for">&ensp;break&ensp;</span> exits loop immediately</p>
+      </section>
 
 
-            <!-- Section 12 -->
-            <section id="twelve" class="content-card">
-                <h2 class="section-title">12. <span class="for">&ensp;for&ensp;</span> Loop with <span
-                        class="for">&ensp;continue&ensp;</span></h2>
-                <pre class="code">
+      <!-- Section 12 -->
+      <section id="twelve" class="content-card">
+        <h2 class="section-title">12. <span class="for">&ensp;for&ensp;</span> Loop with <span
+            class="for">&ensp;continue&ensp;</span></h2>
+        <pre class="code">
 for (int i = 1; i <= 5; i++) {
   if ( i == 3) {
     break;
@@ -376,154 +425,252 @@ for (int i = 1; i <= 5; i++) {
 }
     </pre>
 
-                <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
-                <pre class="code">
+        <p class="pt-3 pl-3 text-lg font-semibold"> Output</p>
+        <pre class="code">
 1 2 4 5 
     </pre>
-                <p class="pt-3">&#128073; <span class="for">&ensp;continue&ensp;</span> skips current iteration only</p>
-            </section>
+        <p class="pt-3">&#128073; <span class="for">&ensp;continue&ensp;</span> skips current iteration only</p>
+      </section>
 
 
-            <!-- Section 13 -->
-            <section class="content-card">
-                <h2 class="section-title">13. Advanced: Enhanced <span class="for">&ensp;for&ensp;</span> Loop (
-                    for-each )</h2>
-                <p class="pt-3 text-lg font-semibold"> Used for:</p>
-                <ul class="list-disc list-inside p-2 space-y-1">
-                    <li> Arrays</li>
-                    <li> Collections</li>
-                </ul>
-                <p class="pt-3 text-lg font-semibold"> Syntax</p>
-                <pre class="code">
+      <!-- Section 13 -->
+      <section id="thirteen" class="content-card">
+        <h2 class="section-title">13. Advanced: Enhanced <span class="for">&ensp;for&ensp;</span> Loop (
+          for-each )</h2>
+        <p class="pt-3 text-lg font-semibold"> Used for:</p>
+        <ul class="list-disc list-inside p-2 space-y-1">
+          <li> Arrays</li>
+          <li> Collections</li>
+        </ul>
+        <p class="pt-3 text-lg font-semibold"> Syntax</p>
+        <pre class="code">
 for (datatype variable : array){
     // code
 }               </pre>
-                <p class="pt-3 text-lg font-semibold"> Example</p>
-                <pre class="code">
+        <p class="pt-3 text-lg font-semibold"> Example</p>
+        <pre class="code">
 int[] numbers = {10, 20, 30};
 
 for (int num : numbers) {
   System.out.println(num);
 }
     </pre>
-                <ul class=" p-2 space-y-1">
-                    <li class="font-semibold"> &#128204; Limitation</li>
-                    <li>&#10060; index access</li>
-                    <li>&#10060; Cannot modify structure</li>
-                </ul>
-            </section>
+        <ul class=" p-2 space-y-1">
+          <li class="font-semibold"> &#128204; Limitation</li>
+          <li>&#10060; index access</li>
+          <li>&#10060; Cannot modify structure</li>
+        </ul>
+      </section>
 
-            <!-- Section 14 -->
-            <section class="content-card">
-                <h2 class="section-title">14. Advanced: <span class="for">&ensp;for(;;)&ensp;</span> Infinite Loop</h2>
-                <pre class="code">
+      <!-- Section 14 -->
+      <section id="fourteen" class="content-card">
+        <h2 class="section-title">14. Advanced: <span class="for">&ensp;for(;;)&ensp;</span> Infinite Loop</h2>
+        <pre class="code">
 for (;;){
     System.out.println("Running forever");
 }
                 </pre>
-                <p class="pt-3 text-lg font-semibold">&#9989; Valid Java <br> Used in :</p>
-                <ul class="list-disc list-inside p-2 space-y-1">
-                    <li> Game loops</li>
-                    <li> Servers</li>
-                    <li> Embedded systems</li>
-                </ul>
-            </section>
+        <p class="pt-3 text-lg font-semibold">&#9989; Valid Java <br> Used in :</p>
+        <ul class="list-disc list-inside p-2 space-y-1">
+          <li> Game loops</li>
+          <li> Servers</li>
+          <li> Embedded systems</li>
+        </ul>
+      </section>
 
-            <!-- Section 15 -->
-            <section class="content-card">
-                <h2 class="section-title">15. Scope of Variables in <span class="for">&ensp;for&ensp;</span> Loop
-                    (Tricky)</h2>
-                <pre class="code">
+      <!-- Section 15 -->
+      <section id="fifteen" class="content-card">
+        <h2 class="section-title">15. Scope of Variables in <span class="for">&ensp;for&ensp;</span> Loop
+          (Tricky)</h2>
+        <pre class="code">
 for (int i = 1; i <= 3; i++){
     System.out.println("i");
 }
 // System.out.println(i); &#10060; ERROR
                 </pre>
-                <p class="pt-3 text-lg"> &#128073; <span class="for">&ensp;i&ensp;</span> exists <strong> only inside
-                        the loop </strong>
-                </p>
-            </section>
-            
-            <!-- Section 16 -->
-            <section id="twelve" class="content-card">
-                <h2 class="section-title">16. Performance & Best Practices (Pro Level)</h2>
-                <p class="pt-3 text-lg font-semibold">&#10060;Bad</p>
-                <pre class="code">
+        <p class="pt-3 text-lg"> &#128073; <span class="for">&ensp;i&ensp;</span> exists <strong> only inside
+            the loop </strong>
+        </p>
+      </section>
+
+      <!-- Section 16 -->
+      <section id="sixteen" class="content-card">
+        <h2 class="section-title">16. Performance & Best Practices (Pro Level)</h2>
+        <p class="pt-3 text-lg font-semibold">&#10060;Bad</p>
+        <pre class="code">
 for (int i = 0; i < arr.length; i++) {
   }
     </pre>
 
-                <p class="pt-3  text-lg font-semibold">&#9989; Better</p>
-                <pre class="code">
+        <p class="pt-3  text-lg font-semibold">&#9989; Better</p>
+        <pre class="code">
 int len = arr.length;
 for (int i =0; i< len; i++){
 }
     </pre>
-                <p class="pt-3 font-medium">&#128073; Reduces repeated property access (minor but pro habit) </p>
-            </section>
+        <p class="pt-3 font-medium">&#128073; Reduces repeated property access (minor but pro habit) </p>
+      </section>
 
-            <!-- Pro Tip -->
-            <section class="content-card border-l-4 border-blue-500">
-                <h2 class="section-title">🧠 Pro Tip Summary</h2>
-                <ul class="unlist mt-3">
-                    <li>✔ Use for loop when count is known</li>
-                    <li>✔ Prefer enhanced for for read-only data</li>
-                    <li>✔ Avoid infinite loops unless intentional</li>
-                    <li>✔ Always use curly braces</li>
-                    <li>✔ Master nested loops for interviews</li>
-                </ul>
-            </section>
+      <!-- Section 17 Interview Question -->
+      <section id="seventeen" class="content-card">
+        <h2 class="section-title">17. Interview Questions ( Must Know )</h2>
+        <h2 class="section-title"> Q1. Can condition be omitted?</h2>
+        <p> &#9989 Yes </p>
+        <pre class="code">
+for (int i = 1;; i++){
+    System.out.println(i);
+}
+</pre>
+        <br>
+        <hr>
+        <h2 class="section-title pt-3"> Q2. Is <span class="for">&ensp;for&ensp;</span> loop faster than <span
+            class="for">&ensp;while&ensp;</span>?</h2>
+        <p>&#10060; No real difference</p>
+        <p>&#9989; Choice depends on readability</p>
+        <br>
+        <hr>
+        <h2 class="section-title pt-3"> Q3. Can we write logic in update part?</h2>
+        <p>&#9989; Yes</p>
+        <pre class="code">
+for (int i = 1; i<= 10;  i += 2){
+     System.out.println(i);
+} </pre>
+      </section>
 
-        </main>
+      <!-- Section 18 real uses -->
+      <section id="eighteen" class="content-card ">
+        <h2 class="section-title"> Real-world Use Cases </h2>
+        <ul class="list-disc list-inside mt-3">
+          <li> Iterating database results</li>
+          <li> Processing arrays & collections</li>
+          <li> Generating reports</li>
+          <li>Pattern & algorithm problems</li>
+          <li> Game engines & animationss</li>
+        </ul>
+      </section>
 
-    </div>
-    <!-- BACK TO TOP BUTTON (SCRIPT) -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-4 right-6
-bg-gradient-to-tr from-orange-400 to-sky-500 text-white text-3xl w-12 h-12 rounded-full shadow-lg 
-hover:bg-gradient-to-tr hover:from-fuchsia-400 hover:to-yellow-500 translate-y-1 transition ">
-        &uarr;
-    </button>
-    <!-- FOOTER -->
-    <footer class="text-center p-4 text-sm text-white/90">
-        &copy; Core Java Learning &#124; Chapter-4.
-    </footer>
+      <!-- Section 19 Pro Tip Summary -->
+      <section id="nineteen" class="content-card ">
+        <h2 class="section-title"> Pro Tip Summary</h2>
+        <ul class="unlist mt-3">
+          <li>✔ Use for loop when count is known</li>
+          <li>✔ Prefer enhanced for for read-only data</li>
+          <li>✔ Avoid infinite loops unless intentional</li>
+          <li>✔ Always use curly braces</li>
+          <li>✔ Master nested loops for interviews</li>
+        </ul>
+      </section>
 
-    <script>
 
-        /* ===========================
-           REUSABLE STYLES (JS)
-        =========================== */
-        document.querySelectorAll(".content-card").forEach(card => {
-            card.classList.add(
-                "bg-white/80",
-                "dark:bg-slate-800",
-                "p-6",
-                "rounded-xl",
-                "shadow",
-                "transition-colors"
-            );
-        });
+    </main>
 
-        document.querySelectorAll(".section-title").forEach(t => {
-            t.classList.add("text-2xl", "font-semibold", "text-blue-600");
-        });
+  </div>
+  <!-- BACK TO TOP BUTTON (SCRIPT) -->
+  <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
+    fixed bottom-4 right-4 sm:right-6
+    text-2xl sm:text-3xl
+    w-10 h-10 sm:w-12 sm:h-12
+    rounded-full shadow-lg
+    bg-gradient-to-tr from-orange-400 to-sky-500
+    hover:from-fuchsia-400 hover:to-yellow-500
+    transition">
+    &uarr;
+  </button>
 
-        document.querySelectorAll(".code").forEach(c => {
-            c.classList.add("bg-gray-900", "text-green-400", "p-4", "rounded-2xl", "mt-3");
-        });
+  <!-- FOOTER -->
+  <footer class="text-center p-4 text-sm text-white/90">
+    &copy; Core Java Learning &#124; Chapter-4.
+  </footer>
 
-        document.querySelectorAll(".tableCode").forEach(l => {
-            l.classList.add("w-full", "border", "bg-white/70", "border-collapse", "overflow-hidden", "rounded-lg");
-        });
+  <script>
 
-        document.querySelectorAll(".listCode").forEach(k => {
-            k.classList.add("w-full", "border", "bg-white/70", "border-collapse", "overflow-hidden", "rounded-lg");
-        });
+    window.addEventListener("scroll", () => {
+      const scrollTop = document.documentElement.scrollTop;
+      const height =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
 
-        document.querySelectorAll(".for").forEach(f => {
-            f.classList.add("bg-slate-300", "rounded-md", "font-mono",);
-        });
-    </script>
+      const progress = (scrollTop / height) * 100;
+      document.getElementById("progressBar").style.width = progress + "%";
+    });
+
+    const menuBtn = document.getElementById("menuBtn");
+    const sidebar = document.getElementById("sidebar");
+
+    menuBtn.addEventListener("click", () => {
+      sidebar.classList.toggle("-translate-x-full");
+    });
+
+
+
+    /* ===========================
+       REUSABLE STYLES (JS)
+    =========================== */
+    document.querySelectorAll(".content-card").forEach(card => {
+      card.classList.add(
+        "bg-white/80",
+        "dark:bg-slate-800",
+        "p-6",
+        "rounded-xl",
+        "shadow",
+        "transition-colors"
+      );
+    });
+
+    document.querySelectorAll(".section-title").forEach(t => {
+      t.classList.add(
+        "font-bold",
+        "text-base",
+        "sm:text-lg",
+        "mb-3"
+      );
+    });
+
+    document.querySelectorAll(".code").forEach(c => {
+      c.classList.add(
+        "bg-gray-900",
+        "text-green-400",
+        "p-3",
+        "sm:p-4",
+        "rounded-2xl",
+        "mt-3",
+        "text-xs",
+        "sm:text-sm",
+        "lg:text-base",
+        "overflow-x-auto"
+      );
+    });
+
+    document.querySelectorAll(".tableCode").forEach(l => {
+      l.classList.add(
+        "w-full",
+        "border",
+        "bg-white/70",
+        "border-collapse",
+        "overflow-hidden",
+        "rounded-lg"
+      );
+    });
+
+    document.querySelectorAll(".listCode").forEach(k => {
+      k.classList.add(
+        "w-full",
+        "border",
+        "bg-white/70",
+        "border-collapse",
+        "overflow-hidden",
+        "rounded-lg"
+      );
+    });
+
+    document.querySelectorAll(".for").forEach(f => {
+      f.classList.add(
+        "bg-slate-300",
+        "rounded-md",
+        "font-mono",
+      );
+    });
+  </script>
 
 </body>
 
