@@ -108,26 +108,25 @@ class=" absolute top-14 right-4 z-50
     <i class="fa-solid fa-bars"></i>
   </button></h2>
       <ul class="space-y-2 text-blue-600 text-sm">
-        <li><a href="#one">1. else-if Ladder</a></li>
-        <li><a href="#two">2. Why do we need it?</a></li>
-        <li><a href="#three">3. Syntax</a></li>
-        <li><a href="#four">4. Basic Example</a></li>
-        <li><a href="#five">5. Student Marks Example</a></li>
-        <li><a href="#six">6. Flowchart Thinking</a></li>
-        <li><a href="#seven">7. Common Mistakes</a></li>
-        <li><a href="#eight">8. else-if vs multiple if</a></li>
-        <li><a href="#nine">9. Advanced Login Example</a></li>
-        <li><a href="#ten">10. Nested else-if ladder</a></li>
-        <li><a href="#eleven">11. else-if vs switch</a></li>
-        <li><a href="#twelve">12. Performance Tip</a></li>
-        <li><a href="#thirteen">13. Practice Questions</a></li>
-        <li><a href="#fourteen">14. Interview One-Liner</a></li>
-        <li><a href="#fifteen">15. Interview One-Liner</a></li>
-        <li><a href="#sixteen">16. Interview One-Liner</a></li>
-        <li><a href="#seventeen">17. Interview One-Liner</a></li>
-        <li><a href="#eightee">18. Interview One-Liner</a></li>
-        <li><a href="#nineteen">19. Interview One-Liner</a></li>
-        <li><a href="#twenty">20. Interview One-Liner</a></li>
+        <li><a href="#one">1. What is switch statement?</a></li>
+        <li><a href="#two">2. Syntax </a></li>
+        <li><a href="#three">3. Rules of OLD switch </a></li>
+        <li><a href="#four">4. Example 1 - Simple Integer Switch</a></li>
+        <li><a href="#five">5. Why break is IMPORTANT?</a></li>
+        <li><a href="#six">6.Intentional Fall-through (Real Use)</a></li>
+        <li><a href="#seven">7. default Case</a></li>
+        <li><a href="#eight">8.  Switch with String (Java 7+)</a></li>
+        <li><a href="#nine">9. Switch with enum</a></li>
+        <li><a href="#ten">10. Problems with OLD switch</a></li>
+        <li><a href="#eleven">11. New Switch Expression (Arrow →)</a></li>
+        <li><a href="#twelve">12.Example - New Switch</a></li>
+        <li><a href="#thirteen">13. New Switch with Multiple Values</a></li>
+        <li><a href="#fourteen">14. Switch as an Expression (Returns Value)</a></li>
+        <li><a href="#fifteen">15. Using yield (Block Switch)</a></li>
+        <li><a href="#sixteen">16. Old vs New Switch - Comparison</a></li>
+        <li><a href="#seventeen">17. When to Use Switch?</a></li>
+        <li><a href="#eightee">18.Interview Questions (Important)</a></li>
+        <li><a href="#nineteen">19.Real-Life Example (Menu Program)</a></li>
       </ul>
     </aside>
 
@@ -156,7 +155,7 @@ class=" absolute top-14 right-4 z-50
       <!-- 2 -->
       <section id="two" class=" content-card">
         <h2 class="section-title">&#50;&#65039;&#8419; Syntax - OLD switch (Traditional)</h2>
-        <pre class="bg-gray-900 text-green-400 p-4 rounded-lg mt-4 overflow-x-auto">
+        <pre class="code">
 switch (expression) {
     case value1:
         // code
@@ -175,7 +174,7 @@ switch (expression) {
         <h2 class="section-title">3. Rules of OLD switch</h2>
 
         <h3 class="text-xl font-semibold mt-4">Expression rules</h3>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside p-2 space-y-1">
           <li>byte</li>
           <li>short</li>
           <li>char</li>
@@ -185,14 +184,14 @@ switch (expression) {
         </ul>
 
         <p class="mt-2 text-red-600 font-semibold">&#10060; Not allowed:</p>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside p-2 space-y-1">
           <li>float, double</li>
           <li>long</li>
           <li>boolean</li>
         </ul>
 
         <h3 class="text-xl font-semibold mt-4">Case rules</h3>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside p-2 space-y-1">
           <li>case values must be constant</li>
           <li>case values must be unique</li>
           <li>Order does not matter</li>
@@ -201,9 +200,9 @@ switch (expression) {
       </section>
 
       <!-- 4 -->
-      <section id="#four" class=" card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">4. Example 1 - Simple Integer Switch</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-4 overflow-x-auto">
+      <section id="four" class=" content-card">
+        <h2 class="section-title">4. Example 1 - Simple Integer Switch</h2>
+        <pre class="code">
 int day = 3;
 
 switch (day) {
@@ -221,7 +220,7 @@ switch (day) {
 }
       </pre>
         <p class="pt-4"><strong>Explanation</strong></p>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside p-2 space-y-1">
           <li>day = 3</li>
           <li>Control jumps to case 3</li>
           <li>Prints Wednesday</li>
@@ -230,10 +229,10 @@ switch (day) {
       </section>
 
       <!-- 5 -->
-      <section id="#five" class=" card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600 mb-3">5. Why break is IMPORTANT?</h2>
+      <section id="five" class="content-card">
+        <h2 class="section-title ">5. Why break is IMPORTANT?</h2>
         <p>Without break, <strong>fall-through happens</strong>.</p>
-        <pre class="bg-gray-800 text-green-400 p-3 rounded-lg mt-3 overflow-x-auto">
+        <pre class="code ">
 int num = 2;
 
 switch (num) {
@@ -246,7 +245,7 @@ switch (num) {
 }
       </pre>
         <p class="pt-2 pb-2"><strong>Output</strong></p>
-        <pre class="bg-gray-800 text-white p-3 rounded">
+        <pre class="code">
 Two
 Three
       </pre>
@@ -257,9 +256,9 @@ Three
       </section>
 
       <!-- 6 -->
-      <section id="six" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">6. Intentional Fall-through (Real Use)</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="six" class="content-card">
+        <h2 class="section-title ">6. Intentional Fall-through (Real Use)</h2>
+        <pre class="code ">
 int month = 2;
 
 switch (month) {
@@ -279,9 +278,9 @@ switch (month) {
       </section>
 
       <!-- 7 -->
-      <section id="seven" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">7. default Case</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="seven" class="content-card">
+        <h2 class="section-title">7. default Case</h2>
+        <pre class="code">
 int choice = 10;
 
 switch (choice) {
@@ -296,9 +295,9 @@ switch (choice) {
       </section>
 
       <!-- 8 -->
-      <section id="eight" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">8. Switch with String (Java 7+)</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="eight" class="content-card">
+        <h2 class="section-title">8. Switch with String (Java 7+)</h2>
+        <pre class="code">
 String browser = "Chrome";
 
 switch (browser) {
@@ -317,9 +316,9 @@ switch (browser) {
       </section>
 
       <!-- 9 -->
-      <section id="nine" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">9. Switch with enum</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="nine" class="content-card">
+        <h2 class="section-title">9. Switch with enum</h2>
+        <pre class="code">
 enum Day { MON, TUE, WED }
 
 Day d = Day.MON;
@@ -337,8 +336,8 @@ switch (d) {
       </section>
 
       <!-- 10 -->
-      <section id="ten" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">10. Problems with OLD switch</h2>
+      <section id="ten" class="content-card">
+        <h2 class="section-title">10. Problems with OLD switch</h2>
         <ul class="list-disc list-inside spacey-y-1 mt-3">
           <li>Too many break</li>
           <li>Easy to forget break</li>
@@ -348,9 +347,9 @@ switch (d) {
       </section>
 
       <!-- 11 -->
-      <section id="eleven" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">11. New Switch Expression (Arrow →)</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="eleven" class="content-card">
+        <h2 class="section-title">11. New Switch Expression (Arrow →)</h2>
+        <pre class="code">
 switch (expression) {
     case value -> statement;
     case value2 -> statement;
@@ -360,9 +359,9 @@ switch (expression) {
       </section>
 
       <!-- 12 -->
-      <section id="twelve" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">12. Example - New Switch</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="twelve" class="content-card">
+        <h2 class="section-title">12. Example - New Switch</h2>
+        <pre class="code">
 int day = 1;
 
 switch (day) {
@@ -371,7 +370,7 @@ switch (day) {
     default -> System.out.println("Invalid day");
 }
       </pre>
-        <ul class="list-disc list-inside">
+        <ul class="list-disc list-inside p-2 space-y-1">
           <li>No break needed</li>
           <li>No fall-through</li>
           <li>More readable</li>
@@ -379,9 +378,9 @@ switch (day) {
       </section>
 
       <!-- 13 -->
-      <section id="thirteen" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">13. New Switch with Multiple Values</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="thirteen" class=" content-card">
+        <h2 class="section-title">13. New Switch with Multiple Values</h2>
+        <pre class="code">
 int month = 2;
 
 switch (month) {
@@ -393,9 +392,9 @@ switch (month) {
       </section>
 
       <!-- 14 -->
-      <section id="fourteen" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">14. Switch as an Expression (Returns Value)</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="fourteen" class="content-car">
+        <h2 class="section-title">14. Switch as an Expression (Returns Value)</h2>
+        <pre class="code">
 int day = 3;
 
 String result = switch (day) {
@@ -410,9 +409,9 @@ System.out.println(result);
       </section>
 
       <!-- 15 -->
-      <section id="fifteen" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">15. Using yield (Block Switch)</h2>
-        <pre class="bg-gray-800  text-green-400 p-4 rounded-lg mt-3 overflow-x-auto">
+      <section id="fifteen" class="content-card">
+        <h2 class="section-title">15. Using yield (Block Switch)</h2>
+        <pre class="code">
 int num = 10;
 
 String type = switch (num) {
@@ -431,9 +430,9 @@ System.out.println(type);
       </section>
 
       <!-- 16 -->
-      <section id="sixteen" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600 mb-3">16. Old vs New Switch - Comparison</h2>
-        <table class="w-full border border-slate-700 bg-white/70">
+      <section id="sixteen" class="content-card">
+        <h2 class="section-title">16. Old vs New Switch - Comparison</h2>
+        <table class="table-code">
           <tr class="bg-sky-500">
             <th class="border p-2">Feature</th>
             <th class="border p-2">Old Switch</th>
@@ -468,16 +467,16 @@ System.out.println(type);
       </section>
 
       <!-- 17 -->
-      <section id="seventeen" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600">17. When to Use Switch?</h2>
+      <section id="seventeen" class="content-card">
+        <h2 class="section-title">17. When to Use Switch?</h2>
         <p class="mt-3 mb-3 font-semibold">✅ Use switch when:</p>
-        <ul class="list-disc list-inside">
+        <ul class="list-code">
           <li>Comparing one variable</li>
           <li>With fixed values</li>
           <li>Better readability than if-else</li>
         </ul>
         <p class="mt-3 mb-3 font-semibold">❌ Avoid switch when:</p>
-        <ul class="list-disc list-inside">
+        <ul class="list-code">
           <li>Complex conditions</li>
           <li>Ranges (&gt;, &lt;)</li>
           <li>Boolean logic</li>
@@ -485,8 +484,8 @@ System.out.println(type);
       </section>
 
       <!-- 18 -->
-      <section id="eighteen" class="card bg-white/70 p-6 rounded-xl shadow space-y-1">
-        <h2 class="text-2xl font-semibold text-blue-600  mb-3">18. Interview Questions (Important)</h2>
+      <section id="eighteen" class="content-card space-y-3">
+        <h2 class="section-title space-y-1">18. Interview Questions (Important)</h2>
         <p><strong>Q1.</strong> Why break is used in switch?<br />👉 To prevent fall-through.</p>
         <p><strong>Q2.</strong> Can we use long in switch?<br />👉 No.</p>
         <p><strong>Q3.</strong> Since when String is allowed?<br />👉 Java 7.</p>
@@ -494,9 +493,9 @@ System.out.println(type);
       </section>
 
       <!-- 19 -->
-      <section id="nineteen" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600 mb-3">19. Real-Life Example (Menu Program)</h2>
-        <pre class="bg-gray-800 text-green-400 p-4 rounded-lg  overflow-x-auto">
+      <section id="nineteen" class="content-card">
+        <h2 class="section-title">19. Real-Life Example (Menu Program)</h2>
+        <pre class="code">
 int choice = 2;
 
 String item = switch (choice) {
@@ -510,16 +509,6 @@ System.out.println("You ordered: " + item);
       </pre>
       </section>
 
-      <!-- 20 -->
-      <section id="twenty" class="card bg-white/70 p-6 rounded-xl shadow">
-        <h2 class="text-2xl font-semibold text-blue-600 mb-3">20. What Next?</h2>
-        <ul class="list-disc list-inside space-y-1">
-          <li>Compare if-else vs switch deeply</li>
-          <li>MCQs + interview questions</li>
-          <li>Real-world Java project usage</li>
-          <li>Common switch mistakes</li>
-        </ul>
-      </section>
     </main>
   </div>
   <!-- BACK TO TOP BUTTON (SCRIPT) -->
@@ -529,7 +518,7 @@ System.out.println("You ordered: " + item);
     &uarr;
   </button>
   <!-- FOOTER -->
-  <footer class="text-center p-4 text-sm text-white/90">
+  <footer class="text-center p-4 text-md text-slate-900">
     &copy; Core Java Learning &#124; Chapter-4.
   </footer>
 
@@ -609,10 +598,9 @@ System.out.println("You ordered: " + item);
         });
     
         document.querySelectorAll(".section-title").forEach(t => {
-          t.classList.add(
-            "font-bold",
-            "text-base",
-            "sm:text-lg",
+          t.classList.add( 
+            "text-2xl",
+            "font-semibold",
             "mb-3"
           );
         });
@@ -632,7 +620,7 @@ System.out.println("You ordered: " + item);
           );
         });
     
-        document.querySelectorAll(".tableCode").forEach(l => {
+        document.querySelectorAll(".table-code").forEach(l => {
           l.classList.add( 
             "card",
             "w-full",
@@ -644,14 +632,12 @@ System.out.println("You ordered: " + item);
           );
         });
     
-        document.querySelectorAll(".listCode").forEach(k => {
+        document.querySelectorAll(".list-code").forEach(k => {
           k.classList.add(
-            "w-full",
-            "border",
-            "bg-white/70",
-            "border-collapse",
-            "overflow-hidden",
-            "rounded-lg"
+            "list-disc", 
+            "list-inside", 
+            "spacey-y-1", 
+            "mt-3",
           );
         });
     
