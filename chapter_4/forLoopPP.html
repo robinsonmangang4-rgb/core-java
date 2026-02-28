@@ -287,6 +287,45 @@ for (; num > 0; num /= 10) {
                 </pre>
                 <p class="mt-3"><strong> Explanation :</strong> Divide by each iteration. </p>
             </section>
+
+                <!-- Section 13 -->
+            <section id="thirteen" class="content-card ">
+                <h2 class="section-title">&#49;&#65039;&#51;&#65039;&#8419; reverse a number </h2>
+                <pre class="code">
+int num = 12345, rev  = 0;
+for (; num > 0; num /= 10) {
+    rev = rev * 10 + num % 10;
+}
+    System.out.println(rev);
+                </pre>
+                <p class="mt-3"><strong> Explanation :</strong> Extract last digit and rebuild. </p>
+            </section>
+
+             <!-- Section 14 -->
+            <section id="fourteen" class="content-card ">
+                <h2 class="section-title">&#49;&#65039;&#52;&#65039;&#8419; Sum of digits of anumber </h2>
+                <pre class="code">
+int num = 12345, sum  = 0;
+for (; num > 0; num /= 10) {
+    sum += num % 10;
+}
+    System.out.println(sum);
+                </pre>
+                <p class="mt-3"><strong> Explanation :</strong> Add each digit using modulus. </p>
+            </section>
+
+            <!-- Section 15 -->
+            <section id="fifteen" class="content-card ">
+                <h2 class="section-title">&#49;&#65039;&#53;&#65039;&#8419; check palindrome number </h2>
+                <pre class="code">
+int num = 121, temp = num, rev  = 0;
+for (; temp > 0; temp /= 10) {
+    rev = rev * 10 + temp % 10;
+}
+    System.out.println( rev == num);
+                </pre>
+                <p class="mt-3"><strong> Explanation :</strong> Compare reversed with original.  </p>
+            </section>
         </main>
     </div>
     <!-- BACK TO TOP BUTTON (SCRIPT) -->
