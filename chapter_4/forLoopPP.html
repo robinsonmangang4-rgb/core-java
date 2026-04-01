@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <link rel="icon" type="image/png" sizes="32*32"
         href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1a0WBC7gzH2m5vruS5y6ITiFyhgd4-2iPIw&s">
-    <title>for-Looop: Core Java: Control Statement</title>
+    <title>for-Loop: Core Java: Control Statement</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <!-- Tailwind Dark Mode Using : has() -->
 
@@ -252,7 +252,7 @@ for (int i = 1; i <= 10; i++){
 
             <!-- Section 10 -->
             <section id="ten" class="content-card ">
-                <h2 class="section-title">&#49;&#65039;&#48;&#65039;&#8419; Factiorial of a number (5)</h2>
+                <h2 class="section-title">&#49;&#65039;&#48;&#65039;&#8419; Factorial of a number (5)</h2>
                 <pre class="code">
 int fact = 1;
 for (int i = 1; i <= 5; i++){
@@ -304,7 +304,7 @@ for (; num > 0; num /= 10) {
 
             <!-- Section 14 -->
             <section id="fourteen" class="content-card ">
-                <h2 class="section-title">&#49;&#65039;&#52;&#65039;&#8419; Sum of digits of anumber </h2>
+                <h2 class="section-title">&#49;&#65039;&#52;&#65039;&#8419; Sum of digits of a number </h2>
                 <pre class="code">
 int num = 12345, sum  = 0;
 for (; num > 0; num /= 10) {
@@ -355,7 +355,7 @@ for (int i = 2; i <= num / 2; i++) {
         break;
     }
 }              </pre>
-                <p class="mt-3"><strong> Explanation :</strong> if dividible by any number, not prime. </p>
+                <p class="mt-3"><strong> Explanation :</strong> if divisible by any number, not prime. </p>
             </section>
 
             <!-- Section 18 -->
@@ -522,7 +522,7 @@ String str = "hello world";
 int count = 0;
 for (int i = 0; i <= str.length(); i ++) {
     char ch = str.charAt(i);
-    if ( "aeiouAEIOU".indexOf(ch) ! = -1) count++;
+    if ( "a e  o u A E I O U".indexOf(ch) ! = -1) count++;
     }
         System.out.println(count);
             </pre>
@@ -548,7 +548,7 @@ for (int i = str.length() - 1; i >= 0; i--) {
 int num = 153, temp = num, sum = 0;
 for ( ; temp > 0; temp / 10; ) {
     int digit = temp % 10;
-    sum +=digit * dogit * digit;
+    sum +=digit * digit * digit;
     }
     System.out.print( sum == num);
             </pre>
@@ -566,7 +566,7 @@ for (int i = 1; i <= 5; i++) {
     System.out.println();
 }
             </pre>
-                <p class="mt-3"><strong> Explanation :</strong> Print multiplicatio grid. </p>
+                <p class="mt-3"><strong> Explanation :</strong> Print multiplication grid. </p>
             </section>
 
             <!-- Section 34-->
@@ -822,6 +822,32 @@ int num = 28, sum = 0;
     System.out.println(sum == num);
             </pre>
                 <p class="mt-3"><strong> Explanation :</strong> Check a perfect number. </p>
+            </section>
+
+            <!-- Section 52-->
+            <section id="52" class="content-card ">
+                <h2 class="section-title">&#53;&#65039;&#50;&#65039;&#8419; Print all divisors. </h2>
+                <pre class="code">
+int num = 12;
+    for (int i = 1; i <= num; i++) {
+    if (num % i == 0)  System.out.println(i + " ");
+}
+            </pre>
+                <p class="mt-3"><strong> Explanation :</strong> Print all divisors. </p>
+            </section>
+
+            <!-- Section 53-->
+            <section id="53" class="content-card ">
+                <h2 class="section-title">&#53;&#65039;&#51;&#65039;&#8419; Nested number pattern</h2>
+                <pre class="code">
+for (int i = 1; i <= 5; i++) {
+    for (int j = 1; j <= 5; j++) {
+        System.out.print(i + " ");
+    }
+    System.out.println();
+}
+            </pre>
+                <p class="mt-3"><strong> Explanation :</strong> Nested number pattern </p>
             </section>
         </main>
     </div>
