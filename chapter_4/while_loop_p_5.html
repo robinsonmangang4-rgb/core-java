@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Core Java for Loop tutorial from zero to advanced with examples, patterns, interview questions.">
+    <meta name="keywords" content="Core Java, for loop, Java loops, Java control statements">
+    <meta name="author" content="Core Java Learning">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32*32"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1a0WBC7gzH2m5vruS5y6ITiFyhgd4-2iPIw&s">
+    <title>for-Loop: Core Java: Control Statement</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind Dark Mode Using : has() -->
+
+    <!-- ✅ THEME STYLES -->
+    <style>
+        /* LIGHT THEME */
+        html[data-theme="light"] body {
+            background: #f1f5f9;
+            color: #0f172a;
+        }
+
+        /* DARK THEME */
+        html[data-theme="dark"] body {
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        html[data-theme="dark"] .card {
+            background: #1e293b;
+        }
+
+        html[data-theme="dark"] footer {
+            color: #9ca3af;
+        }
+
+        /* Animated icon */
+        .theme-icon {
+            transition: transform 0.4s ease;
+        }
+
+        .rotate {
+            transform: rotate(180deg) scale(1.15);
+        }
+    </style>
+</head>
+
+<body class="transition-colors duration-500">
+
+    <!-- HEADER -->
+    <header class="relative bg-gradient-to-tr from-slate-500 via-sky-400 to-purple-400 
+    p-4 sm:p-6 text-center">
+
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden absolute right-4 top-1 text-3xl text-indigo-900">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Responsive Heading -->
+        <h1 class="font-bold text-indigo-800">
+            <span class="block md:hidden text-xl">
+                Core Java
+            </span>
+
+            <span class="hidden md:block lg:hidden text-2xl">
+                Core Java - for Loop
+            </span>
+
+            <span class="hidden lg:block text-4xl">
+                Core Java - Chapter 4 Part-4 (for Loop)
+            </span>
+        </h1>
+
+        <p class="mt-2 text-sm sm:text-base lg:text-lg">
+            Control Statements Tutorial
+        </p>
+
+
+        <!-- 🌙 MOBILE FLOATING TOGGLE -->
+        <button id="themeToggle" class=" absolute top-10 right-4 z-50
+            w-10 h-10 rounded-full
+            bg-gradient-to-tr from-indigo-500 via-sky-400  to-purple-600
+            text-white text-lg
+            shadow-lg
+            flex items-center justify-center
+            active:scale-95 transition">
+
+            <i id="themeIcon" class="fa-solid fa-moon theme-icon"></i>
+        </button>
+
+    </header>
+
+
+    <div class="flex flex-col md:flex-row">
+        <aside id="sidebar" class="
+    card
+    sidebar
+    fixed lg:sticky
+    lg:top-0 lg:left-0 lg:z-40
+    w-64
+    h-screen md:h-[calc(100vh-120px)]
+    overflow-y-auto
+    -translate-x-full md:translate-x-0
+    transition-transform duration-300
+    bg-slate-200 dark:bg-slate-800
+    shadow-md
+    p-4
+    md:sticky top-0
+    md:rounded-r-lg
+">
+
+            <h2 class="font-bold text-lg mb-3">Chapter 4 <span> <!-- Hamburger -->
+                    <button id="menuBtn1" class="md:hidden absolute right-4 top-4 text-3xl text-indigo-900">
+                        <i class="fa-solid fa-bars"></i>
+                    </button></span></h2>
+            <ul class="space-y-2 text-blue-600 text-sm">
+                <li><a href="#one">1.Print numbers from 1 to 10 </a></li>
+                <li><a href="#two">2.Print numbers from 10 to 1</a></li>
+                <li><a href="#three">3.Print even numbers from 1 to 20.</a></li>
+                <li><a href="#four">4.Print old numbers from 1 to 20. </a></li>
+                <li><a href="#five">5. Print first 10 natural numbers</a></li>
+                <li><a href="#six">6. Print squares of numbers 1-10</a></li>
+                <li><a href="#seven">7. Print cubes of numbers 1-10 </a></li>
+                <li><a href="#eight">8.Print multiplication table of 5 </a></li>
+                <li><a href="#nine">9. Sum of first 10 natural numbers </a></li>
+                <li><a href="#ten">10. Factorial of a number (5) </a></li>
+                <li><a href="#eleven">11.Print numbers divisible by 3 (1-30) </a></li>
+                <li><a href="#twelve">12.Count digits in a number </a></li>
+                <li><a href="#thirteen">13. reverse a number </a></li>
+                <li><a href="#fourteen">14. Sum of digits of a number </a></li>
+                <li><a href="#fifteen">15. check palindrome number </a></li>
+                <li><a href="#sixteen">16.Print fibonacci Series (10 terms) </a></li>
+                <li><a href="#seventeen">17. Check Prime number </a></li>
+                <li><a href="#eighteen">18Print primes between 1 - 50 </a></li>
+                <li><a href="#nineteen">19.Multiplication tables 1 - 5 </a></li>
+                <li><a href="#20">20. Print star row (5 stars) </a></li>
+                <li><a href="#21">21. Print square star pattern. </a></li>
+                <li><a href="#22">22. Right triangle pattern</a></li>
+                <li><a href="#23">23. Inverted triangle</a></li>
+                <li><a href="#24">24. Number triangle</a></li>
+                <li><a href="#25">25. Floyd's Triangle</a></li>
+                <li><a href="#26">26. Sum of the even numbers 1-50.</a></li>
+                <li><a href="#27">27. Sum of the old numbers 1-50.</a></li>
+                <li><a href="#28">28. Power of a number</a></li>
+                <li><a href="#29">29. Print ASCII characters A-Z.</a></li>
+                <li><a href="#30">30. Count Vowels in string.</a></li>
+                <li><a href="#31">31. Reverse string using loop.</a></li>
+                <li><a href="#32">32. Check Armstrong number.</a></li>
+                <li><a href="#33">33. Print multiplication grid</a></li>
+                <li><a href="#34">34. Print number skipping multiplication of 3.</a></li>
+                <li><a href="#35">35. Break loop at 7 </a></li>
+                <li><a href="#36">36. Hollow square pattern</a></li>
+                <li><a href="#37">37. Pyramid pattern.</a></li>
+                <li><a href="#38">38. Diamond pattern. </a></li>
+                <li><a href="#39">39. Print Pascal Triangles (5 rows). </a></li>
+                <li><a href="#40">40. Sum of array elements.</a></li>
+                <li><a href="#41">41. Find max element in array.</a></li>
+                <li><a href="#42">42. Reverse array.</a></li>
+                <li><a href="#43">43. Count even number in array.</a></li>
+                <li><a href="#44">44. Search element in array. </a></li>
+                <li><a href="#45">45. Print alternate elements.</a></li>
+                <li><a href="#46">46. Count words in sentence.</a></li>
+                <li><a href="#47">47. Remove spaces from string. </a></li>
+                <li><a href="#48">48. Count frequency of character.</a></li>
+                <li><a href="#49">49. Generate multiplication matrix.</a></li>
+                <li><a href="#50">50. Sum of series 1 + 1/2 + 1/3 + … + 1/n.</a></li>
+                <li><a href="#51">51. Check perfect number.</a></li>
+                <li><a href="#52">52. Print all divisors. </a></li>
+                <li><a href="#53">53. Nested number pattern </a></li>
+                <li><a href="#54">54. Check strong number</a></li>
+                <li><a href="#55">55. Generate multiplication pyramid.</a></li>
+
+            </ul>
+        </aside>
+
+        <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
+            <div id="progressBar" class="h-1 bg-gradient-to-r from-sky-400 to-purple-500 w-0"></div>
+        </div>
