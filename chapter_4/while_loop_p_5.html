@@ -180,3 +180,152 @@
         <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
             <div id="progressBar" class="h-1 bg-gradient-to-r from-sky-400 to-purple-500 w-0"></div>
         </div>
+    <!-- BACK TO TOP BUTTON (SCRIPT) -->
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
+    fixed bottom-4 right-4 sm:right-6
+    text-2xl sm:text-3xl
+    w-10 h-10 sm:w-12 sm:h-12
+    rounded-full shadow-lg
+    bg-gradient-to-tr from-orange-400 to-sky-500
+    hover:from-fuchsia-400 hover:to-yellow-500
+    transition">
+        &uarr;
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="text-center p-4 text-sm text-white/90">
+        &copy; Core Java Learning &#124; Chapter-4.
+    </footer>
+
+    <script>
+
+        const html = document.documentElement;
+        const toggleBtn = document.getElementById("themeToggle");
+        const icon = document.getElementById("themeIcon");
+
+        function applyTheme(theme) {
+            html.setAttribute("data-theme", theme);
+            localStorage.setItem("theme", theme);
+
+            icon.classList.add("rotate");
+            setTimeout(() => icon.classList.remove("rotate"), 400);
+
+            if (theme === "dark") {
+                icon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+            }
+        }
+
+        //  AUTO SYSTEM DARK MODE (FIRST VISIT)
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            applyTheme("dark");
+        }
+
+        // TOGGLE
+        toggleBtn.addEventListener("click", () => {
+            const current = html.getAttribute("data-theme");
+            applyTheme(current === "dark" ? "light" : "dark");
+        });
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+
+            const progress = (scrollTop / height) * 100;
+            document.getElementById("progressBar").style.width = progress + "%";
+        });
+
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+        });
+
+        const menuBtn1 = document.getElementById("menuBtn1");
+
+        menuBtn1.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+        });
+
+
+
+        /* ===========================
+        REUSABLE STYLES (JS)
+        =========================== */
+        document.querySelectorAll(".content-card").forEach(card => {
+            card.classList.add(
+                "card",
+                "bg-white/80",
+                "dark:bg-slate-800",
+                "p-6",
+                "rounded-xl",
+                "shadow",
+                "transition-colors"
+            );
+        });
+
+        document.querySelectorAll(".section-title").forEach(t => {
+            t.classList.add(
+                "font-bold",
+                "text-base",
+                "sm:text-lg",
+                "mb-3"
+            );
+        });
+
+        document.querySelectorAll(".code").forEach(c => {
+            c.classList.add(
+                "bg-gray-900",
+                "text-green-400",
+                "p-3",
+                "sm:p-4",
+                "rounded-2xl",
+                "mt-3",
+                "text-xs",
+                "sm:text-sm",
+                "lg:text-base",
+                "overflow-x-auto"
+            );
+        });
+
+        document.querySelectorAll(".table-code").forEach(l => {
+            l.classList.add(
+                "card",
+                "w-full",
+                "border",
+                "bg-white/70",
+                "border-collapse",
+                "overflow-hidden",
+                "rounded-lg"
+            );
+        });
+
+        document.querySelectorAll(".list-code").forEach(k => {
+            k.classList.add(
+                "list-disc",
+                "list-inside",
+                "spacey-y-1",
+                "mt-3",
+            );
+        });
+
+        document.querySelectorAll(".for").forEach(f => {
+            f.classList.add(
+                "text-blue-700",
+                "bg-slate-300",
+                "rounded-md",
+                "font-mono",
+            );
+        });
+    </script>
+</body>
+
+</html>
