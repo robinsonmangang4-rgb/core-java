@@ -245,6 +245,39 @@ while ( true ) {
                 </pre>
         <h2 class="mt-3"> &rarr; This runs forever because condition is always true. </h2>
         </section>
+
+        <section id="5" class="content-card ">
+                <h2 class="section-title">&#53;&#65039;&#8419;. While Loop with User Input.   </h2>
+                <pre class="code">
+import java.util.scanner;
+
+public class WhileInput{
+    public static void main(string [] args ){
+        Scanner sc = new Scanner (System.in);
+        int num;
+        while ( true){
+            System.out.print("Enter number (0 to stop) : ");
+            num =sc.nextInt();
+
+            if( num == 0 ){
+                break;
+            }
+
+            System.out.println(" You entered: " + num);
+
+        }
+    }
+}
+                </pre>
+        <h2 class="mt-3 section-title"> Explanation: </h2>
+        <ul class="list-disc list-inside ">
+            <li> Loop runs infinitely </li>
+            <li> Stop when user enter <span class="for"> 0. </span> </li>
+            <li><span class="for"> break  </span> exits loop.</li>
+        </ul>
+        </section>
+
+
     <!-- BACK TO TOP BUTTON (SCRIPT) -->
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
     fixed bottom-4 right-4 sm:right-6
