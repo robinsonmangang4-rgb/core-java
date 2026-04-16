@@ -344,6 +344,23 @@ public class NestedWhile {
                 </pre>
                 </section>
 
+                <section id="9" class="content-card ">
+                <h2 class="section-title">&#57;&#65039;&#8419; Common Mistakes. </h2>
+                <h2 class="section-title">&#10060; Missing increment &rarr; Infinite loop. </h2>
+                <pre class="code">
+int i = 1;
+while (i <= 5) {
+    System.out.println(i);  // i never changes
+}
+                </pre>
+
+                <h2 class="section-title">&#10060; Wrong condition.</h2>
+                <pre class="code">
+
+while (i >= 5) // may never run
+                </pre>
+                </section>
+
 
     <!-- BACK TO TOP BUTTON (SCRIPT) -->
     <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
