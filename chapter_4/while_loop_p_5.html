@@ -372,7 +372,7 @@ while (i >= 5) // may never run
                     </ul>
                 </section>
 
-                 <section id="11" class="content-card ">
+                <section id="11" class="content-card ">
                 <h2 class="section-title">&#49;&#65039;&#8419;&#49;&#65039;&#8419;Practice Programs (Important )</h2>
                 <h2 class="section-title">&#49;. Print 1 to 10 </h2>
                 <pre class="code">
@@ -382,6 +382,33 @@ while (i <= 10) {
     i++;
 }
                 </pre>
+
+                <h2 class="section-title">&#50;. Sum of first N numbers </h2>
+                <pre class="code">
+int i = 1, sum = 0;
+
+while (i <= 5) {
+    sum += i;
+    i++;
+}
+
+System.out.println("Sum = " + sum);
+                </pre>
+
+                <h2 class="section-title">&#51;. Reverse a Number </h2>
+                <pre class="code">
+int num = 1234;
+int rev = 0;
+
+while (num != 0) {
+    int digit = num % 10;
+    rev = rev * 10 + digit;
+    num = num / 10;
+}
+
+System.out.println("Reverse = " + rev);
+                </pre>
+                
                 </section>
 
     <!-- BACK TO TOP BUTTON (SCRIPT) -->
