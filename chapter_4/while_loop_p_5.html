@@ -118,8 +118,8 @@
                         <i class="fa-solid fa-bars"></i>
                     </button></span></h2>
             <ul class="space-y-2 text-blue-600 text-sm">
-                <li><a href="#one">1.Print numbers from 1 to 10 </a></li>
-                <li><a href="#two">2.Print numbers from 10 to 1</a></li>
+                <li><a href="#1">1.Print numbers from 1 to 10 </a></li>
+                <li><a href="#2">2.Print numbers from 10 to 1</a></li>
                 <li><a href="#three">3.Print even numbers from 1 to 20.</a></li>
                 <li><a href="#four">4.Print old numbers from 1 to 20. </a></li>
                 <li><a href="#five">5. Print first 10 natural numbers</a></li>
@@ -128,7 +128,7 @@
                 <li><a href="#eight">8.Print multiplication table of 5 </a></li>
                 <li><a href="#nine">9. Sum of first 10 natural numbers </a></li>
                 <li><a href="#ten">10. Factorial of a number (5) </a></li>
-                <li><a href="#eleven">11.Print numbers divisible by 3 (1-30) </a></li>
+                <li><a href="#11">11.Print numbers divisible by 3 (1-30) </a></li>
                 <li><a href="#twelve">12.Count digits in a number </a></li>
                 <li><a href="#thirteen">13. reverse a number </a></li>
                 <li><a href="#fourteen">14. Sum of digits of a number </a></li>
@@ -407,6 +407,35 @@ while (num != 0) {
 }
 
 System.out.println("Reverse = " + rev);
+                </pre>
+
+                <h2 class="section-title">&#51;. Check Palindrome</h2>
+                <pre class="code">
+int num = 121, temp = num, rev = 0;
+
+while (num != 0) {
+    int digit = num % 10;
+    rev = rev * 10 + digit;
+    num = num / 10;
+}
+
+if (temp == rev)
+    System.out.println("Palindrome");
+else
+    System.out.println("Not Palindrome");
+                </pre>
+
+                <h2 class="section-title">&#51;. Factorial </h2>
+                <pre class="code">
+int n = 5;
+int fact = 1;
+
+while (n > 0) {
+    fact *= n;
+    n--;
+}
+
+System.out.println("Factorial = " + fact);
                 </pre>
                 
                 </section>
