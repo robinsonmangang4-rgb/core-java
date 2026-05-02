@@ -358,10 +358,35 @@ ATM Menu
 1. Withdraw
 2. Deposit
                 </pre>
-
             </section>
             
+            <section id="9" class="content-card">
+                <h2 class="section-title"> &#57;&#65039;&#8419; Example with User Input. </h2>
+                <pre class="code">
+import java.util.Scanner;
 
+public class InputExample {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int num;
+
+        do {
+            System.out.print("Enter a positive number: ");
+            num = sc.nextInt();
+        } while (num <= 0);
+
+        System.out.println("You entered: " + num);
+    }
+}
+                </pre>
+                <hr class=" mt-6 mb-6">
+                <h2 class="section-title"> Explanation </h2>
+                <p class="mt-3"> This loop keeps asking user until valid input is entered.</p>
+                <p class="mt-3"> Best use case for validation.</p>
+
+
+
+            </section>
 
 
         </main>
