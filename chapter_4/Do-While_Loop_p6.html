@@ -421,6 +421,55 @@ do{
             </section>
             <hr class="mt-6 mb-6">
 
+            <section id="12" class="content-card">
+                <h2 class="section-title">&#49;&#65039;&#50;&#65039;&#8419; Using <span class="for">continue</span> in <span class="for">do-while</span>.</h2>
+                <pre class="code">
+int i = 0;
+
+do{
+    i++;
+
+    if( i == 3){
+        continue;
+    }
+    System.out.println(i);
+}while(i < 5);
+                </pre>
+                <h2 class="mt-3"> Output :</h2>
+                <pre class="code">
+1
+2
+4
+5
+                </pre>
+                <h2 class="mt-3">Skips <span class="for">3</span>.</h2>
+            </section>
+            <hr class="mt-6">
+            
+            <section id="13" class="content-card">
+                <h2 class="section-title"> &#49;&#65039;&#8419; Nested <span class="for">do-while</span>.</h2>
+                <pre class="code">
+int i = 1;
+
+do{
+    int j = 1;
+    do{
+        System.out.println(j + " ");
+        j++;
+        }while (j <= 3);
+
+        System.out.println();
+        i++;
+}while( i <= 2);
+                </pre>
+                <h2 class="mt-3"> Output : </h2>
+                <pre class="code">
+1 2 3
+1 2 3
+                </pre>
+            </section>
+            <hr class="mt-6">
+
         </main>
     </div>
 
