@@ -222,6 +222,49 @@ System.oout.print(sum);
                 </pre>
             </section>
 
+            <section id="7" class="content-card">
+                <h2 class="section-title"> &#55;&#65039;&#8419; 7. Factorial of a number (5!) </h2>
+                <pre class="code">
+int i = 1, fact = 1;
+
+do {
+    fact *= i;
+    i++;
+} while (i <= 5);
+
+System.out.println(fact);
+                </pre>
+            </section>
+
+            <section id="8" class="content-card">
+                <h2 class="section-title"> &#56;&#65039;&#8419; 8. Count digits in a number</h2>
+                <pre class="code">
+int num = 12345, count = 0;
+
+do {
+    num /= 10;
+    count++;
+} while (num > 0);
+
+System.out.println(count);
+                </pre>
+            </section>
+
+            <section id="9" class="content-card">
+                <h2 class="section-title"> &#54;&#65039;&#8419; 9. Reverse a number </h2>
+                <pre class="code">
+int num = 123, rev = 0;
+
+do {
+    int digit = num % 10;
+    rev = rev * 10 + digit;
+    num /= 10;
+} while (num > 0);
+
+System.out.println(rev);
+                </pre>
+            </section>
+
         </main>
     </div>
 
