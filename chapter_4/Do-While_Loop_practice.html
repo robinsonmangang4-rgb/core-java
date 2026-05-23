@@ -265,6 +265,34 @@ System.out.println(rev);
                 </pre>
             </section>
 
+            <section id="10" class="content-card">
+                <h2 class="section-title"> &#54;&#65039;&#8419; 10. Sum of digits </h2>
+                <pre class="code">
+int num = 123, sum = 0;
+
+do {
+    sum += num % 10;
+    num /= 10;
+} while (num > 0);
+
+System.out.println(sum);
+                </pre>
+            </section>
+
+            <section id="11" class="content-card">
+                <h2 class="section-title"> &#54;&#65039;&#8419; 11.Check palindrome number </h2>
+                <pre class="code">
+int num = 121, temp = num, rev = 0;
+
+do {
+    rev = rev * 10 + (num % 10);
+    num /= 10;
+} while (num > 0);
+
+System.out.println(temp == rev ? "Palindrome" : "Not");
+                </pre>
+            </section>
+
         </main>
     </div>
 
