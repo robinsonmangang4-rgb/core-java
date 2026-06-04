@@ -372,6 +372,35 @@ System.out.println(count);
                 </pre>
             </section>
 
+            <section id="18" class="content-card">
+                <h2 class="section-title"> &#49;&#65039;&#8419;&#56;&#65039;&#8419;18. Power calculation (2^5) </h2>
+                <pre class="code">
+int base = 2, exp = 5, result = 1, i = 1;
+
+do {
+    result *= base;
+    i++;
+} while (i <= exp);
+
+System.out.println(result);
+                </pre>
+            </section>
+
+            <section id="19" class="content-card">
+                <h2 class="section-title"> &#49;&#65039;&#8419;&#57;&#65039;&#8419;  19. Check Armstrong (153) </h2>
+                <pre class="code">
+int num = 153, temp = num, sum = 0;
+
+do {
+    int d = num % 10;
+    sum += d * d * d;
+    num /= 10;
+} while (num > 0);
+
+System.out.println(sum == temp ? "Armstrong" : "No");
+                </pre>
+            </section>
+
         </main>
     </div>
 
