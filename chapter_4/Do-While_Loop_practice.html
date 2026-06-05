@@ -401,6 +401,42 @@ System.out.println(sum == temp ? "Armstrong" : "No");
                 </pre>
             </section>
 
+            <section id="20" class="content-card">
+                <h2 class="section-title"> &#50;&#65039;&#8419;&#48;&#65039;&#8419;  20. Print Fibonacci (first 10) </h2>
+                <pre class="code">
+int a = 0, b = 1, i = 1;
+
+do {
+    System.out.print(a + " ");
+    int c = a + b;
+    a = b;
+    b = c;
+    i++;
+} while (i <= 10);
+                </pre>
+            </section>
+
+            <section id="21" class="content-card">
+                <h2 class="section-title"> &#50;&#65039;&#8419;&#49;&#65039;&#8419;  21. Menu-driven program </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+Scanner sc = new Scanner(System.in);
+int choice;
+
+do {
+    System.out.println("1.Add 2.Sub 3.Exit");
+    choice = sc.nextInt();
+
+    if (choice == 1)
+        System.out.println("Add selected");
+    else if (choice == 2)
+        System.out.println("Sub selected");
+
+} while (choice != 3);
+                </pre>
+            </section>
+
         </main>
     </div>
 
