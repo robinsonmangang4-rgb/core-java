@@ -549,7 +549,7 @@ do {
             </section>
 
             <section id="30" class="content-card">
-                <h2 class="section-title"> &#51;&#65039;&#8419;&#548;&#65039;&#8419; 30.  Print digits line by line.  </h2>
+                <h2 class="section-title"> &#51;&#65039;&#8419;&#48;&#65039;&#8419; 30.  Print digits line by line.  </h2>
                 <pre class="code">
 int num = 123456;
 do {
@@ -559,6 +559,25 @@ do {
 }while (num > 0);
                 </pre>
             </section>
+            
+            <section id="31" class="content-card">
+                <h2 class="section-title"> &#51;&#65039;&#8419;&#49;&#65039;&#8419; 31. Prime number check.  </h2>
+                <pre class="code">
+int num = 7, i = 2;
+boolean prime = true;
+
+do {
+    if (num % i == 0) {
+        prime = false;
+        break;
+    }
+    i++;
+} while (i <= num / 2);
+
+System.out.println(prime ? "Prime" : "Not");
+                </pre>
+            </section>
+
 
         </main>
     </div>
