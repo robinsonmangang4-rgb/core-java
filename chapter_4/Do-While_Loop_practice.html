@@ -608,6 +608,29 @@ do {
                 </pre>
             </section>
 
+            <section id="34" class="content-card">
+                <h2 class="section-title"> &#51;&#65039;&#8419;&#52;&#65039;&#8419; 33. Strong number.  </h2>
+                <pre class="code">
+int num = 145, temp = num, sum = 0;
+
+do {
+    int d = num % 10;
+    int fact = 1, i = 1;
+
+    do {
+        fact *= i;
+        i++;
+    } while (i <= d);
+
+    sum += fact;
+    num /= 10;
+
+} while (num > 0);
+
+System.out.println(sum == temp ? "Strong" : "No");
+                </pre>
+            </section>
+
 
         </main>
     </div>
