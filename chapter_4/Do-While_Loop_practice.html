@@ -644,6 +644,34 @@ do {
                 </pre>
             </section>
 
+            <section id="36" class="content-card">
+                <h2 class="section-title"> &#51;&#65039;&#8419;&#54;&#65039;&#8419; 36. number guessing game.  </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+public class NumberGuessing {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        int secret = 7;
+        int guess;
+
+        do {
+            System.out.print("Guess the number: ");
+            guess = sc.nextInt();
+
+            if (guess != secret) {
+                System.out.println("Try Again!");
+            }
+
+        } while (guess != secret);
+
+        System.out.println("Correct!");
+    }
+}
+                </pre>
+            </section>
+
 
 
         </main>
