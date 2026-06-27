@@ -744,7 +744,32 @@ public class Pyramid {
                 </pre>
             </section>
 
+             <section id="39" class="content-card">
+                <h2 class="section-title"> &#51;&#65039;&#8419;&#57;&#65039;&#8419; 39. Sum until user enters 0.  </h2>
+                <pre class="code">
+import java.util.Scanner;
 
+public class SumUntilZero {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        int num;
+        int sum = 0;
+
+        do {
+            System.out.print("Enter number: ");
+            num = sc.nextInt();
+
+            sum += num;
+
+        } while (num != 0);
+
+        System.out.println("Sum = " + sum);
+    }
+}
+                </pre>
+            </section>
 
         </main>
     </div>
