@@ -771,6 +771,42 @@ public class SumUntilZero {
                 </pre>
             </section>
 
+            <section id="40" class="content-card">
+                <h2 class="section-title"> &#52;&#65039;&#8419;&#48;&#65039;&#8419; 40.  Find Second largest Digit.  </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+public class SecondLargestDigit {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        int largest = -1;
+        int second = -1;
+
+        do {
+            int digit = num % 10;
+
+            if (digit > largest) {
+                second = largest;
+                largest = digit;
+            } else if (digit > second && digit != largest) {
+                second = digit;
+            }
+
+            num /= 10;
+
+        } while (num > 0);
+
+        System.out.println("Second Largest Digit = " + second);
+    }
+}
+                </pre>
+            </section>
+
         </main>
     </div>
 
