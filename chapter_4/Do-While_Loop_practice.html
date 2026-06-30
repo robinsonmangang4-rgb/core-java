@@ -807,6 +807,39 @@ public class SecondLargestDigit {
                 </pre>
             </section>
 
+            <section id="41" class="content-card">
+                <h2 class="section-title"> &#52;&#65039;&#8419;&#49;&#65039;&#8419; 41.  Checked te Perfect Number.  </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+public class PerfectNumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter number: ");
+        int num = sc.nextInt();
+
+        int sum = 0;
+        int i = 1;
+
+        do {
+            if (num % i == 0)
+                sum += i;
+
+            i++;
+
+        } while (i < num);
+
+        if (sum == num)
+            System.out.println("Perfect Number");
+        else
+            System.out.println("Not Perfect Number");
+    }
+}
+                </pre>
+            </section>
+
         </main>
     </div>
 
