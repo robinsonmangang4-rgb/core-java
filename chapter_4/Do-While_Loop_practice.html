@@ -840,6 +840,37 @@ public class PerfectNumber {
                 </pre>
             </section>
 
+            <section id="42" class="content-card">
+                <h2 class="section-title"> &#52;&#65039;&#8419;&#50;&#65039;&#8419; 42.  Binary to Decimal.  </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+public class PerfectNumber {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter binary number: ");
+        int binary = sc.nextInt();
+
+        int decimal = 0;
+        int power = 1;
+
+        do {
+            int digit = binary % 10;
+            decimal += digit * (int)Math.pow(2,power);
+            
+            power++;
+            binary /= 10;
+
+        } while (binary > 0 );
+
+            System.out.println("Decimal = " + decimal);
+    }
+}
+                </pre>
+            </section>
+
         </main>
     </div>
 
