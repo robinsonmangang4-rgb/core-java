@@ -871,6 +871,33 @@ public class PerfectNumber {
                 </pre>
             </section>
 
+            <section id="43" class="content-card">
+                <h2 class="section-title"> &#52;&#65039;&#8419;&#50;&#65039;&#8419; 43.Decimal to Binary.  </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+public class DecimalToBinary {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter Decimal number: ");
+        int num = sc.nextInt();
+
+        String binary = "";
+
+        do {
+            binary = (num % 2) + binary;
+            num/=2;
+
+        } while (num > 0 );
+
+            System.out.println("Binary = " + binary);
+    }
+}
+                </pre>
+            </section>
+
         </main>
     </div>
 
