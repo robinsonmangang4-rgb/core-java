@@ -872,7 +872,7 @@ public class PerfectNumber {
             </section>
 
             <section id="43" class="content-card">
-                <h2 class="section-title"> &#52;&#65039;&#8419;&#50;&#65039;&#8419; 43.Decimal to Binary.  </h2>
+                <h2 class="section-title"> &#52;&#65039;&#8419;&#51;&#65039;&#8419; 43.Decimal to Binary.  </h2>
                 <pre class="code">
 import java.util.Scanner;
 
@@ -893,6 +893,40 @@ public class DecimalToBinary {
         } while (num > 0 );
 
             System.out.println("Binary = " + binary);
+    }
+}
+                </pre>
+            </section>
+
+            <section id="44" class="content-card">
+                <h2 class="section-title"> &#52;&#65039;&#8419;&#52;&#65039;&#8419; 44.  Count Frequency of digits.  </h2>
+                <pre class="code">
+import java.util.Scanner;
+
+public class DigitFrequency {
+    public static void main(String[] args) {
+
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("Enter  number: ");
+        int num = sc.nextInt();
+        int [] freq = new int[10];
+
+        do {
+            int digit = num % 10;
+            freq[ digit]++;
+            num /=10;
+
+        } while (num > 0 );
+        int i = 0;
+
+        do{
+            if(freq [i] > 0 )
+            System.out.println( i + " -> " + freq[i]);
+            i++;
+
+
+        }while (i < 10);
     }
 }
                 </pre>
