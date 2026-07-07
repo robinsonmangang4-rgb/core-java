@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content=" Core Java break-continue tutorial from zero to advanced with example,patterns, interview questions.">
+    <meta name="keywords" content="Core Java, break-continue, Java loops, Java control statements">
+    <meta name="author" content="Core Java Learning">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/png" sizes="32*32"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1a0WBC7gzH2m5vruS5y6ITiFyhgd4-2iPIw&s">
+    <title>break-continue: Core Java: Control Statement</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Tailwind Dark Mode Using : has() -->
+
+    <!-- ✅ THEME STYLES -->
+    <style>
+        /* LIGHT THEME */
+        html[data-theme="light"] body {
+            background: #c4c7c9cc;
+            color: #0f172a;
+        }
+
+        /* DARK THEME */
+        html[data-theme="dark"] body {
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        html[data-theme="dark"] .card {
+            background: #1e293b;
+        }
+
+        html[data-theme="dark"] footer {
+            color: #9ca3af;
+        }
+
+        /* Animated icon */
+        .theme-icon {
+            transition: transform 0.4s ease;
+        }
+
+        .rotate {
+            transform: rotate(180deg) scale(1.15);
+        }
+    </style>
+</head>
+<body class="transition-colors duration-500">
+
+    <!-- HEADER -->
+    <header class="relative bg-gradient-to-tr from-slate-500 via-sky-400 to-purple-400 
+    p-4 sm:p-6 text-center">
+
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden absolute right-4 top-1 text-3xl text-indigo-900">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Responsive Heading -->
+        <h1 class="font-bold text-indigo-800">
+            <span class="block md:hidden text-xl">
+                Core Java
+            </span>
+
+            <span class="hidden md:block lg:hidden text-2xl">
+                Core Java - break-continue
+            </span>
+
+            <span class="hidden lg:block text-4xl">
+                Core Java - Chapter 4 Part-6 (break-continue)
+            </span>
+        </h1>
+
+        <p class="mt-2 text-sm sm:text-base lg:text-lg">
+            Control Statements Tutorial
+        </p>
+
+
+        <!-- 🌙 MOBILE FLOATING TOGGLE -->
+        <button id="themeToggle" class=" absolute top-10 right-4 z-50
+            w-10 h-10 rounded-full
+            bg-gradient-to-tr from-indigo-500 via-sky-400  to-purple-600
+            text-white text-lg
+            shadow-lg
+            flex items-center justify-center
+            active:scale-95 transition">
+
+            <i id="themeIcon" class="fa-solid fa-moon theme-icon"></i>
+        </button>
+
+    </header>
+
+
+    <div class="flex flex-col md:flex-row">
+        <aside id="sidebar" class="
+            card
+            sidebar
+            fixed lg:sticky
+            lg:top-0 lg:left-0 lg:z-40
+            w-64
+            h-screen md:h-[calc(100vh-120px)]
+            overflow-y-auto
+            -translate-x-full md:translate-x-0
+            transition-transform duration-300
+            bg-slate-200 dark:bg-slate-800
+            shadow-md
+            p-4
+            md:sticky top-0
+            md:rounded-r-lg
+            ">
+
+            <h2 class="font-bold text-lg mb-3">Chapter 4 <span> <!-- Hamburger -->
+                    <button id="menuBtn1" class="md:hidden absolute right-4 top-4 text-3xl text-indigo-900">
+                        <i class="fa-solid fa-bars"></i>
+                    </button></span></h2>
+            <ul class="space-y-2 text-blue-600 text-sm">
+                <li><a href="#1"> 1. Print numbers from 1 to 5. </a></li>
+                <li><a href="#2"> 2. Print numbers from 10 to 1. </a></li>
+                <li><a href="#3"> 3. Print even numbers from 2 to 20. </a></li>
+                <li><a href="#4"> 4. Print old numbers from 1 to 15. </a></li>
+                <li><a href="#5"> 5. Print multiplication table of 5. </a></li>
+                <li><a href="#6"> 6. Sum of numbers from 1 to 10. </a></li>
+                <li><a href="#7"> 7. Factorial of a number (5!). </a></li>
+                <li><a href="#8"> 8. Count digits in a number. </a></li>
+                <li><a href="#9"> 9. Reverse a number. </a></li>
+                <li><a href="#10">10. Sum of digits. </a></li>
+                <li><a href="#11">11. Check palindrome number. </a></li>
+                <li><a href="#12">12. Print ASCII values A-Z. </a></li>
+                <li><a href="#13">13. Print squares 1-10.</a></li>
+                <li><a href="#14">14. Print cubes 1-5. </a></li>
+                <li><a href="#15">15. Print numbers divisible by 3 (1-30).</a></li>
+                <li><a href="#16">16. Find largest digit</a></li>
+                <li><a href="#17">17. Count even digits. </a></li>
+                <li><a href="#18">18. Power calculation (2^5). </a></li>
+                <li><a href="#19">19. Check Armstrong (153). </a></li>
+                <li><a href="#20">20.  Print Fibonacci (first 10). </a></li>
+                <li><a href="#21">21. Menu-driven program. </a></li>
+                <li><a href="#22">22. Validate input (positive number). </a></li>
+                <li><a href="#23">23. Print pattern (square). </a></li>
+                <li><a href="#24">24. Sum of even numbers 1-50. </a></li>
+                <li><a href="#25">25. Count vowels in number string. </a></li>
+                <li><a href="#26">26. Print multiples of 7. </a></li>
+                <li><a href="#27">27. count out Numbers from 1 to 20. </a></li>
+                <li><a href="#28">28. Sum of the Squares . </a></li>
+                <li><a href="#29">29. Reverse a String. </a></li>
+                <li><a href="#30">30. Print digits line by line. </a></li>
+                <li><a href="#31">31. Prime number check. </a></li>
+                <li><a href="#32">32. GCD of two numbers . </a></li>
+                <li><a href="#33">33. LCM. </a></li>
+                <li><a href="#34">34. Strong number. </a></li>
+                <li><a href="#35">35. Login system (3 attempts). </a></li>
+                <li><a href="#36">36. number guessing game. </a></li>
+                <li><a href="#37">37. ATM Simulation. </a></li>
+                <li><a href="#38">38. Pattern Pyramid. </a></li>
+                <li><a href="#39">39. Sum until user enters 0. </a></li>
+                <li><a href="#40">40. Find Second largest Digit. </a></li>
+                <li><a href="#41">41. Checked te Perfect Number. </a></li>
+                <li><a href="#42">42. Binary to Decimal. </a></li>
+                <li><a href="#43">43. Decimal to Binary. </a></li>
+                <li><a href="#44">44. Count Frequency of digits. </a></li>
+                <li><a href="#45">45. Palindrome String . </a></li>
+            </ul>
+        </aside>
+
+        <div class="fixed top-0 left-0 w-full h-1 bg-transparent z-50">
+            <div id="progressBar" class="h-1 bg-gradient-to-r from-sky-400 to-purple-500 w-0"></div>
+        </div>
+
+        <main class="flex-1 max-w-full sm:max-w-3xl lg:max-w-5xl mx-auto p-4 sm:p-6 space-y-6 sm:space-y-8">
+    
+</body>
+</html>
