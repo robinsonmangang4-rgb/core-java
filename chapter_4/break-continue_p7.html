@@ -181,12 +181,13 @@
             </section>
             
             <section id="#2" class=" card bg-white p-6 rounded-xl shadow">
-                <h2 class="text-2xl font-semibold"> What is <span class="for">break </span></h2>
-                <p class="mt-2">
+                <h1 class="text-2xl font-semibold"> 1. <span class="for">break</span>Statement</h1>
+                <h2 class="text-2xl font-semibold ml-4"> What is <span class="for">break </span></h2>
+                <p class="mt-2 ml-6">
                     The <span class="for"> break</span> statements is used to <strong>immediately terminate </strong> a loop or a switch statement.
                 </p>
-                <h2> Once <span class="for">break</span> executes:</h2>
-                <ol class="list-disc mt-5 ">
+                <h2 class="mt-4 ml-6 font-semibold"> Once <span class="for">break</span> executes:</h2>
+                <ol class="list-disc mt-2 ml-12 ">
                     <li>The loop stops immediately.</li>
                     <li>Control moves to the first statement after the loop.</li>
                 </ol>
@@ -194,6 +195,42 @@
                 <pre class="code">
 break;
                 </pre>
+            </section>
+            <section class=" card bg-white p-6 rounded-xl shadow">
+                <h2 class="text-2xl font-semibold ">Example 1: beak with <span class="for">while</span> loop</h2>
+                <pre class="code">
+public class BreakExample1{
+    public static void main(string[] args){
+        int i = 1;
+        while (i <= 10){
+            if (i == 6){
+                break;
+            }
+            System.out.println(i);
+            i++;
+        }
+    }
+}
+                </pre>
+                <h2 class="text-2xl font-semibold mt-4">Output</h2>
+                <pre class="code">
+1
+2
+3
+4
+5
+
+                </pre>
+                <h2 class="text-2xl font-semibold mt-4">Explanation</h2>
+                <ol class="list-disc mt-2 ml-12 ">
+                    <li>i = 1 &rarr; prints 1 </li>
+                    <li>i = 2 &rarr; prints 2 </li>
+                    <li>i = 3 &rarr; prints 3 </li>
+                    <li>i = 4 &rarr; prints 4 </li>
+                    <li>i = 5 &rarr; prints 5 </li>
+                    <li>i = 6 &rarr; break executes. </li>
+                    <li> Loop stops immediately. </li>
+                </ol>
             </section>
 
             <!-- BACK TO TOP BUTTON (SCRIPT) -->
