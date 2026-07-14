@@ -173,14 +173,14 @@
         </div>
 
         <main class="flex-1 max-w-full sm:max-w-3xl lg:max-w-5xl mx-auto p-4 sm:p-6 space-y-6 sm:space-y-8">
-        <section id="#1" class=" card bg-white p-6 rounded-xl shadow">
+        <section id="#1" class=" content-card ">
                 <h2 class="text-2xl font-semibold"> Core Java <span class="for">break </span>and <span class="for">continue </span>-Full Course (with Examples and Explanations).</h2>
                 <p class="mt-2">
                     The <span class="for"> break</span> and <span class="for">continue</span>statements are <strong> jump statements</strong> in Java. They control the execution of loops and switch statements.
                 </p>
             </section>
             
-            <section id="#2" class=" card bg-white p-6 rounded-xl shadow">
+            <section id="#2" class=" content-card ">
                 <h1 class="text-2xl font-semibold"> 1. <span class="for">break</span>Statement</h1>
                 <h2 class="text-2xl font-semibold ml-4"> What is <span class="for">break </span></h2>
                 <p class="mt-2 ml-6">
@@ -196,7 +196,9 @@
 break;
                 </pre>
             </section>
-            <section class=" card bg-white p-6 rounded-xl shadow">
+
+
+            <section id="#3" class="  content-card ">
                 <h2 class="text-2xl font-semibold ">Example 1: beak with <span class="for">while</span> loop</h2>
                 <pre class="code">
 public class BreakExample1{
@@ -233,8 +235,43 @@ public class BreakExample1{
                 </ol>
             </section>
 
+            <section id="#4" class="content-card">
+                <h2 class="section-title ">Example 1: beak with <span class="for">for</span> loop</h2>
+                <pre class="code">
+public class BreakExample2{
+    public static void main(string[] args){
+        for (int i = 1; i <= 10; i++)
+        {
+            if(i==7){
+                break;
+            }
+            System.out.println(i);
+        }
+        
+    }
+}
+                </pre>
+                 <h2 class="text-2xl font-semibold mt-4">Output</h2>
+                <pre class="code">
+1
+2
+3
+4
+5
+6
+
+                </pre>
+            </section>
+
+            <section class="content-card flex justify-between">
+                <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
+                <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
+
+            </section>
+        </main>
+    </div>
             <!-- BACK TO TOP BUTTON (SCRIPT) -->
-    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
+    <button onclic<k="window.scrollTo({top:0,behavior:'smooth'})" class="
     fixed bottom-4 right-4 sm:right-6
     text-2xl sm:text-3xl
     w-10 h-10 sm:w-12 sm:h-12
@@ -246,8 +283,8 @@ public class BreakExample1{
     </button>
 
     <!-- FOOTER -->
-    <footer class="text-center p-4 text-sm text-white/90">
-        &copy; Core Java Learning &#124; Chapter-4.
+    <footer class="text-center p-4 text-sm text-black">
+        &copy; Core Java Learning &#124; Chapter-4 (<strong>break-continue</strong>).
     </footer>
 
     <script>
