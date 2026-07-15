@@ -251,7 +251,7 @@ public class BreakExample2{
     }
 }
                 </pre>
-                 <h2 class="text-2xl font-semibold mt-4">Output</h2>
+                <h2 class="text-2xl font-semibold mt-4">Output</h2>
                 <pre class="code">
 1
 2
@@ -263,6 +263,33 @@ public class BreakExample2{
                 </pre>
             </section>
 
+            <section id="#5" class="content-card">
+                <h2 class="section-title"> Example 3: break in <span class="for">switch</span>.</h2>
+                <pre class="code">
+int day = 2;
+switch(day){
+    case 1:
+        System.out.println("Monday");
+        break;
+
+        case 2:
+        System.out.println("Tuesday");
+        break;
+
+        default:
+        System.out.println("invalid");
+}
+                </pre>
+
+                <h2 class="text-2xl font-semibold mt-4">Output</h2>
+                <pre class="code">
+Tuesday
+
+                </pre>
+                <h2 class="section-title mt-4"> Why <span class="for">break</span> is needed?</h2>
+                <p class="mt-2"> Without <span class="for">break</span>, Java continues executing the ext case (<strong>fall-through</strong>).</p>
+            </section>
+<hr>
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
