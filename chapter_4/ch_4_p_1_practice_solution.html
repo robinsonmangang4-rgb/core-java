@@ -7,47 +7,84 @@
     <title>If / If-Else Practice Programs (Java)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
+    <!-- ✅ THEME STYLES -->
     <style>
-        body:has(#dark:checked) {
-            background-color: #0f172a;
+        /* LIGHT THEME */
+        html[data-theme="light"] body {
+            background: #c4c7c9cc;
+            color: #0f172a;
+        }
+
+        /* DARK THEME */
+        html[data-theme="dark"] body {
+            background: #0f172a;
             color: #e5e7eb;
         }
 
-        body:has(#dark:checked) .card {
-            background-color: #020617;
-            color: #e5e7eb;
+        html[data-theme="dark"] .card {
+            background: #1e293b;
         }
 
-        body:has(#dark:checked) .sidebar {
-            background-color: #020617;
+        html[data-theme="dark"] footer {
+            color: #9ca3af;
         }
 
-        body:has(#dark:checked) header {
-            background-color: #020617;
+        /* Animated icon */
+        .theme-icon {
+            transition: transform 0.4s ease;
+        }
+
+        .rotate {
+            transform: rotate(180deg) scale(1.15);
         }
     </style>
-
 </head>
 
-<body class="bg-gray-200">
+<body class="transition-colors duration-500">
 
-    <!-- Header -->
-    <header class="bg-blue-600 text-white p-6 text-center">
-        <h1 class="text-4xl font-bold">Core Java - Chapter 4 Part-1</h1>
-        <pc class="text-lg mt-2"> If and If-else Statements ( Full Course )</p>
-            <!-- Dark Mode Radio -->
-            <div class="flex justify-center gap-4 mt-4 text-sm">
-                <label class="cursor-pointer">
-                    <input type="radio" name="theme" id="light" checked hidden>
-                    &#9728; Light
-                </label>
+    <!-- HEADER -->
+    <header class="relative bg-gradient-to-tr from-slate-500 via-sky-400 to-purple-400 
+    p-4 sm:p-6 text-center">
 
-                <label class="cursor-pointer">
-                    <input type="radio" name="theme" id="dark" hidden>
-                    &#127769; Dark
-                </label>
-            </div>
+        <!-- Hamburger -->
+        <button id="menuBtn" class="md:hidden absolute right-4 top-1 text-3xl text-indigo-900">
+            <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <!-- Responsive Heading -->
+        <h1 class="font-bold text-indigo-800">
+            <span class="block md:hidden text-xl">
+                Core Java
+            </span>
+
+            <span class="hidden md:block lg:hidden text-2xl">
+                Core Java - for Loop
+            </span>
+
+            <span class="hidden lg:block text-4xl">
+                Core Java - Chapter 4 Part-4 (for Loop)
+            </span>
+        </h1>
+
+        <p class="mt-2 text-sm sm:text-base lg:text-lg">
+            Control Statements Tutorial
+        </p>
+
+
+        <!-- 🌙 MOBILE FLOATING TOGGLE -->
+        <button id="themeToggle" class=" absolute top-10 right-4 z-50
+            w-10 h-10 rounded-full
+            bg-gradient-to-tr from-indigo-500 via-sky-400  to-purple-600
+            text-white text-lg
+            shadow-lg
+            flex items-center justify-center
+            active:scale-95 transition">
+
+            <i id="themeIcon" class="fa-solid fa-moon theme-icon"></i>
+        </button>
+
     </header>
+
 
     <div class="flex flex-col md:flex-row">
 
@@ -207,19 +244,163 @@ else
     System.out.println("Not Palindrome");</code></pre>
             </div>
 
+
+            <section class="content-card flex justify-between">
+                <a href="ch_4_part_1.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
+                <p class=" font-semibold"> Completed!! Well done. You can go to next &rAarr;</p>
+                <a href="else-if_ladder_part_2.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
+
+            </section>
         </main>
+    </div>
 
 
-        <!-- BACK TO TOP BUTTON -->
-        <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="fixed bottom-6 right-6 bg-blue-600 text-white
- w-12 h-12 rounded-full shadow-lg
- hover:bg-blue-700 transition">
-            &uarr;
-        </button>
-        <!-- FOOTER -->
-        <footer class="text-center p-4 text-sm text-gray-500">
-            © Core Java Learning | Chapter 4
-        </footer>
+    <!-- BACK TO TOP BUTTON (SCRIPT) -->
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
+    fixed bottom-4 right-4 sm:right-6
+    text-2xl sm:text-3xl
+    w-10 h-10 sm:w-12 sm:h-12
+    rounded-full shadow-lg
+    bg-gradient-to-tr from-orange-400 to-sky-500
+    hover:from-fuchsia-400 hover:to-yellow-500
+    transition">
+        &uarr;
+    </button>
+
+    <!-- FOOTER -->
+    <footer class="text-center p-4 text-sm text-black">
+        &copy; Core Java Learning &#124; Chapter-4.
+    </footer>
+
+    <script>
+
+        const html = document.documentElement;
+        const toggleBtn = document.getElementById("themeToggle");
+        const icon = document.getElementById("themeIcon");
+
+        function applyTheme(theme) {
+            html.setAttribute("data-theme", theme);
+            localStorage.setItem("theme", theme);
+
+            icon.classList.add("rotate");
+            setTimeout(() => icon.classList.remove("rotate"), 400);
+
+            if (theme === "dark") {
+                icon.classList.replace("fa-moon", "fa-sun");
+            } else {
+                icon.classList.replace("fa-sun", "fa-moon");
+            }
+        }
+
+        //  AUTO SYSTEM DARK MODE (FIRST VISIT)
+        const savedTheme = localStorage.getItem("theme");
+
+        if (savedTheme) {
+            applyTheme(savedTheme);
+        } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+            applyTheme("dark");
+        }
+
+        // TOGGLE
+        toggleBtn.addEventListener("click", () => {
+            const current = html.getAttribute("data-theme");
+            applyTheme(current === "dark" ? "light" : "dark");
+        });
+
+        window.addEventListener("scroll", () => {
+            const scrollTop = document.documentElement.scrollTop;
+            const height =
+                document.documentElement.scrollHeight -
+                document.documentElement.clientHeight;
+
+            const progress = (scrollTop / height) * 100;
+            document.getElementById("progressBar").style.width = progress + "%";
+        });
+
+        const menuBtn = document.getElementById("menuBtn");
+        const sidebar = document.getElementById("sidebar");
+
+        menuBtn.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+        });
+
+        const menuBtn1 = document.getElementById("menuBtn1");
+
+        menuBtn1.addEventListener("click", () => {
+            sidebar.classList.toggle("-translate-x-full");
+        });
+
+
+
+        /* ===========================
+        REUSABLE STYLES (JS)
+        =========================== */
+        document.querySelectorAll(".content-card").forEach(card => {
+            card.classList.add(
+                "card",
+                "bg-white/80",
+                "dark:bg-slate-800",
+                "p-6",
+                "rounded-xl",
+                "shadow",
+                "transition-colors"
+            );
+        });
+
+        document.querySelectorAll(".section-title").forEach(t => {
+            t.classList.add(
+                "font-bold",
+                "text-base",
+                "sm:text-lg",
+                "mb-3"
+            );
+        });
+
+        document.querySelectorAll(".code").forEach(c => {
+            c.classList.add(
+                "bg-gray-900",
+                "text-green-400",
+                "p-3",
+                "sm:p-4",
+                "rounded-2xl",
+                "mt-3",
+                "text-xs",
+                "sm:text-sm",
+                "lg:text-base",
+                "overflow-x-auto"
+            );
+        });
+
+        document.querySelectorAll(".table-code").forEach(l => {
+            l.classList.add(
+                "card",
+                "w-full",
+                "border",
+                "bg-white/70",
+                "border-collapse",
+                "overflow-hidden",
+                "rounded-lg"
+            );
+        });
+
+        document.querySelectorAll(".list-code").forEach(k => {
+            k.classList.add(
+                "list-disc",
+                "list-inside",
+                "spacey-y-1",
+                "mt-3",
+            );
+        });
+
+        document.querySelectorAll(".for").forEach(f => {
+            f.classList.add(
+                "text-blue-700",
+                "bg-slate-300",
+                "rounded-md",
+                "font-mono",
+            );
+        });
+    </script>
 </body>
 
 </html>
