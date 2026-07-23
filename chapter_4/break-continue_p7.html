@@ -176,7 +176,7 @@
         <section id="#1" class=" content-card ">
                 <h2 class="text-2xl font-semibold"> Core Java <span class="for">break </span>and <span class="for">continue </span>-Full Course (with Examples and Explanations).</h2>
                 <p class="mt-2">
-                    The <span class="for"> break</span> and <span class="for">continue</span>statements are <strong> jump statements</strong> in Java. They control the execution of loops and switch statements.
+                    The <span class="for"> break</span> and <span class="for">continue</span> statements are <strong> jump statements</strong> in Java. They control the execution of loops and switch statements.
                 </p>
             </section>
             
@@ -290,6 +290,50 @@ Tuesday
                 <p class="mt-2"> Without <span class="for">break</span>, Java continues executing the ext case (<strong>fall-through</strong>).</p>
             </section>
 <hr>
+
+            <section id="#6" class="content-card">
+                <h2 class="text-2xl font-semibold">2. <span class="for">continue</span> Statement.</h2>
+                <h2 class="section-title mt-2"> Definition </h2>
+                <p class="mt-2"> The <span class="for">continue</span>statement <strong>skips the current iteration </strong> and moves directly to the next iteration of the loop.</p>
+                <h2 class="section-title mt-2"> Syntax </h2>
+                <pre class="code">
+continue;
+                </pre>
+            </section>
+            <hr>
+            <section id="#7" class="content-card">
+                <h2 class="text-2xl font-semibold"> Example 1: continue with <span class="for">for</span>.</h2>
+                <pre class="code">
+public class ContinueExample1 {
+    public static void main(String[] args) {
+
+        for (int i = 1; i <= 5; i++) {
+
+            if (i == 3) {
+                continue;
+            }
+
+            System.out.println(i);
+        }
+    }
+}
+                </pre>
+                <h2 class="section-title">Output</h2>
+                <pre class="code">
+1
+2
+4
+5
+                </pre>
+                <h2 class="text-2xl font-semibold mt-4">Explanation</h2>
+                <ol class="list-disc mt-2 ml-12 ">
+                    <li>i = 1 &rarr; prints 1 </li>
+                    <li>i = 2 &rarr; prints 2 </li>
+                    <li>i = 3 &rarr; When <span class="for">i == 3</span>, <span class="for">continue</span> skips printing.</li>
+                    <li>i = 4 &rarr; prints 4 </li>
+                    <li>i = 5 &rarr; prints 5 </li>
+                </ol>
+            </section>
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
@@ -298,7 +342,7 @@ Tuesday
         </main>
     </div>
             <!-- BACK TO TOP BUTTON (SCRIPT) -->
-    <button onclic<k="window.scrollTo({top:0,behavior:'smooth'})" class="
+    <button onclick="window.scrollTo({top:0,behavior:'smooth'})" class="
     fixed bottom-4 right-4 sm:right-6
     text-2xl sm:text-3xl
     w-10 h-10 sm:w-12 sm:h-12
