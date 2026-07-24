@@ -334,6 +334,38 @@ public class ContinueExample1 {
                     <li>i = 5 &rarr; prints 5 </li>
                 </ol>
             </section>
+<hr>
+            <section id="#8" class="content-card">
+                <h2 class="text-2xl font-semibold">Example 2: continue with <span class="for">while</span>.</h2>
+                <pre class="code">
+public class ContinueExample2 {
+    public static void main(String[] args) {
+
+        int i = 0;
+
+        while (i < 5) {
+
+            i++;
+
+            if (i == 3) {
+                continue;
+            }
+
+            System.out.println(i);
+        }
+    }
+}
+                </pre>
+                <h2 class="section-title">Output</h2>
+                <pre class="code">
+1
+2
+3
+4
+5
+                </pre>
+                <p class="mt-4">Notice that <span class="for">i++</span> is done <strong>before </strong><span class="for">continue</span>. Otherwise, the loop could become infinite.</p>
+            </section>
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
