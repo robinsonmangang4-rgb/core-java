@@ -7,7 +7,7 @@
     <title>If / If-Else Practice Programs (Java)</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
     <script src="https://cdn.tailwindcss.com"></script>
-    <!-- ✅ THEME STYLES -->
+ <!-- ✅ THEME STYLES -->
     <style>
         /* LIGHT THEME */
         html[data-theme="light"] body {
@@ -58,11 +58,11 @@
             </span>
 
             <span class="hidden md:block lg:hidden text-2xl">
-                Core Java - for Loop
+                Core Java - If and IF-else
             </span>
 
             <span class="hidden lg:block text-4xl">
-                Core Java - Chapter 4 Part-4 (for Loop)
+                Core Java - Chapter 4 Part-1 (if and if-else)
             </span>
         </h1>
 
@@ -88,8 +88,27 @@
 
     <div class="flex flex-col md:flex-row">
 
-        <aside class="sidebar md:w-64 bg-slate-200 shadow-md p-4 md:sticky md:top-0 h-fit">
-            <h2 class="font-bold text-lg mb-3">Chapter 4 part-One</h2>
+ <aside id="sidebar" class="
+            card
+            sidebar
+            fixed lg:sticky
+            lg:top-0 lg:left-0 lg:z-40
+            w-64
+            h-screen md:h-[calc(100vh-120px)]
+            overflow-y-auto
+            -translate-x-full md:translate-x-0
+            transition-transform duration-300
+            bg-slate-200 dark:bg-slate-800
+            shadow-md
+            p-4
+            md:sticky top-0
+            md:rounded-r-lg
+            ">
+
+            <h2 class="font-bold text-lg mb-3">Chapter 4 <span> <!-- Hamburger -->
+                    <button id="menuBtn1" class="md:hidden absolute right-4 top-4 text-3xl text-indigo-900">
+                        <i class="fa-solid fa-bars"></i>
+                    </button></span></h2>
             <ul class="space-y-2 text-blue-800 text-sm">
                 <li><a href="#one">1. Positive or Negative</a></li>
                 <li><a href="#two">2. Even or odd.</a></li>
