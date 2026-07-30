@@ -173,14 +173,14 @@
         </div>
 
         <main class="flex-1 max-w-full sm:max-w-3xl lg:max-w-5xl mx-auto p-4 sm:p-6 space-y-6 sm:space-y-8">
-        <section id="#1" class=" content-card ">
+        <section id="1" class=" content-card ">
                 <h2 class="text-2xl font-semibold"> Core Java <span class="for">break </span>and <span class="for">continue </span>-Full Course (with Examples and Explanations).</h2>
                 <p class="mt-2">
                     The <span class="for"> break</span> and <span class="for">continue</span> statements are <strong> jump statements</strong> in Java. They control the execution of loops and switch statements.
                 </p>
             </section>
             
-            <section id="#2" class=" content-card ">
+            <section id="2" class=" content-card ">
                 <h1 class="text-2xl font-semibold"> 1. <span class="for">break</span>Statement</h1>
                 <h2 class="text-2xl font-semibold ml-4"> What is <span class="for">break </span></h2>
                 <p class="mt-2 ml-6">
@@ -198,7 +198,7 @@ break;
             </section>
 
 
-            <section id="#3" class="  content-card ">
+            <section id="3" class="  content-card ">
                 <h2 class="text-2xl font-semibold ">Example 1: beak with <span class="for">while</span> loop</h2>
                 <pre class="code">
 public class BreakExample1{
@@ -235,7 +235,7 @@ public class BreakExample1{
                 </ol>
             </section>
 
-            <section id="#4" class="content-card">
+            <section id="4" class="content-card">
                 <h2 class="section-title ">Example 1: beak with <span class="for">for</span> loop</h2>
                 <pre class="code">
 public class BreakExample2{
@@ -263,7 +263,7 @@ public class BreakExample2{
                 </pre>
             </section>
 
-            <section id="#5" class="content-card">
+            <section id="5" class="content-card">
                 <h2 class="section-title"> Example 3: break in <span class="for">switch</span>.</h2>
                 <pre class="code">
 int day = 2;
@@ -291,7 +291,7 @@ Tuesday
             </section>
 <hr>
 
-            <section id="#6" class="content-card">
+            <section id="6" class="content-card">
                 <h2 class="text-2xl font-semibold">2. <span class="for">continue</span> Statement.</h2>
                 <h2 class="section-title mt-2"> Definition </h2>
                 <p class="mt-2"> The <span class="for">continue</span>statement <strong>skips the current iteration </strong> and moves directly to the next iteration of the loop.</p>
@@ -301,7 +301,7 @@ continue;
                 </pre>
             </section>
             <hr>
-            <section id="#7" class="content-card">
+            <section id="7" class="content-card">
                 <h2 class="text-2xl font-semibold"> Example 1: continue with <span class="for">for</span>.</h2>
                 <pre class="code">
 public class ContinueExample1 {
@@ -335,7 +335,7 @@ public class ContinueExample1 {
                 </ol>
             </section>
 <hr>
-            <section id="#8" class="content-card">
+            <section id="8" class="content-card">
                 <h2 class="text-2xl font-semibold">Example 2: continue with <span class="for">while</span>.</h2>
                 <pre class="code">
 public class ContinueExample2 {
@@ -368,7 +368,7 @@ public class ContinueExample2 {
             </section>
             <hr>
 
-            <section id="#9" class="content-card">
+            <section id="9" class="content-card">
                 <h2 class="text-2xl font-semibold">Difference between <span class="for">break</span> and <span class="for">continue</span>.</h2>
                 
         <table class="w-full mt-4 border border-gray-300">
@@ -404,7 +404,44 @@ public class ContinueExample2 {
             </table>
             </section>
 <hr>
-
+            <section id="10" class="content-card">
+                <h2 class="text-2xl font-semibold"> Real-world Examples. </h2>
+                <h2 class="section-title"> 1. ATM PIN (<span class="for">break</span>).</h2>
+                <pre class="code">
+for (int attempt = 1; attempt <= 3; attempt++){
+    if(correctPin){
+        System.out.println("login Successful");
+        break;
+    }
+}
+                </pre>
+                <p class="mt-4"> When the correct PIN is entered, there's no need to continue checking more attempts.</p>
+            <hr>
+            <h2 class="section-title"> 2. Skip absent students (<span class="for">continue</span>).</h2>
+            <pre class="code">
+for ( int roll = 1; roll <= 10; roll++){
+    if (roll == 5){
+        continue;
+    }
+    System.out.println("Present: "+roll);
+}
+            </pre>
+            <h2 class="section-title">Output.</h2>
+            <pre class="code">
+Present: 1
+Present: 2
+Present: 3
+Present: 4
+Present: 6
+Present: 7
+Present: 8
+Present: 9
+Present: 10
+            </pre>
+            <p class="mt-4">Student 5 is absent, so that iteration is skipped.</p>
+            </section>
+            <hr>
+            
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
