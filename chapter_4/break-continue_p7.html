@@ -441,6 +441,32 @@ Present: 10
             <p class="mt-4">Student 5 is absent, so that iteration is skipped.</p>
             </section>
             <hr>
+            <section id="11" class="content-card">
+                <h2 class="text-2xl font-semibold"> Break with Nested Loops. </h2>
+                <pre class="code">
+for (int i = 1; i <= 3; i++){
+    for (int j = 1; j <= 5; j++){
+        if(j==3){
+            break;
+        }
+        System.out.println(i+ " "+j);
+    }
+}
+                </pre>
+                <h2 class="section-title"> Output</h2>
+                <pre class="code">
+1 1
+1 2
+2 1
+2 2
+3 1
+3 2
+                </pre>
+                <p class="mt-4"> Explanation: <span class="for">break</span> exits only the <strong> inner loop.</strong> The outer loop continues.</p>
+            </section>
+
+            <hr>
+
             
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
