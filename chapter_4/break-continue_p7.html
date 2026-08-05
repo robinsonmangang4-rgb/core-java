@@ -546,7 +546,50 @@ Loop ended.
                 </ul>
             </section>
             <hr>
+            <section id="15" class="content-card">
+                <h2 class="text-2xl font-semibold"> Common Mistakes.</h2>
+                <p class="mt-4"> &#10060; Using  <span class="for">continue</span> instead of <span class="for">break</span></p>
+                <pre class="code">
+if (found){
+    continue;   <Span class="text-white/70"> // Wrong if you want to stop the loop</Span>
+}
+                </pre>
+                <p class="mt-4 mb-4"> &#9989; Correct </p>
+                <pre class="code">
+if ( found){
+    break;
+}
+                </pre>
+            <hr class="mt-4">
+                
+            <p class="mt-4 mb-4"> &#10060; Infinite loop with <span class="for">continue</span>. </p>
+                <pre class="code">
+int i = 1;
+while(i <=5){
+    
+    if ( i == 3){
+    continue;
+    }
+    i++;
+}
+                </pre>
+                <p class="mt-4 mb-4"> <span class="for">i</span> never increments when it is 3, so the loop rus forever.</p>
+            <p class="mt-4  mb-4"> &#9989; Correct </p>
+            <pre class="code">
+int i = 1;
 
+while(i <= 5){
+
+    if(i == 3){
+        i++;
+        continue;
+    }
+
+    System.out.println(i);
+    i++;
+}
+            </pre>
+            </section>
             
 
             <section class="content-card flex justify-between">
