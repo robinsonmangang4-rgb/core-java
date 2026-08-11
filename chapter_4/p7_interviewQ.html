@@ -232,11 +232,70 @@ for(int i=1;i<=5;i++){
             <section id="4" class="content-card">
                 <h2 class="text-2xl font-semibold"> &#52;&#65039;&#8419; 3. What is the difference between <span class="for">break</span> and <span class="for">continue</span>?</h2>
                 <p class="mt-4"> <Strong> Answers </Strong>
-                    
+                    <table class="w-full bg-gray-300 mt-4 border border-gray-400 ">
+                        <tr class="border p-4 ">
+                            <th>break</th>
+                            <th>continue</th>
+                        </tr>
+                        <tr>
+                            <td>Stops the entire loop</td>
+                            <td>Skips only the current iteration</td>
+                        </tr>
+                        <tr>
+                            <td>Control moves outside the loop</td>
+                            <td>Control moves to the next iteration</td>
+                        </tr>
+                        <tr>
+                            <td>Can be used in loops and switch</td>
+                            <td>Used only in loops</td>
+                        </tr>
+                        <tr>
+                            <td>Ends execution immediately</td>
+                            <td>Continues execution of remaining iterations</td>
+                        </tr>
+                    </table>
+                <h2 class="section-title mt-4"> Example: </h2>
+                <p class="mt-4 mb-4 section-title"> break</p>
+                    <pre class="code">
+for(int i=1;i<=5;i++){
+
+    if(i==3)
+        break;
+
+    System.out.println(i);
+}
+                    </pre>
+                    <h2 class="section-title mt-4">Output:</h2>
+                    <pre class="code">
+1
+2
+                    </pre>
+                </p>
+
+                <p class="mt-4 mb-4 section-title"> continue</p>
+                    <pre class="code">
+for(int i=1;i<=5;i++){
+
+    if(i==3)
+        continue;
+
+    System.out.println(i);
+}
+                    </pre>
+                    <h2 class="section-title mt-4">Output:</h2>
+                    <pre class="code">
+1
+2
+4
+5
+                    </pre>
                 </p>
             </section>
+            <hr>
+            
+            <section id="6" class="content-card">
 
-
+            </section>
 
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
