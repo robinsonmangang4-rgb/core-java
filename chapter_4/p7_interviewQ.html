@@ -294,8 +294,42 @@ for(int i=1;i<=5;i++){
             <hr>
             
             <section id="6" class="content-card">
+                <h2 class="text-2xl font-semibold">&#54;&#65039;&#8419; Can <span class="for">break</span> be used in a <span class="for">switch</span> statement?</h2>
+                <p class="mt-4 mb-4 section-title"> Answer:</p>
+                <p class="mt-4 mb-4 section-title"> Yes.</p>
+                <p class="mt-4 mb-4 "> <span class="for">break</span> is commonly used in a <span class="for">switch</span> statement to stop execution after a matching case.</p>
+                <p class="mt-4 mb-4"> Without <span class="for">break</span>, Java executes the following cases too (fall-though).</p>
+                <h2 class="section-title"> Example:</h2>
+                <pre class="code">
+int day = 2;
 
+switch(day){
+
+case 1:
+System.out.println("Monday");
+break;
+
+case 2:
+System.out.println("Tuesday");
+break;
+
+case 3:
+System.out.println("Wednesday");
+break;
+
+}
+                </pre>
+                <h2 class="section-title">Output</h2>
+                <pre class="code">
+Tuesday
+                </pre>
             </section>
+            <hr>
+
+            <section id="7" class="content-card">
+                <h2 class="text-2xl font-semibold">&#55;</h2>
+            </section>
+
 
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
