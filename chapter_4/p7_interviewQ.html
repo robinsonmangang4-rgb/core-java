@@ -355,6 +355,44 @@ for(int i=1;i<=3;i++){
             </section>
 <hr>
 
+
+            <section id="8" class="content-card">
+                <h2 class="text-2xl font-semibold"> &#56;&#65039;&#8419; 6. What is a labeled <span class="for">break</span>?</h2>
+                <p class="section-title">Answer:</p>
+                <p class="mt-4 mb-4">A labeled <span class="for">break</span> is used to exit an <strong> outer loop </strong>directly.</p>
+                <p class="mt-4 mb-4"> It is useful in nested loops.</p>
+                <h2 class="section-title"> Example:</h2>
+                <pre class="code">
+outer:
+
+for(int i=1;i<=3;i++){
+
+    for(int j=1;j<=3;j++){
+
+        if(i==2 && j==2){
+
+            break outer;
+
+        }
+
+        System.out.println(i+" "+j);
+
+    }
+
+}
+                </pre>
+                <h2 class="section-title"> Output:</h2>
+                <pre class="code">
+1 1
+1 2
+1 3
+2 1
+                </pre>
+                <p class="mt-4 mb-4"> The program exits both loops when <span class="for">i == 2</span>and <span class="for">j == 2</span>.</p>
+            </section>
+<hr>
+
+
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
