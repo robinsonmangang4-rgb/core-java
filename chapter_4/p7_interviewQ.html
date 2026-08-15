@@ -294,7 +294,7 @@ for(int i=1;i<=5;i++){
             <hr>
             
             <section id="6" class="content-card">
-                <h2 class="text-2xl font-semibold">&#54;&#65039;&#8419; Can <span class="for">break</span> be used in a <span class="for">switch</span> statement?</h2>
+                <h2 class="text-2xl font-semibold">&#53;&#65039;&#8419; Can <span class="for">break</span> be used in a <span class="for">switch</span> statement?</h2>
                 <p class="mt-4 mb-4 section-title"> Answer:</p>
                 <p class="mt-4 mb-4 section-title"> Yes.</p>
                 <p class="mt-4 mb-4 "> <span class="for">break</span> is commonly used in a <span class="for">switch</span> statement to stop execution after a matching case.</p>
@@ -327,7 +327,7 @@ Tuesday
             <hr>
 
             <section id="7" class="content-card">
-                <h2 class="text-2xl font-semibold">&#55;&#65039;&#8419; 5. Can <span class="for">continue</span> be used inside a <span class="for">switch</span> statement?</h2>
+                <h2 class="text-2xl font-semibold">&#54;&#65039;&#8419; 5. Can <span class="for">continue</span> be used inside a <span class="for">switch</span> statement?</h2>
                 <p class="section-title"> Answer: </p>
                 <p class="mt-4 mb-4"> <strong>No</strong>, <span class="for">continue</span> is not used to control a <span class="for">switch</span> statement itself.</p>
                 <p class="mt-4 mb-4"> It is only used with loops.</p>
@@ -357,7 +357,7 @@ for(int i=1;i<=3;i++){
 
 
             <section id="8" class="content-card">
-                <h2 class="text-2xl font-semibold"> &#56;&#65039;&#8419; 6. What is a labeled <span class="for">break</span>?</h2>
+                <h2 class="text-2xl font-semibold"> &#55;&#65039;&#8419; 6. What is a labeled <span class="for">break</span>?</h2>
                 <p class="section-title">Answer:</p>
                 <p class="mt-4 mb-4">A labeled <span class="for">break</span> is used to exit an <strong> outer loop </strong>directly.</p>
                 <p class="mt-4 mb-4"> It is useful in nested loops.</p>
@@ -392,6 +392,40 @@ for(int i=1;i<=3;i++){
             </section>
 <hr>
 
+            <section id="9" class="content-card">
+                <h2 class="text-2xl font-semibold"> &#56;&#65039;&#8419; 7. What is a labeled <span class="for">continue</span>?</h2>
+                <p class="section-title mt-4"> Answer: </p>
+                <p class="mt-4 mb-4"> A labeled <span class="for">continue</span> skips the remaining statements odf the current outer loop iteration and dtarts the next iteration of the labeled loop.</p>
+                <h2 class="section-title"> Example: </h2>
+                <pre class="code">
+outer:
+
+for(int i=1;i<=3;i++){
+
+    for(int j=1;j<=3;j++){
+
+        if(j==2){
+
+            continue outer;
+
+        }
+
+        System.out.println(i+" "+j);
+
+    }
+
+}
+                </pre>
+                <h2 class="section-title"> Output:</h2>
+                <pre class="code">
+1 1
+2 1
+3 1
+                </pre>
+            </section>
+            <hr>
+
+            
 
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
