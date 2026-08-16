@@ -425,7 +425,36 @@ for(int i=1;i<=3;i++){
             </section>
             <hr>
 
-            
+            <section id="10" class="content-card">
+                <h2 class="text-2xl font-semibold">&#56;&#65039;&#8419; 8. Does <span class="for">break</span> terminate all loops? </h2>
+                <h2 class="section-title"> Answer:</h2>
+                <p class="section-title"> No.</p>
+                <h2 class="mt-4 mb-4">A normal <Span class="for">break</Span> terminates only the <strong>current(innermost) loop.</strong></h2>
+                <h2 class="mt-4 mb-4"> To terminate an outer loop, use a <strong>labeled break</strong>.</h2>
+                <h2 class="section-title"> Example:</h2>
+                <pre class="code">
+for(int i=1;i<=2;i++){
+
+    for(int j=1;j<=3;j++){
+
+        if(j==2)
+            break;
+
+        System.out.println(i+" "+j);
+
+    }
+
+}
+                </pre>
+                <h2 class="section-title"> Output:</h2>
+                <pre class="code">
+1
+3
+4
+5
+                </pre>
+            </section>
+<hr>
 
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
