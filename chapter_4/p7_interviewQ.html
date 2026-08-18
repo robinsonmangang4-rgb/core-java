@@ -553,7 +553,40 @@ while(i<=5){
             </section>
             <hr>
 
-            
+            <section id="14" class="content-card">
+                <h2 class="text-2xl font-semibold"> &#49;&#65039;&#8419;&#52;&#65039;&#8419; 13. Why can <span class="for">continue</span> cause an infinite loop?</h2>
+                <h2 class="section-title">Answer: </h2>
+                <p class="mt-4 mb-4"> If the loop variable is not update before <span class="for">continue</span> executes, the loop continue never changes.</p>
+                <h2 class="section-title"> Example: </h2>
+                <pre class="code">
+int i = 1;
+while(i <= 5){
+    if(i == 2){
+        continue;
+    }
+    i++;
+}
+                </pre>
+                <p class="mt-4 mb-4"> Here, <span class="for">i</span> stays <span class="for font-bold">2</span> forever, causing an infinite loop.</p>
+            </section>
+<hr>
+
+            <section id="15" class="content-card">
+                <h2 class="text-2xl font-semibold"> &#49;&#65039;&#8419;&#53;&#65039;&#8419; 14. Can <span class="for">break</span> be used in all loops?</h2>
+                <h2 class="section-title"> Answer: </h2>
+                <h2 class="section-title"> Yes.</h2>
+                <p class="mt-4 mb-4"> It can be used in:</p>
+                <ul class="mt-4 mb-4  ml-8 list-disc space-y-2">
+                    <li class="for w-fit">for</li>
+                    <li class="for w-fit">while</li>
+                    <li class="for w-fit">do-while</li>
+                    <li class="for w-fit">switch</li>
+                </ul>
+            </section>
+            <hr>
+
+
+
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
