@@ -639,13 +639,47 @@ if( found ){
     break;
 }
                 </pre>
-                <p class="mt-4 "> Negative numbers are skipped.</p>
             </section>
             <hr>
 
             <section id="20" class="content-card">
-                <h2 class="text-2xl font-semibold"> &#50;&#65039;&#8419;&#48;&#65039;&#8419;</h2>
+                <h2 class="text-2xl font-semibold"> &#50;&#65039;&#8419;&#48;&#65039;&#8419; 19. When should you use <span class="for">continue</span>?</h2>
+                <h2 class="section-title">Answer: </h2>
+                <p class="mt-4"> Use <span class="for">continue</span> when you want to ignore certain values but continue processing the remaining data.</p>
+                <h2 class="section-title"> Example: </h2>
+                <pre class="code">
+if(number < 0 ){
+    continue;
+}
+                </pre>
+                <p class="nt-4"> Negative numbers are skipped.</p>
+            </section>
+            <section id="21" class="content-card ">
+                <h2 class="text-2xl font-semibold"> &#50;&#65039;&#8419;&#49;&#65039;&#8419; 20. What is "fall-through" in a switch statement?</h2>
+                <h2 class="secction-title"> Answer: </h2>
+                <p class="mt-4"> Fall-through occurs when a <span class="for">switch</span> case does not have a <span class="for">break</span>, so execution continue into the next case(s).</p>
+                <h2 class="section-title"> Example: </h2>
+                <pre class="code">
+iint day = 2;
 
+switch(day){
+
+case 1:
+System.out.println("Monday");
+
+case 2:
+System.out.println("Tuesday");
+
+case 3:
+System.out.println("Wednesday");
+
+}
+                </pre>
+                <h2 class="section-title"> Output:</h2>
+                <pre class="code">
+Tuesday
+Wednesday
+                </pre>
             </section>
 
             <section class="content-card flex justify-between">
