@@ -682,6 +682,54 @@ Wednesday
                 </pre>
             </section>
 
+            <section id="22" class="content-card">
+                <h2 class="text-2xl font-semibold">&#50;&#65039;&#8419;&#50;&#65039;&#8419; 21. Can <span class="for">break</span> and <span class="for">continue</span> be used together?</h2>
+                <h2 class="section-title"> Answer: </h2>
+                <h2 class="section-title"> Yes.</h2>
+                <p class="mt-4"> They can appear in the same loop, but only one executes in particular iteration depending on the conditions.</p>
+                <h2 class="section-tiile"> Example: </h2>
+                <pre class="code">
+for(int i=1;i<=10;i++){
+
+    if(i==3)
+        continue;
+
+    if(i==8)
+        break;
+
+    System.out.println(i);
+
+}
+                </pre>
+                <h2 class="section-title"> Output: </h2>
+                <pre class="code">
+1
+2
+4
+5
+6
+7
+                </pre>
+            </section>
+            <hr>
+
+
+            <section id="23" class="content-card">
+                <h2 class="text-2xl font-semibold">&#50;&#65039;&#8419;&#51;&#65039;&#8419; 22. Which is faster: <span class="for">break</span> or <span class="for">continue</span>?</h2>
+                <h2 class="section-title mt-2"> Answer: </h2>
+                <p class="mt-2"> Neither is inherently faster. they serve different purpose:</p>
+                <ul class=" ml-8 mt-2 list-disc">
+                    <li> <span class="for">break</span> can improve performance by ending the loop early.</li>
+                    <li> <span class="for">continue</span> skips unnecessary work within an iteration but keeps the loop running.</li>
+                </ul>
+                <p class="mt-4">Performance depends on the program's logic rather than the statements themselves.</p>
+
+            </section>
+<hr>
+
+
+
+
             <section class="content-card flex justify-between">
                 <a href="Do-While_Loop_practice.html" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block">&larr; Previous </a>
                 <a href="#" class="bg-blue-500 w-auto h-auto rounded-md font-semibold text-lg px4 py2 inline-block"> Next &rarr; </a>
